@@ -69,7 +69,7 @@ directory, with `index.rst` as the top-level organizational hub.
 
 The compendium is maintained by [Cyrus Omar](https://web.eecs.umich.edu/~comar).
 
-The template for the compendium is based on the EECS 490 course notes prepared 
+The template was adapted from [EECS 490 course notes](https://github.com/eecs490/notes) prepared 
 by Amir Kamil (akamil@umich.edu). 
 
 All contributions are governed by the [Creative Commons
