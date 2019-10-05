@@ -8,8 +8,7 @@ user interfaces for programming languages, broadly construed.
 
 It is structured as an annotated bibliography, organized hierarchically into topic areas, and covering both academic research and notable non-academic designs. In addition to textual summaries, the summaries of notable systems might include screenshots, videos, and links to external resources. The goal in each case is to convey the key results and ideas clearly and concisely, so that the compendium is a useful resource for  researchers, practitioners, and hobbyists who might be interested in **surveying** a topic area.
 
-It will take contributions from many different members of our community to truly achieve a comprehensive compendium covering this diverse field.
-The compendium is far from comprehensive today. 
+It will take contributions from many different members of our community to truly achieve a comprehensive compendium.
 Contributions are very welcome through GitHub's pull request mechanism. 
 
 ## Build Requirements
