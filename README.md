@@ -69,7 +69,7 @@ directory, with `index.rst` as the top-level organizational hub.
 
 The compendium is maintained by [Cyrus Omar](https://web.eecs.umich.edu/~comar).
 
-The template was adapted from [EECS 490 course notes](https://github.com/eecs490/notes) prepared 
+The Sphinx setup was adapted from [EECS 490 course notes](https://github.com/eecs490/notes) prepared 
 by Amir Kamil (akamil@umich.edu). 
 
 All contributions are governed by the [Creative Commons
