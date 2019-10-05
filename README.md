@@ -72,7 +72,6 @@ The compendium is maintained by [Cyrus Omar](https://web.eecs.umich.edu/~comar).
 The template for the compendium is based on the EECS 490 course notes prepared 
 by Amir Kamil (akamil@umich.edu). 
 
-All contributions to this conpendium are governed by the [Creative Commons
+All contributions are governed by the [Creative Commons
 Attribution-ShareAlike 4.0 International
-license](https://creativecommons.org/licenses/by-sa/4.0/), unless otherwise
-noted.
+license](https://creativecommons.org/licenses/by-sa/4.0/).
