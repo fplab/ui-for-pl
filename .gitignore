@@ -1,0 +1,36 @@
+# Created by https://www.gitignore.io/api/emacs
+
+*.dSYM
+*.class
+a.out
+
+### Emacs ###
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Latex
+*.aux
+*.log
+*.toc
+
+# C extensions
+*.so
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
