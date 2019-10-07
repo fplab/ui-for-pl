@@ -1,14 +1,7 @@
 ## User Interfaces for Programming Languages: The Compendium
 
-  > **compendium**. *noun*. a collection of concise but detailed information about a particular subject, especially in a book or other publication.
-
 This compendium covers research and practice in the field of 
 user interfaces for programming languages, broadly construed. 
-
-It is structured as an annotated bibliography, organized hierarchically into topic areas, and covering both academic research and notable non-academic designs. In addition to text, the summaries of notable systems might include screenshots, videos, and links to external resources. The goal in each case is to convey the key results and ideas clearly and concisely, so that the compendium is a useful resource for  researchers, practitioners, and hobbyists who might be interested in **thoroughly surveying** a topic area.
-
-It will take contributions from many different members of our community to truly achieve a comprehensive compendium.
-Contributions are very welcome through GitHub's pull request mechanism. 
 
 ### Build Requirements
 
@@ -56,6 +49,7 @@ which is the branch used for publishing to
 [https://fplab.github.io/ui-for-pl/](https://fplab.github.io/ui-for-pl/).
 
 ### Contributing
+Contributions are very welcome through GitHub's pull request mechanism. To quickly propose edits to a single file, you can find it in this repository and click the pencil icon. 
 
 The text for these notes is written in
 [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/directives.html),
@@ -71,6 +65,8 @@ The compendium is maintained by [Cyrus Omar](https://web.eecs.umich.edu/~comar) 
 
 The Sphinx setup was adapted from [EECS 490 course notes](https://github.com/eecs490/notes) prepared 
 by Amir Kamil (akamil@umich.edu). 
+
+### License 
 
 All contributions are governed by the [Creative Commons
 Attribution-ShareAlike 4.0 International
