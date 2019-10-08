@@ -29,6 +29,8 @@ titlesuffix = "UI for PL"
 release = ''
 version = release
 
+todo_include_todos = True
+
 
 # -- General configuration ---------------------------------------------------
 
@@ -36,6 +38,8 @@ version = release
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+  'sphinxcontrib.bibtex',
+  'sphinx.ext.todo'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

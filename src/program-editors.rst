@@ -12,11 +12,6 @@ Language Servers
 
 TODO: OCaml language server paper, others
 
-Error Reporting
-===============
-
-TODO: error reporting, localization, repair, etc.
-
 Structure Editors
 =================
 

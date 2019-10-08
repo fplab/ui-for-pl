@@ -21,3 +21,19 @@ div.contents ul.simple ul {
 .wy-menu .caption-text {
   color: yellow;
 }
+
+.bib-item {
+  background-color: #e7f2fa;
+}
+
+.citation {
+	margin-bottom: 0px !important;
+}
+
+.citation + p {
+	display: none;
+}
+
+ul {
+	margin-bottom: 0px !important;
+}

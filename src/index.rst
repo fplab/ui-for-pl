@@ -35,6 +35,16 @@ Contributors
 
 .. raw:: latex
 
+  \part{Language Usability}
+
+.. toctree::
+  :caption: Language Usability
+  :hidden:
+
+  language-usability.rst
+
+.. raw:: latex
+
   \part{Program Editors}
 
 .. toctree::
