@@ -34,3 +34,7 @@ Icon
 
 # Thumbnails
 ._*
+
+# Sphinx
+
+html/
