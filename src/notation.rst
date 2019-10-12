@@ -11,6 +11,8 @@ There can be many different notations for any given structure, and these notatio
 Mathematical notation is often defined informally, e.g. by example, rather than by specifying a formal syntax.
 **Programs** are exceptional mathematical structures in this regard: they are typically governed by more rigorous specifications. The **abstract syntax** (a.k.a. **structural syntax**) of a programming language specifies the formation rules for these structures. A **concrete syntax** (a.k.a. **surface syntax**) formally specifies a notation for these structures. Programming language specifications typically privilege a single concrete syntax, and it is common in practice to refer to this as *the* concrete syntax of the language. 
 
+Programs construct and manipulate expressions of various types. Notation specific to a certain type of data is known as **literal notation** for that type. An instance of this notation is called a *literal*. For example, the concrete syntax of many programming languages allows for list literals like ``[1, 2, 3]``.
+
 History of Mathematical Notation
 ================================
 
@@ -140,18 +142,28 @@ Diagrammatic notation has been used to describe structures that arise in fields 
 
   Cite Katherine's work on generating diagrams from symbolic descriptions of structures.
 
-Interactive Notation
-====================
+.. todo::
 
-TODO: Graphite
-TODO: Projectional Editors
+  Amy Ko's graduate work, and other work on projectional editors
+
+.. todo::
+
+  Graphite 
 
 Customizable Notation
 =====================
 
-Grab stuff from background section of Cyrus' PhD thesis
+.. todo::
+  
+  Cite Cyrus' PhD thesis + ECOOP and ICFP papers
 
-Programs construct and manipulate expressions of various types. Notation specific to a certain type of data is known as **literal notation** for that type. An instance of this notation is called a *literal*. For example, the concrete syntax of many programming languages defines list literals.  
+.. todo::
+
+  Cite Erdweg's work
+
+.. todo:: 
+
+  Cite Schwerdfeger and Van Wyk
 
 
 .. container:: hidden
