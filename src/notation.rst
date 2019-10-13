@@ -77,9 +77,11 @@ Notations designed for consumption and manipulation by humans (as opposed to tho
 
 Secondary Notation
 ==================
-Additional cues are often inserted when editing or rendering notation in order to improve readability and other cognitive dimensions. These additional cues are called *secondary notation* if they are formally redundant. For example, a human might insert formally unnecessary indentation to better communicate nested scopes to human readers, place conceptually related items near each other, or include comments. A program editor or pretty printer might use syntax highlighting and typography to communicate structural or semantic information.
+Additional cues are often systematically inserted when editing or rendering notation in order to improve readability and other cognitive dimensions. These additional cues are called *secondary notation* if they are formally redundant. 
 
-A **pretty printer** is a function that takes a structure as input and generates a visual representation of it suitable for human consumption, using both primary and secondary notation.
+For example, a human might insert formally unnecessary indentation to better communicate nested scopes to human readers, place conceptually related items near each other, or include natural language comments. 
+
+A **pretty printer** is a function that takes a structure as input and generates a visual representation of it suitable for human consumption, using both primary and secondary notation. A program editor or pretty printer might use syntax highlighting and typography to communicate structural or semantic information.
 
 .. note::
   If, for example, indentation is required (as in Python) or color is used to communicate information not available by any other means, then these cues are not secondary notation, but rather part of the primary notation. However, these notational design choices are typically motivated by many of the same cognitive considerations as secondary notation.
@@ -96,7 +98,7 @@ A **pretty printer** is a function that takes a structure as input and generates
   .. bibliography:: notation.bib
     :filter: key == "petre2006cognitive"
 
-  This paper states, based on observations made in other studies, that experts are more adept at using secondary notation than novices.
+  This paper reflects on cognitive dimensions theory as a whole and, in particular, states, based on observations made in other studies, that experts are more adept at using secondary notation than novices.
 
 Textual Notation
 ================
