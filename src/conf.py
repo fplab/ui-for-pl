@@ -70,7 +70,7 @@ html_context = {
     "github_user": "fplab",
     "github_repo": "ui-for-pl",
     "github_version": "master",
-    "conf_py_path": "/doc/",
+    "conf_py_path": "/src/",
     # "source_suffix": source_suffix
 }
 
