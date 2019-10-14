@@ -24,15 +24,15 @@ Compendium content is written in
 with the extensions supported by [Sphinx](http://www.sphinx-doc.org/).
 This format is similar to Markdown, but offers some more advanced features. 
 
-The notes are structured as one file per topic area in the `src`
+The compendium is structured as one file per topic area in the `src`
 directory, with `index.rst` as the top-level organizational hub.
 
-We use BibTeX for citations, via the [sphinxcontrib-bibtex](https://sphinxcontrib-bibtex.readthedocs.io/en/latest/) extension. See `src/notation.rst` for examples of how to include a bibliography entry in your article. This extension is somewhat limited, so we need to use the following workarounds:
-1. Each .bib file can seemingly have no more than 9 entries, so just make new files, e.g. `notation.bib`, `notation2.bib` and so on, as needed.
+We use BibTeX for citations, via the [sphinxcontrib-bibtex](https://sphinxcontrib-bibtex.readthedocs.io/en/latest/) extension. See `src/notation.rst` for examples of how to include bibliography entries in your article. This extension is somewhat limited, so we need to use the following workarounds:
+1. Each .bib file can have no more than 9 entries, so just make new files, e.g. `notation.bib`, `notation2.bib` and so on, as needed.
 2. Sphinx will generate warnings if you have not explicitly cited a bibliography entry in the text. To get around this, you can include a hidden area at the bottom of each file to cite items that you have not otherwise cited. See the bottom of `notation.rst` for an example.
 3. There are certain lexical limitations on the cite keys, e.g. they cannot have capital letters. I recommend using cite keys of the form `lastnameYY` where `YY` is the two digit year, e.g. `hughes95`.
 
-You can find BibTeX entries using [Google Scholar](https://scholar.google.com/) or [DBLP](https://dblp.uni-trier.de/). Please remove extraneous details, e.g. publisher names and locations. For common publication venues, it is okay to use abbreviations, e.g. `OOPSLA`, rather than full conference names.
+You can find BibTeX entries using [Google Scholar](https://scholar.google.com/) or [DBLP](https://dblp.uni-trier.de/). Please remove extraneous details, e.g. conference locations and dates, and publisher names and locations. For common publication venues, it is okay to use abbreviations, e.g. `OOPSLA`, rather than full conference names.
 
 ### Contributors
 
