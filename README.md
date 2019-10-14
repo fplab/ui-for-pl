@@ -37,7 +37,7 @@ which is the branch used for publishing to
 [https://fplab.github.io/ui-for-pl/](https://fplab.github.io/ui-for-pl/).
 
 ### Contributing
-Contributions are very welcome through GitHub's pull request mechanism. To quickly propose edits to a single file, you can find it in this repository and click the pencil icon. 
+Contributions are very welcome through GitHub's pull request mechanism. To quickly propose edits to a single file, you can find it in this repository and click the pencil icon to propose the edit as a pull request directly. For more sophisticated changes, fork the repository and make a pull request.
 
 The text for these notes is written in
 [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/directives.html),
