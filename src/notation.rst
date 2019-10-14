@@ -128,17 +128,40 @@ Unparsers
 ---------
 An unparser is a function that takes a structure as input and produces a string representation which, if parsed, will produce the original structure (or in some cases one merely equivalent to it, for some suitable notion of equivalence).  
 
-It is often the case that there are multiple valid string representations of a structure, e.g. because whitespace might be ignored. Different unparsers are therefore free to make different choices within this space. Some unparsers are pretty printers: they will choose a "pretty" string representation, e.g. one that follows secondary notational conventions about the use of whitespace. 
+It is often the case that there are multiple valid string representations of a structure, e.g. because whitespace might be ignored. Different unparsers are therefore free to make different choices within this space. 
 
-.. todo::
-  cite papers about pretty printing
+Some unparsers are pretty printers: they will choose a "pretty" string representation, e.g. one that follows secondary notational conventions about the use of whitespace. 
 
-In other cases, an unparser's goal may simply be to minimize the size of the resulting string representation, or to intentionally obfuscate the code, e.g. to obscure trade secrets when source code must be sent to client browsers.
+.. container:: bib-item
+
+  .. bibliography:: notation2.bib
+    :filter: key == "hughes95"
+
+  This paper introduces the basic mechanisms behind many textual pretty printer libraries.
+
+.. container:: bib-item
+
+  .. bibliography:: notation2.bib
+    :filter: key == "wadler2003prettier"
+
+  This paper refines Hughes' design.
+
+.. container:: bib-item
+
+  .. bibliography:: notation2.bib
+    :filter: key == "bernardy17"
+
+  This paper further improves on Hughes' and Wadler's designs, specifying a number of design criteria explicitly and supporting more flexible alignment specifications.
+
+Not all unparsers are pretty printers. An unparser's goal may simply be to minimize the size of the resulting string representation, or to intentionally obfuscate the code.
 
 Diagrams and Graphical Notation
 ===============================
 
-Diagrammatic notation has been used to describe structures that arise in fields other than pure mathematics. Examples include `juggling notation <http://www.solipsys.co.uk/new/JugglingTalkSummary.html?JugglingTalk>`_, `knot notation <https://www.maths.ed.ac.uk/~v1ranick/papers/conway.pdf>`_ (see `Katherine Ye's Strange Loop 2015 talk <https://www.youtube.com/watch?v=Wahc9Ocka1g>`_), and `notation for kinetic sculptures <https://github.com/hypotext/notation#channa-horwitzs-sonakinetography>`_. These examples come from Katherine Ye's excellent notes on `notations and thought <https://github.com/hypotext/notation#notation-and-thought>`_, which contains a number of other examples, quotations, and musings on notation.
+Mathematical notation is often non-textual. For example, it is common to lay out fractions vertically, or to use square root notation that requires placing a line over a sub-expression.
+In other cases, mathematical notation is even more overtly diagrammatic or graphical. For example, matrix notation lays out sub-expressions in a grid. Set intersection is diagrammed using overlapping circles.
+
+Diagrammatic notation is also used to represent structures that arise in fields other than pure mathematics. Examples include `juggling notation <http://www.solipsys.co.uk/new/JugglingTalkSummary.html?JugglingTalk>`_, `knot notation <https://www.maths.ed.ac.uk/~v1ranick/papers/conway.pdf>`_ (see `Katherine Ye's Strange Loop 2015 talk <https://www.youtube.com/watch?v=Wahc9Ocka1g>`_), and `notation for kinetic sculptures <https://github.com/hypotext/notation#channa-horwitzs-sonakinetography>`_. These examples come from Katherine Ye's excellent notes on `notations and thought <https://github.com/hypotext/notation#notation-and-thought>`_, which contain a number of other examples, quotations, and musings on notation.
 
 .. todo::
 
@@ -146,7 +169,7 @@ Diagrammatic notation has been used to describe structures that arise in fields 
 
 .. todo::
 
-  Amy Ko's graduate work, and other work on projectional editors
+  Amy Ko's graduate work, and other work on projectional editors, including mbeddr
 
 .. todo::
 
@@ -178,3 +201,6 @@ Customizable Notation
   :cite:`iverson1987notation`
   :cite:`petre1995looking`
   :cite:`petre2006cognitive`
+  :cite:`hughes95`
+  :cite:`wadler2003prettier`
+  :cite:`bernardy17`
