@@ -1,7 +1,7 @@
 ## User Interfaces for Programming Languages: The Compendium
 
 This compendium covers research and practice in the field of 
-user interfaces for programming languages, broadly construed. 
+user interfaces for programming languages. 
 
 ### Build Instructions
 
