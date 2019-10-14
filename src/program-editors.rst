@@ -35,3 +35,8 @@ TODO: Thomas' papers, and other related work
 TODO: work on operational transforms, CRDTs, and other techniques
 
 TODO: work on version control systems
+
+Accessibility
+=============
+
+TODO: accessibility-related discussion
