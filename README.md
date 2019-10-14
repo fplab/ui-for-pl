@@ -35,10 +35,10 @@ which is the branch used for publishing to
 ### Contributing
 Contributions are very welcome through GitHub's pull request mechanism. To quickly propose edits to a single file, you can find it in this repository (e.g. by clicking on the Edit on Github link at the top of the corresponding page) and click the pencil icon to propose the edit as a pull request directly. For more sophisticated changes, fork the repository and make a pull request.
 
-The text for these notes is written in
+Compendium content is written in
 [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/directives.html),
 with the extensions supported by [Sphinx](http://www.sphinx-doc.org/).
-This format is similar to Markdown, but offers some more advanced features.
+This format is similar to Markdown, but offers some more advanced features. 
 
 The notes are structured as one file per topic area in the `src`
 directory, with `index.rst` as the top-level organizational hub.
