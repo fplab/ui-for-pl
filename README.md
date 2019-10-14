@@ -21,17 +21,6 @@ $ make
 
 The result is the `html` directory.
 
-(NOT YET WORKING) Build and publish the result to GitHub pages:
-
-```
-$ make publish
-```
-
-This uses the [`ghp-import`](https://pypi.org/project/ghp-import/)
-tool to push the output to the `gh-pages` branch of this repository,
-which is the branch used for publishing to
-[https://fplab.github.io/ui-for-pl/](https://fplab.github.io/ui-for-pl/).
-
 ### Contributing
 Contributions are very welcome through GitHub's pull request mechanism. To quickly propose edits to a single file, you can find it in this repository (e.g. by clicking on the Edit on Github link at the top of the corresponding page) and click the pencil icon to propose the edit as a pull request directly. For more sophisticated changes, fork the repository and make a pull request.
 
