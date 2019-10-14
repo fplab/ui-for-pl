@@ -5,7 +5,7 @@ user interfaces for programming languages.
 
 ### Build Instructions
 
-We use [Sphinx](http://www.sphinx-doc.org/).
+The compendium is built using the [Sphinx](http://www.sphinx-doc.org/) document generation system.
 
 The required libraries are listed in `requirements.txt` and can be installed using `pip` as follows:
 
@@ -13,16 +13,11 @@ The required libraries are listed in `requirements.txt` and can be installed usi
 $ pip3 install -r requirements.txt
 ```
 
-Then you can build the HTML output:
-
-```
-$ make
-```
-
-The result is the `html` directory.
+Then you can build the HTML output by typing `make` at the shell. 
+The result is the `html` directory. The `make clean` command will delete the build artifacts.
 
 ### Contributing
-Contributions are very welcome through GitHub's pull request mechanism. To quickly propose edits to a single file, you can find it in this repository (e.g. by clicking on the Edit on Github link at the top of the corresponding page) and click the pencil icon to propose the edit as a pull request directly. For more sophisticated changes, fork the repository and make a pull request.
+Contributions are welcome through GitHub's pull request mechanism. To quickly propose edits to a single file, you can find it on Github (e.g. by clicking on the Edit on Github link at the top of the corresponding page) and click the pencil icon. For more sophisticated changes, fork the repository and make a pull request.
 
 Compendium content is written in
 [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/directives.html),
