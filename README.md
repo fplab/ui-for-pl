@@ -1,7 +1,7 @@
 ## User Interfaces for Programming Languages: The Compendium
 
 This compendium covers research and practice in the field of 
-user interfaces for programming languages. 
+user interfaces for programming languages. It has not yet been published online (see below).
 
 ### Build Instructions
 
@@ -17,7 +17,9 @@ Then you can build the HTML output by typing `make` at the shell.
 The result is the `html` directory. The `make clean` command will delete the build artifacts.
 
 ### Contributing
-Contributions are welcome through GitHub's pull request mechanism. To quickly propose edits to a single file, you can find it on Github (e.g. by clicking on the Edit on Github link at the top of the corresponding page) and click the pencil icon. For more sophisticated changes, fork the repository and make a pull request.
+The  first round of contributions will be made by students in [EECS 598](http://web.eecs.umich.edu/~comar/courses/ui-for-pl/) at Michigan during Fall 2019. After that, the compendium will be published online and contributions from the rest of the community will be welcome.
+
+Contributions are made through GitHub's pull request mechanism. To quickly propose edits to a single file, you can find it on Github (e.g. by clicking on the Edit on Github link at the top of the corresponding page) and click the pencil icon. For more sophisticated changes, fork the repository and make a pull request.
 
 Compendium content is written in
 [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/directives.html),
