@@ -10,7 +10,7 @@ The compendium is built using the [Sphinx](http://www.sphinx-doc.org/) document 
 The required libraries are listed in `requirements.txt` and can be installed using `pip` as follows:
 
 ```
-$ pip3 install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Then you can build the HTML output by typing `make` at the shell. 
