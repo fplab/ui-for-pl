@@ -5,11 +5,11 @@
 Overview
 ========
 
-Development software has improved far beyond what was initially conceived. **Programming assistants**, tools that are integrated into this software to enable more effective programming, are leading the charge with new initiatives and improvements every year. Why do we need programming assistants? As more complex and time-consuming projects arise, assistants can significantly reduce the time and effort a programmer exhausts during development.
+**Programming assistants**, tools that are integrated into this software to enable more effective programming, are leading the charge with new initiatives and improvements every year. Why do we need programming assistants? As more complex and time-consuming projects arise, assistants can significantly reduce the time and effort a programmer exhausts during development.
 
 Programming assistants can be highly sophisticated themselves, with most using advanced artificial intelligence, machine learning and natural language processing models. However, most models can be represented by the following diagram:
 
--- Insert Diagram Here --
+.. image:: Ml_model.png
 
 where the input can be range from syntactical structure (abstract syntax trees, parsed text) to program runtime data. The chosen model is done so based on accuracy and runtime comparisons between various hypothesized models. Even after the model is chosen, it is further evaluated and tuned. Once a model is chosen and trained on input data, new data is introduced for prediction and the results are published. The main areas of research for programming assistants are discussed further below.
 
@@ -43,7 +43,7 @@ How does it work? Given a history of edits on a given document, Blue-Pencil take
  1. An oracle that returns a program that explains a set of non-overlapping edits
  2. An exhaustive enumeration based procedure for creating a directed acyclical multigraph (DAM) where the nodes represent document versions and the edges represent edges
  3. A solver for the least colorful path problem on the DAM
- 
+
 The model was evaluated with 37 document editing sessions in two software development languages (C# and SQL) coming from various sources. The model provided 206 suggestions and only yielded 23 false positives giving it a final precision value of 0.89 with the average suggestion time being 199 ms. More details on the implementation and results of the study can be found here.
 
 Program Synthesis
@@ -73,7 +73,7 @@ Given the query `open file example.txt`, anyCode would return a list of potentia
 .. code-block:: Java
   File file = new File("/Users/example/example.txt");
   BufferedReader reader = new BufferedReader(new FileReader("/Users/example/example.txt"));
-  
+
 The authors state that the key feature that differentiates their tool is that it does not take into account any prior code context. The main take aways of their tool are that it often produces the expected code fragments, tolerates the flexibility of the English language, and it can repair incorrect Java expressions that use the wrong syntax or missing arguments.
 
 anyCode was evaluated with 45 examples where the effectiveness criteria was that it was able to successfully synthesize expected expressions and to list them among the top 10 solutions. The two models used to build the tool, unigram and PCFG, were evaluated separately and together. Using only the unigram model, the expected expression was only in the top 10 27% of the time and 18% using the PCFG model.
@@ -83,7 +83,7 @@ However, when both models were used, the expected expression was in the top 10 8
 Code Completion
 ---------------
 
-**Code Completion**, a subsection of Program Synthesis, refers to the process of intelligent completion suggestion making for lines of code a user writes during the development of an application. It is intended to speed up the process of coding applications by reducing typos and other mistakes. Code Completion assistants serves as convenient way to access function syntax and descriptions, significantly reducing the amount of memorization required. 
+**Code Completion**, a subsection of Program Synthesis, refers to the process of intelligent completion suggestion making for lines of code a user writes during the development of an application. It is intended to speed up the process of coding applications by reducing typos and other mistakes. Code Completion assistants serves as convenient way to access function syntax and descriptions, significantly reducing the amount of memorization required.
 
 Common techniques to achieve this include auto completion popups while typing, querying parameters of functions, querying hints related to syntax errors. The models used in Code Completion are very similar to those used in Program Synthesis but tend to use different inputs.
 
@@ -98,7 +98,7 @@ Raychev, Vechev and Yahav addressed the code completion problem using APIs. Unli
 .. code-block:: python
   X = data[X_features]
   y = data[y_label]
-  
+
   X_tr, X_te, y_tr, y_te = train_test_split(X, y, 0.2)
   model = RandomForestClassifier()
   ?
@@ -147,7 +147,7 @@ Bibliography
 
   .. bibliography:: notation.bib
     :filter: key == 'gvero2015synthesizing'
-    
+
 .. container:: bib-item
 
   .. bibliography:: notation.bib
