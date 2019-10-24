@@ -30,7 +30,7 @@ Deductive Program Synthesis is focused on an approach in which the derivation ta
 
 Inductive Program Synthesis (IPS) has been a more popular area of research in the last decade. This is mainly due to the realization that most are not familiar with complicated mathematical theorems and prefer to synthesize using less formal specifications. There are many different variations of IPS as there are many different iterative approaches, but most follow the same overall architecture containing a synthesizer and a verifier:
 
--- Insert Diagram Here --
+.. image:: program_synthesis_model.png
 
 A synthesizer produces a 'candidate program' based on the specifications provided and sends the program to a verifier to validate that the program fully satisfies the specifications. If the verifier successfully validates the program, no further action is taken. However, if the verifier determines that the candidate is not satisfactory, it provides feedback to the synthesizer to be used to guide the development of a new candidate program. This process is repeated until the candidate program passes all of the specification.
 
