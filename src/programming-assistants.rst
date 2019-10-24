@@ -5,51 +5,18 @@
 Overview
 ========
 
-**Programming assistants**, tools that are integrated into this software to enable more effective programming, are leading the charge with new initiatives and improvements every year. Why do we need programming assistants? As more complex and time-consuming projects arise, assistants can significantly reduce the time and effort a programmer exhausts during development.
+**Programming assistants** are tools integrated into development environments that enable more effective programming by allowing the developer to focus less on the syntactical and logical problems occured during development and more on the big picture of projects. Why do we need programming assistants? As more complex and time-consuming projects arise, assistants can significantly reduce the time and effort a programmer exhausts during development, while also reducing the probability of errors occuring.
 
 Programming assistants can be highly sophisticated themselves, with most using advanced artificial intelligence, machine learning and natural language processing models. However, most models can be represented by the following diagram:
 
 .. image:: Ml_model.png
 
-where the input can be range from syntactical structure (abstract syntax trees, parsed text) to program runtime data. The chosen model is done so based on accuracy and runtime comparisons between various hypothesized models. Even after the model is chosen, it is further evaluated and tuned. Once a model is chosen and trained on input data, new data is introduced for prediction and the results are published. The main areas of research for programming assistants are discussed further below.
-
-Refactoring
-===========
-
-**Refactoring** refers to the process of restructuring existing code without changing the program's behavior and is a large area of interest in programming assistant research. It is intended to improve the nonfunctional attributes of a program including code readability, reduced complexity and source code maintainability. Typically, code refactoring applies small changes to various areas of a program and most development environments have already integrated support for basic refactoring.
-
-Refactoring is motivated by indications of characteristics in a program of a deeper problem. This is known as **code smell**. Detecting problems early and refactoring source code can save developers time and effort debugging in the future. The main benefits of refactoring can be categorized into either **maintainability**: Fixing issues is very easy because the code is easy to read and easy to understand, or **extensibility**: Extending the capabilities of the application is very easy because the codes uses recognizable design patterns and is flexible.
-
-Software engineers at Microsoft are currently developing and integrating a refactoring assistant that recognizes editing patterns in source code and suggest other edits :cite:`miltner2019fly`.
-
-Consider a corpus of code where every line is similar like the following:
-.. code-block:: python
-  var1 = ExampleFunction(param1)
-  var2 = ExampleFunction(param2)
-  var3 = ExampleFunction(param3)
-  var4 = ExampleFunction(param4)
-
-A new function is then written to initialize the created variables so the code must be changed to call the new function:
-.. code-block:: python
-  var1 = NewFunction(param1)
-  var2 = NewFunction(param2)
-  var3 = NewFunction(param3)
-  var4 = NewFunction(param4)
-
-Although this is a small example, making changes like these is a very tedious process. Scaling this up to larger projects creates a real problem with a large resource requirement. This is the exact problem the Blue-Pencil solution aims to tackle. Blue-Pencil non intrusively watches and learn from user edits and makes suggestions accordingly. It attempts to identify repetitive edits using the document edit history by generating explanations for each of the user's edits to predict actions to take. `This article <https://devblogs.microsoft.com/visualstudio/refactoring-made-easy-with-intellicode/>`_ demonstrates Blue-Pencil in action as it was recently integrated into Visual Studio 2019.
-
-How does it work? Given a history of edits on a given document, Blue-Pencil takes an oracle-guided approach to generate explanations for the history. The following are the three main ingredients in an OracleBasedExplanationGenerator:
-
- 1. An oracle that returns a program that explains a set of non-overlapping edits
- 2. An exhaustive enumeration based procedure for creating a directed acyclical multigraph (DAM) where the nodes represent document versions and the edges represent edges
- 3. A solver for the least colorful path problem on the DAM
-
-The model was evaluated with 37 document editing sessions in two software development languages (C# and SQL) coming from various sources. The model provided 206 suggestions and only yielded 23 false positives giving it a final precision value of 0.89 with the average suggestion time being 199 ms. More details on the implementation and results of the study can be found here.
+where the input can be range from syntactical structure (abstract syntax trees, parsed text, edit action history) to program runtime data. The chosen model is done so based on accuracy and runtime comparisons between various hypothesized models. Even after the model is chosen, it is further evaluated and tuned. Once a model is chosen and trained on input data, new data is introduced for prediction and the results are published. Models can output various types of predictions including: single hole and multiple hole fillings in a program and arbitrary edits throughout a program. The main areas of research for programming assistants are discussed further below.
 
 Program Synthesis
 =================
 
-**Program Synthesis** refers to the process of code synthesis based on a programmer's instructions. It is intended to serve as the ultimate abstraction and allows the assistant to implement instructions containing a mixture of English and programmatic syntax. This area of research originates from the idea that computers are very good at following explicit instructions, but humans are not necessarily good at writing those instructions. Wouldn't it be more efficient to tell a computer what the developer wants it to do and to leave the implementation details to the computer? The main promise of Program Synthesis is to automate the trivial parts of programming, allowing the developer to focus on the big picture.
+**Program Synthesis** refers to the process of code synthesis based on a programmer's specifications. It is intended to serve as the ultimate abstraction and allows the assistant to implement instructions typically containing a mixture of a natual language and programmatic syntax. This area of research originates from the idea that computers are very good at following explicit instructions, but humans are not necessarily good at writing those instructions. Wouldn't it be more efficient to tell a computer what the developer wants it to do and to leave the implementation details to the computer? The main promise of Program Synthesis is to automate the trivial parts of programming, allowing the developer to focus on the big picture.
 
 Before discussing how synthesis occurs, it is important to discuss the various ways to specify program behavior. Most programming languages are not helpful for telling a program synthesizer what a developer wants it to do. Therefore, there must be a way to provide a specification of what the program should do. There are many styles in place including:
 
@@ -78,16 +45,16 @@ The authors state that the key feature that differentiates their tool is that it
 
 anyCode was evaluated with 45 examples where the effectiveness criteria was that it was able to successfully synthesize expected expressions and to list them among the top 10 solutions. The two models used to build the tool, unigram and PCFG, were evaluated separately and together. Using only the unigram model, the expected expression was only in the top 10 27% of the time and 18% using the PCFG model.
 
-However, when both models were used, the expected expression was in the top 10 82% of time and was the #1 option 44% of the time. More implementation details of the two models can be found `here <https://lara.epfl.ch/~kuncak/papers/GveroKuncak15SynthesizingJavaExpressionsFreeFormQueries.pdf>`_. anyCode was given an average runtime of 60 ms to generate the top 10 expressions, proving that it can effectively and efficiently synthesize expressions.
+However, when both models were used, the expected expression was in the top 10 82% of time and was the #1 option 44% of the time. More implementation details of the two models can be found in the paper :cite:`gvero2015synthesizing`. anyCode was given an average runtime of 60 ms to generate the top 10 expressions, proving that it can effectively and efficiently synthesize expressions.
 
 Code Completion
 ---------------
 
-**Code Completion**, a subsection of Program Synthesis, refers to the process of intelligent completion suggestion making for lines of code a user writes during the development of an application. It is intended to speed up the process of coding applications by reducing typos and other mistakes. Code Completion assistants serves as convenient way to access function syntax and descriptions, significantly reducing the amount of memorization required.
+**Code Completion** systems are simple program synthesis systems that generate code snippets for insertion at the cursor, whereas other program synthesis systems may fill multiple holes in a code corpus. It is intended to speed up the process of coding applications by reducing typos and other mistakes. Code Completion assistants serves as convenient way to access function syntax and descriptions, significantly reducing the amount of memorization required.
 
 Common techniques to achieve this include auto completion popups while typing, querying parameters of functions, querying hints related to syntax errors. The models used in Code Completion are very similar to those used in Program Synthesis but tend to use different inputs.
 
-Common inputs include:
+Common training inputs include:
 - Parsed code corpuses
 - Abstract syntax trees
 
@@ -112,7 +79,7 @@ There are four key aspects in this tool:
 3. Holes as sequences - The tool is able to recognize if multiple method invocations are missing in a given hole and fills in the missing.
 4. New fused completions - The tool is able to make completions on sequences and methods it has not been trained on before.
 
-The evaluation of the tools proved it to be very fast and effective. Out of the 84 examples tested on, the desired completion appeared in the top 3 results in 90% of the cases. More details on the implementation of the model and the evaluation metrics used can be found `here <http://www.cs.technion.ac.il/~yahave/papers/pldi14-statistical.pdf>`_.
+The evaluation of the tools proved it to be very fast and effective. Out of the 84 examples tested on, the desired completion appeared in the top 3 results in 90% of the cases. More details on the implementation of the model and the evaluation metrics used can be found in the paper :cite:`raychev2014code`.
 
 Pythia, an AI-assisted code completion system, is another Microsoft research project that has since been deployed to Visual Studio IntelliCode :cite:`svyatkovskiy2019pythia`. Pythia not only suggests method completions but also search for relevant APIs for suggestion. Pythia also uses abstract syntax trees as input to train large-scale deep learning models and attempts to predict completions within 100 ms. To compare the perform of the Pythia model, the researchers also generated models using the frequency approach and Markov-Chain approach.
 
@@ -121,12 +88,31 @@ The frequency baseline model was generated by training a model based on the occu
 .. code-block:: python
   os.path.isfile -> os.remove -> ?
 
-After creating the baseline models, a long short-term memory model was created with backpropagation through time, a gradient-based neural network training algorithm, applied to the model. More implementation details can be found `here <http://delivery.acm.org/10.1145/3340000/3330699/p2727-svyatkovskiy.pdf?ip=35.1.173.243&id=3330699&acc=OPENTOC&key=93447E3B54F7D979%2E0A17827594E6F2C8%2E4D4702B0C3E38B35%2E9F04A3A78F7D3B8D&__acm__=1571279087_e03a44d506330ae0e8a0d76b148d8a73>`_. Comparing all models created in the study, the frequency and Markov-Chain baselines were 67% and 83% accurate in predicting the expected completion within the top 5 results. The Pythia model was able to out perfom both models with an accuracy of 92% for the same metric, giving the researchers enough evidence to publish and integrate the tool into Visual Studio.
+After creating the baseline models, a long short-term memory model was created with backpropagation through time, a gradient-based neural network training algorithm, applied to the model. More implementation details can be found in the paper :cite:`svyatkovskiy2019pythia`. Comparing all models created in the study, the frequency and Markov-Chain baselines were 67% and 83% accurate in predicting the expected completion within the top 5 results. The Pythia model was able to out perfom both models with an accuracy of 92% for the same metric, giving the researchers enough evidence to publish and integrate the tool into Visual Studio.
+
+Refactoring
+===========
+
+**Refactoring** refers to the process of restructuring existing code without changing the program's behavior and is a large area of interest in programming assistant research. It is intended to improve the nonfunctional attributes of a program. Typically, code refactoring applies small changes to various areas of a program and most development environments have already integrated support for basic refactoring. Detecting problems early and refactoring source code can save developers time and effort debugging in the future. 
+
+The main benefits of refactoring can be categorized into either **maintainability**: Fixing issues is very easy because the code is easy to read and easy to understand, or **extensibility**: Extending the capabilities of the application is very easy because the codes uses recognizable design patterns and is flexible.
+
+(TODO: Suggesting Program Edits)
+
+Software engineers at Microsoft are currently developing and integrating a refactoring assistant that recognizes editing patterns in source code and suggest other edits :cite:`miltner2019fly`.
+
+ `This article <https://devblogs.microsoft.com/visualstudio/refactoring-made-easy-with-intellicode/>`_ demonstrates Blue-Pencil in action as it was recently integrated into Visual Studio 2019.
+
+Although this is a small example, making changes like these is a very tedious process. Scaling this up to larger projects creates a real problem with a large resource requirement. This is the exact problem the Blue-Pencil solution aims to tackle. Blue-Pencil non intrusively watches and learn from user edits and makes suggestions accordingly. It attempts to identify repetitive edits using the document edit history by generating explanations for each of the user's edits to predict actions to take.
+
+How does it work? Given a history of edits on a given document, Blue-Pencil takes an oracle-guided approach to generate explanations for the history. More implementation details are discussed in the paper :cite:`miltner2019fly`.
+
+The model was evaluated with 37 document editing sessions in two software development languages (C# and SQL) coming from various sources. The model provided 206 suggestions and only yielded 23 false positives giving it a final precision value of 0.89 with the average suggestion time being 199 ms. More details on the implementation and results of the study can be found here.
 
 Program Repair
 ==============
 
-**Program Repair** refers to the process of automatic repairing of a code corpus that contains syntactical and/or logical errors. It is intended to speed up the time and effort exhausted to debug a software project. Debugging can consume a significant amount of time the larger or more complex the project is. Not only does the root cause of an issue have to be found but the bug itself has to be fixed making the whole process very tedious. Some common techniques used in Program Repair are statistical fault localization and component-based program synthesis.
+**Program Repair** refers to the process of automatic repairing of a code corpus that contains type and/or runtime errors, manifested as exceptions or failed tests. It is intended to speed up the time and effort exhausted to debug a software project. Debugging can consume a significant amount of time the larger or more complex the project is. Not only does the root cause of an issue have to be found but the bug itself has to be fixed making the whole process very tedious. Some common techniques used in Program Repair are statistical fault localization and component-based program synthesis.
 
 A very common approach for Program Repair is using **Genetic Programming**, a computational method inspired by biological evolution which evolves computer programs tailored to a specific task. Researchers at CMU are doing just this by combining program analysis methods with evolutionary computation to automatically repair bugs :cite:`weimer2010automatic`. The key feature about the research was that it did not rely on formal specifications, allowing it to be more flexible to a larger range of software.
 
@@ -134,7 +120,7 @@ The work introduces algorithms to find and minimize the number of repairs requir
 
 Another Program Repair tool, SemFix is an automated program repair method based on symbolic execution, constraint solving and program synthesis. It utilizes statistical fault localization in order to identify and rank lines of code based on their suspiciousness, determines the correct specifications of buggy statements using a method similar to angelic debugging and finally uses program synthesis to correct the statement :cite:`nguyen2013semfix`.
 
-To evaluate the tool, a buggy test set of 50 was used with a total of 90 bugs. The performance and speed of SemFix was also compared to those of GenProg, a competing automatic debugging tool. SemFix proved to be more successful and faster with the average speed repair speed being 100 ms. Although SemFix outperformed GenProg, it was still only able to debug 48 of the 90 bugs successfully (GenProg was only able to debug 16 of the 90) which seems problematic. However, the SemFix team clearly addresses this and explains the drawbacks of the tool. More details can be found `here <https://www.comp.nus.edu.sg/~abhik/pdf/ICSE13-SEMFIX.pdf>`_.
+To evaluate the tool, a buggy test set of 50 was used with a total of 90 bugs. The performance and speed of SemFix was also compared to those of GenProg, a competing automatic debugging tool. SemFix proved to be more successful and faster with the average speed repair speed being 100 ms. Although SemFix outperformed GenProg, it was still only able to debug 48 of the 90 bugs successfully (GenProg was only able to debug 16 of the 90) which seems problematic. However, the SemFix team clearly addresses this and explains the drawbacks of the tool. More details can be found in the paper :cite:`nguyen2013semfix`.
 
 Interactive Proof Assistants
 ============================
