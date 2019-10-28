@@ -14,12 +14,22 @@ This is very much a **living document** and community contributions are encourag
 Click the "Edit on GitHub" link on any page to quickly propose an edit. 
 For more substantial edits, e.g. to add a new topic area, you can `fork the repository <https://github.com/fplab/ui-for-pl>`_ and make a pull request on GitHub.
 
-This compendium is maintained by `Cyrus Omar <https://web.eecs.umich.edu/~comar>`_ (comar@umich.edu) and other members of the `Future of Programming Lab <https://github.com/fplab/fplab/wiki/The-Future-of-Programming-Lab>`_ at the University of Michigan.
 
 Contributors
 ************
- 
+  * This compendium is maintained by `Cyrus Omar <https://web.eecs.umich.edu/~comar>`_ (comar@umich.edu) and other members of the `Future of Programming Lab <https://github.com/fplab/fplab/wiki/The-Future-of-Programming-Lab>`_ at the University of Michigan.
+
   * During the Fall 2019 term, students taking the `EECS 598: User Interfaces for Programming Languages <http://web.eecs.umich.edu/~comar/courses/ui-for-pl/>`_ course at Michigan will be making the first wave of contributions to this document.
+
+Similar Resources
+-----------------
+The following resources are less focused on summarizing the academic literature but are otherwise similar in spirit:
+
+ * `Gallery of Programmer Interfaces <https://docs.google.com/presentation/d/e/2PACX-1vSPuf3eQ2tlCtXAif4gEWQQU-xK8EzhiH3SIfuD7vWy7eP4NN0-KRejbec_m-GF6-f_D95OOFyyoolx/pub?start=false&loop=false&delayms=3000#slide=id.g1da0625f1b_0_56>`_
+ * `Visual Programming Languages - Snapshots <http://blog.interfacevision.com/design/design-visual-progarmming-languages-snapshots/>`_
+ * `Visual Programming Codex <https://github.com/ivanreese/visual-programming-codex>`_
+ * `The Whole Code Catalog <https://futureofcoding.org/catalog/>`_
+
 
 .. toctree::
 
