@@ -5,21 +5,22 @@
 Overview
 ========
 
-Educational technology is primarily focused at facilitating learning. This includes supporting novice programmers learning the fundamentals
-of programming, supplying tools that promote knowledge sharing, assisting educators in their teaching objectives, and 
-facilitating learning of new technologies and systems. 
+Educational technology is focused on facilitating learning. This includes supporting novice programmers learning the fundamentals
+of programming, supplying tools for developers that promote knowledge sharing, assisting educators in their teaching objectives, and 
+facilitating learning for experienced programmers using new technologies and systems. 
 
-Programming environments that are being used during a learning process focus on different design needs than those that are
-designed to be useful for experts. Educational programming environments typically focus on trying to mitigate what people typically
-find to be hard about programming while supporting the motivations that different people have for trying to learn these new skills :cite:`guzdial2004programming` :cite:`kelleher2005lowering`.
-A few general strategies that are employed to accomplish these goals are developing special programming languages for learning and developing special
-environments (without changing the programming language).
+Programming languages and environments that are designed for use during a learning process are governed by different design criteria than those that are
+designed to be useful for experts. Educational programming environments typically focus on two problems. One is trying to flatten the 
+steep learning curve often faced by novice programmers and help them overcome what is typically perceived as "hard" with 
+programming :cite:`guzdial2004programming`. The second is supporting the motivations that different 
+people have for trying to learn these new programming skills :cite:`kelleher2005lowering`.
 
 There are a few key design principles that are often used in either of these strategies. One is to try to minimize frustration while still being
 challenging enough to maintain interest, with the related principle of incorporating motivations for learning these skills. 
 Another is related to being as concrete as possible versus abstract, as people need to understand concrete concepts before they
-can begin to apply abstractions. Additionally, educational programming environments often are designed to give immediate feedback, often 
-in a visual way that is easy for a learner to understand and see what is happening.
+can begin to apply abstractions. Additionally, educational programming environments often are designed to give immediate feedback, 
+with one way of accomplishing this being using visual notation that helps the user confirm or refine their beliefs about how the
+program being written behaves.
 
 .. container:: bib-item
 
@@ -52,7 +53,7 @@ out education in programming.
 
   This paper goes over the effectiveness of integrating a programming activity into a regular kindergarten class using puzzles
   that give movement directions to a lady bug to reach some designated destination. The students in the class overall had fun
-  solving the puzzles. The children solved the problems in a step-wise fasion, typically only giving the lady bug 1-3 move 
+  solving the puzzles. The children solved the problems in a step-wise fashion, typically only giving the lady bug 1-3 move 
   commands before running the actions and checking to where the lady bug moved.
 
 .. todo:: 
@@ -72,7 +73,7 @@ minimizes the demand for typing and shows program construction in a graphical wa
     :filter: key == 'wyeth2001electronic'
 
   Electronic blocks are physical blocks that are designed for young children to familiarize themselves with concepts related to programming (like input and output).
-  There are three types of blocks, sensor (e.g. sound), logic (e.g. not), and action (e.g. light that turns on and off), that can be combined to form stacks. The researchers ran a study with a class of preschoolers. They found that in general
+  There are three types of blocks, sensor (e.g. sound), logic (e.g. not), and action (e.g. light that turns on and off), that can be combined to form stacks. Researchers ran a study with a class of preschoolers. They found that in general
   the kids seemed to have fun with the blocks. The children had a hard time understanding the logic blocks, but were in general able to understand
   the sensor and action blocks. The preschoolers had an easier time building complexity between interactions of two stacks as opposed to within a single stack.
 
@@ -85,19 +86,37 @@ minimizes the demand for typing and shows program construction in a graphical wa
   designed for kids who have no programming experience. The system strives to make execution visible and allow for tinkering (learning by trying). The
   code is live such that any code fragment can be executed simply by clicking on it (no compile-link-run cycle to go through).
 
-.. todo:: 
-    Find evaluation of effectiveness of Scratch
+.. container:: bib-item
+
+  .. bibliography:: educational-technology2.bib
+    :filter: key == 'maloney2008programming'
+
+  Scratch was introduced as an optional activity at an after-school technology center for traditionally disadvantaged youth in 
+  an impoversished area. Little supervision or formal teaching was provided for the system. Over the course of two years,
+  the youth used Scratch more than any other media-creation tool available at the center. They felt that Scratch
+  was most similar to school activities that particularly supported creativity and personal expression, as opposed 
+  to subject areas that are typically associated with programming.
+
+.. container:: bib-item
+
+  .. bibliography:: educational-technology2.bib
+    :filter: key == 'wilson2010evaluating'
+
+  Scratch was used for teaching lessons in an IT class for 8-9 year old students at a school. The study
+  did not find evidence of whether or not using this programming environment helped the students develop cognitive abilities. 
+  However, based on feedback from the students, they generally enjoyed and were enthusiastic about their lessons 
+  that used Scratch. 
 
 Feedback Generation
 ===================
 
-With the growing number of people interested in learning programming skills, institutions have difficulty getting the number of instrutors
+With the growing number of people interested in learning programming skills, institutions have difficulty maintaining the number of instructors
 needed to give students valuable one-on-one feedback. Thus, automatic feedback generation is innvaluable in the current learning climate.
 
 There are various ways for students to get feedback. One way that automatic feedback is being generated is in systems that perform as "autograders" where
 students can upload submissions and get information back on how their solutions performed against test suites. This however still leaves a burden
 on students to search out where their solution went wrong, which may be difficult for novices. Thus, feedback that can guide students through
-debugging code with errors in it can be far more valuable to the learning process than what is returned by standard autograders.
+debugging code with errors can be far more valuable to the learning process than what is returned by standard autograders.
 
 .. container:: bib-item
 
@@ -106,7 +125,7 @@ debugging code with errors in it can be far more valuable to the learning proces
 
   Five types of common hints that teachers give to help students fix their code that can be generated using program synthesis
   are itentified: transformations (what to change to make the program work), locations (the line(s) that need to be changed to make the program work),
-  data (demonstrating where a variable takes on the wrong value), behavior (identifying where the program is not behaving how it is supposed to), and
+  data (demonstrating where a variable takes on the wrong value), behavior (identifying how the program is not behaving how it is supposed to), and
   examples (examples of inputs and correct outputs). Additionally, four principles of feedback design are identified: 1) help students locate bugs, 2)
   demonstrate instances in which code fails, 3) explain behavior of code with visual execution, and 4) help students understand the relationship
   between the cause of an error and its symptoms.
@@ -116,7 +135,7 @@ Tutoring Systems
 
 Large class sizes and the growing number of people learning computer programming through online courses makes the 
 development of tutoring systems valuable. Tutoring systems provide visualizations and walkthroughs of the execution
-of code. Additionally, they may guide students through developing a program. Students may remain more engaged with the system
+of code. Additionally, they may guide students through developing a program and improving problem solving skills. Students may remain more engaged with the system
 and learn more if there is interaction that demonstrates whether or not the student is understanding and following along.
 
 .. container:: bib-item
@@ -127,11 +146,31 @@ and learn more if there is interaction that demonstrates whether or not the stud
   Python Tutor is an online tutoring system. This is a form of program visualization that shows the state of memory (stack frames and the heap)
   as a piece of code executes, essentially creating visual code traces. 
 
-.. todo::
-    Add information about systems that introduce the programming language a bit at a time (like SP/k)
+.. container:: bib-item
 
-.. todo::
-    Find interactive tutoring systems
+  .. bibliography:: educational-technology2.bib
+    :filter: key == 'cazzola2015gradually'
+
+  This paper goes over the potential benefits of introducing a programming language gradually instead of all at once.
+  One such benefit is allowing students to focus on problem solving, rather than focusing on understanding
+  the full features of a language. A series of subdivisions of Javascript (each subdivision only
+  contains a subset of features of the language, such as conditional statements or functions) 
+  was used to teach a few students in an introductory programming class. The study generally found 
+  that students felt like they focused more on problem solving than learning the programming language.
+
+.. container:: bib-item
+
+  .. bibliography:: educational-technology2.bib
+    :filter: key == 'gerdes2012interactive'
+
+  This paper discusses an interactive tutoring system for students learning Haskell. The system provides
+  feedback on if the student is on the right track solving the problem, hints if the student is stuck,
+  and suggestions on how to refactor code if the student should iterate on their solution. Hints and 
+  feedback are derived from annotated solutions to problems provided by a teacher. Students using
+  the tutor build their solutions by filling in and refining "holes" in the program. Students taking a functional
+  programming course who used the system in general appreciated the ability to see worked-out solutions
+  generated by the system, but felt some work was needed to make the tutor more helpful when students
+  deviate from correct solutions.
 
 Educator Support
 ================
@@ -140,9 +179,9 @@ In the space of education technology, there is needed support for educators. Thi
 or in the context of a more formal classroom setting. 
 
 Informal knowlege sharing allows peers to share information they have learned with one another. Different environments support this to 
-varying levels with some allowing users to explore and modify projects made by other users and to ask clarifying questions.
-For a more formal classroom setting, teachers can often use support in getting a better understanding of what topics
-their students are excelling at understanding and what topics their students are struggling to understand.
+varying levels, with some allowing users to explore and modify projects made by other users and to ask clarifying questions.
+For a more formal classroom setting, teachers can often use support in getting a clear view of what topics
+their students are excelling at or struggling to understand.
 
 .. container:: bib-item
 
@@ -150,7 +189,7 @@ their students are excelling at understanding and what topics their students are
     :filter: key == 'glassman2015overcode'
 
   OverCode is a system designed to allow instructors of large programming classes to automatically group solutions that may have 
-  irrelavent syntactic differences but are semantically equivalent. This should allow instructors to get a high-level overview of
+  irrelevant syntactic differences but are semantically equivalent. This should allow instructors to get a high-level overview of
   the understandings and misunderstandings of their students more quickly than filtering through raw solutions. When evaluated against
   only having access to raw solutions, users were able to review more students' code in less time and felt that they had a better high-level
   overview of ways that the coding problems were solved. 
@@ -162,8 +201,9 @@ their students are excelling at understanding and what topics their students are
 
   CodeScoop is an interactive example extraction system that allows users to quickly pull out examples from an existing code
   base. Given selected lines to be included in an example, the system iteratively checks for ommitted
-  lines of code that may be valuable (such as control flow) to help the example writer not leave critical information out. More participants
-  in the study were able to complete an example extraction exercise when using CodeScoop compared to a text editor and liked their end result
+  lines of code that may be valuable (such as control flow) to help the example writer not leave out critical information. 
+  Study participants were asked to create an example from existing code to answer a fake Stack Overflow question. More participants
+  in the study were able to complete this example extraction exercise when using CodeScoop compared to a text editor and liked their end result
   example better.
 
 Domain Specific Environments
@@ -181,3 +221,7 @@ Domain Specific Environments
   :cite:`glassman2015overcode`
   :cite:`head2018interactive`
   :cite:`fessakis2013problem`
+  :cite:`maloney2008programming`
+  :cite:`wilson2010evaluating`
+  :cite:`cazzola2015gradually`
+  :cite:`gerdes2012interactive`
