@@ -75,14 +75,17 @@ Professional Platforms for Game Development
 In recent years, game engines such as Unity3D and Unreal Engine have been the most popular platforms for game development.
 A game engine simplifies the task of the programmer by offering convenient abstractions for the hardware and operating systems on top of which the game runs.
 Game engines also provide reusable components such as physics, game inputs, rendering, and artificial intelligence (AI).
-Entity-component systems and event-handling mechanisms have been the major architecture of game engines nowadays.
+Entity-component systems and event-handling mechanisms have been a fundamental feature of the software architecture of game engines nowadays.
+Entity-component systems allow users to attach components (i.e. scripts) to different game entities, which maximizes the reusability and interoperability of software modules.
 
 .. container:: bib-item
 
   .. bibliography:: game-development.bib
     :filter: key == 'anderson2008case'
 
-  This article presents a number of potential research topics with regard to the game engine development and architecture design.
+  While available research has mainly focused on game engine subsystems such as rendering and AI, the issues regarding the overall architecture design of game engines have merely been discussed.
+  This article, in response, presents a number of key aspects and potential research topics with regard to the architecture design of game engines.
+  These topics include the establishment of a unified language of game development, the identification of software components that are common to all types of computer games, the definition of the role of content creation tools in the game development process and as part of game engines, and many others.
 
 .. container:: bib-item
 
@@ -93,7 +96,7 @@ Entity-component systems and event-handling mechanisms have been the major archi
   In 3D interactive systems that are developed using game engines, User Interface (UI) components are organized in a hierarchy that is used to propagate events among vertically connected components.
   However, programmers have to connect horizontal components manually and register/unregister events as needed in order to enable communications between those horizontal components.
   This paper introduces a messaging framework, Mercury, to facilitate communication among components.
-  This framework simplifies message propagation for inter-component communication and provides support for UI management and sharing.
+  This framework simplifies message propagation for inter-component communication for UIs in a structured way.
 
 Declarative Programming Languages for Game Development
 ---------------------------------------------------------
@@ -117,19 +120,20 @@ In this section we examine Functional Reactive Programming, visual block-based p
     :filter: key == 'maloney2010scratch'
 
   This paper introduced Scratch, a visual block-based programming environment that allows users to program animated stories and games.
+  Users can import or create images and sounds within the editor.
+  Programming is done by dragging and snapping together colorful command blocks to control 2D graphical objects called sprites moving on a background called the stage.
+  This paper also describes aspects of Scratch and the language design that make it easier for young people to explore, express themselves, and learn.
 
-.. container:: bib-item
+The Blueprints Visual Scripting system :cite:`blueprints` in Unreal Engine is a gameplay scripting system that uses the concept of dataflow programming to compose game elements from within the Unreal Editor.
+Users can use simple drag-and-drop operations to draw connections between nodes on the interface without writing code.
+The system is used to define object-oriented (OO) classes and objects in the engine.
+Specifically, Blueprints can handle extending classes, storing and modifying default properties, and managing components instancing for classes.
 
-  .. bibliography:: game-development.bib
-    :filter: key == 'cooper2000alice'
-
-  This paper introduced Alice, a 3D interactive animation environment.
-
-.. todo::
-    Cite Visual Scripting features from Unity and Unreal that use visual dataflow programming.
 
 Game Description Languages
 ----------------------------------
+Game description languages seek to express components expected in the state of a game, and the rules that induce transitions, resulting in a state-action space.
+Such languages have the potential of enabling automatic game generation and offer opportunities to formalize the knowledge involved in game design and test game design theories.
 Several attempts have been made in the past to model aspects of games and to encode game mechanics for analysis.
 
 .. container:: bib-item
@@ -146,14 +150,36 @@ Several attempts have been made in the past to model aspects of games and to enc
   .. bibliography:: game-development.bib
     :filter: key == 'martens2015ceptre'
 
-  This paper introduced Ceptre, a rule specification language to enable rapid prototyping for experimental game mechanics.
+  This paper introduces Ceptre, a rule specification language to enable rapid prototyping for experimental game mechanics.
   Ceptre presents a correspondence between *gameplay* and *proof search* in linear logic.
   This methodology is proposed to help game designers and researchers in designing, analyzing, and debugging generative, multi-agent gameplay.
 
 Game Development in Education
 -------------------------------------------------
-.. todo::
-    Introduce game development in educational settings.
+Researchers have developed game development environments to broaden interest in computing amongst students in K-12 and university settings.
+
+.. container:: bib-item
+
+  .. bibliography:: game-development.bib
+    :filter: key == 'maloney2008programming'
+
+  This paper reports on the Scratch programming experiences of urban youth from after-school programs over an 18-month period.
+  A total of 536 Scratch projects were collected from the after-school program that mainly serves low-income African American and Latino youths ages 8-18.
+  There projects were analyzed to get an idea of what programming concepts were learned by these youth.
+  The authors also conducted interviews with 30 participants to get their subjective experiences.
+  The findings show that the youth chose to get involved more in Scratch programming given that they had many other software options and that they are motivated to learn to program.
+
+.. container:: bib-item
+
+  .. bibliography:: game-development.bib
+    :filter: key == 'kelleher2007storytelling'
+
+  This paper introduces Storytelling Alice, a programming environment that introduces middle school girls to computer programming as a means to creating 3D animated stories.
+  Alice is a visual block-based programming environment that makes it easy to create 3D animation or program simple games in 3D.
+  Storytelling Alice provides supports for story creation including 1) a set of high-level animations, 2) a collection of 3D characters and scenery designed to spark story ideas, and 3) a tutorial that introduces users to writing.
+  This paper presents a study comparing girls' experiences learning to program using Storytelling Alice and Generic Alice, a version of Alice without storytelling support.
+  A total of 88 girls from local Girl Scout troops participated in the evaluation (45 assigned to Generic Alice and 42 assigned to Storytelling Alice).
+  Users of Storytelling Alice were found more motivated to program; they spent 42% more time programming, were more than 3 times as likely to sneak extra time to work on their programs.
 
 Live Coding
 ===========
