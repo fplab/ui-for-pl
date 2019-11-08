@@ -175,6 +175,58 @@ Diagrammatic notation is also used to represent structures that arise in fields 
 
   Graphite 
 
+Emergence of VPLs and Visual Notations
+--------------------------------------
+
+Overview
+~~~~~~~~
+
+After the emergence of visual programming languages (VPLs), which promised to improve the human programmming experience by integrating text with visual notations to form visualization systems, the research about VPLs rests on improving notations.
+The visual notations of interest are depictions that form the non-textual parts of a VPL, such as lines, patterns and geometric shapes. Since notations are not superior in an absolute sense, researches on figuring out the pros and cons for all kinds
+of visual notations against their textual alternatives are conducted. The following paragraphs show several example studies.
+
+Flowchart
+~~~~~~~~~
+
+The most common instance of visual notation in programming is Flowchart which is usually served as a notation for Control Flow. In a Flowchart, the nodes with text represent the branch conditions and corresponding tasks and the edges with text represents
+branch directions. Researches on whether the flowcharts increase comprehension compared to standard textual program have been conducted and prove that almost in all cases,
+structured flowcharts had a significant advantage for understanding both all dependent variables and all levels of algorithm complexity. 
+
+Matrix (Forms/3)
+~~~~~~~~~~~~~~~~
+
+Another very strong controlled study favorable to a VPL notation designed for Matrix manipulations has been conducted to compare two textual programming languages (Pascal and modified form of APL) to a non-flowchart VPL (Forms/3). The result surprisingly manifested the
+programming accuracy of using Forms/3.
+
+LabVIEW
+~~~~~~~
+
+An industrial-based, observational study to discern how LabView (one of a very successful VPL) would compare to conventional, text-based programming (C) has been conducted and successfully showed that development team with LabVIEW was much more advanced than team with C in terms of both
+productivity and product quality. The researchers in this study attributed the productivity benefits of VPLs to increased communication between the customer (engineers and scientists who posses limited programming experience) and developer (designers of VPLs).
+
+.. container:: bib-item
+
+  .. bibliography:: notation.bib
+    :filter: key == 'vpl1997empirical'
+
+  This article is from a journal of visual language and computing. The author mentioned the current situation of visual programming language research and was trying to demonstrate the shortage of empirical studies backing the design decisions in these VPL and visualization systems. In the following  
+  sections the author examined the empirical data in order to perfrom investigations, presents evidence and illustrated different perspecives of VPL evaluation.
+
+Neural Networks representation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+One of another interesting studies of visual notations is about a new visual notation for the implementation of Neural Networks. Though the notation isself is not diagrammatic but based on JSON, the description of the network is based on data flows, which does not require understanding of 
+traditional textual programming language like C and C++.
+
+
+.. container:: bib-item
+
+  .. bibliography:: notation.bib
+    :filter: key == 'nn2018dfvm'
+
+  This article is from IEEE Second International Conference on Data Stream Mining & Processing, the main focus is on how a neural network can be implemented with help of the data flow management system at a virtual machine and the idea behind this is an alternative representation of neural networks, instead 
+  of using tradional programming-based library like PyTorch...
+
 Customizable Notation
 =====================
 
@@ -204,3 +256,5 @@ Customizable Notation
   :cite:`hughes95`
   :cite:`wadler2003prettier`
   :cite:`bernardy17`
+  :cite:`vpl1997empirical`
+  :cite:`nn2018dfvm`
