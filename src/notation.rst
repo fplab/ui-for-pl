@@ -190,6 +190,12 @@ Customizable Notation
 
   Cite Schwerdfeger and Van Wyk
 
+.. container:: bib-item
+
+  .. bibliography:: notation2.bib
+    :filter: key == "brown1992color"
+
+ This paper focuses on the use of color and sound in **algorithm animation** systems. Color has been used in *Zeus*, a system for algorithm animation and multi-view editing, for the purpose of encoding the state of data structures, typing views together, highlighting activity, emphasizing patterns, and making history visible. Besides, the postive preliminary experiences using sound in *Zeus* show that sound will be a powerful technique for communicating information. See :ref:`language-usability:Algorithm Animation` for more details.
 
 .. container:: hidden
 
@@ -204,3 +210,4 @@ Customizable Notation
   :cite:`hughes95`
   :cite:`wadler2003prettier`
   :cite:`bernardy17`
+  :cite:`brown1992color`
