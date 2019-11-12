@@ -25,24 +25,21 @@ API Usability
   * Distinction with language usability
 ..
 
-Application Programming Interfaces (APIs) are a set of functions and procedures
-that enable an application to access services or data from another source.
+Application Programming Interfaces (APIs) are interfaces that mediate interactions between software components.
 Examples include software libraries and frameworks, OS system calls, and web protocols.
-APIs are a ubiquitous aspect of programming.
-Almost every program written will use an API :cite:`myers2016improving`.
+Nearly every program written will use an API :cite:`myers2016improving`.
 
 The goal of the API designer is to create an API that a broad range of
-programmers can use for their applications.
+programmers can use in their applications.
 This goal mirrors the goals of programming language designers --
 an API designer must a create a service that is "usable" to
 a broad and vaguely scoped audience.
-Like languages, creating APIs is a challenging design problem of making
-a complex service simple enough to be used
-by users who may be are unaware of the inner workings of the API.
+Like languages, APIs must be simple enough to be used
+by users who are unaware of the inner workings of the API.
 
-However, unlike language design, which may begin with a "bottom-up" approach,
-designing APIs is often a problem of taking an already large and complex
-system and simplifying it for a user.
+In many cases, both language and API design can be approached through a "bottom-up" manner -- designed with smaller components
+that can be combined to create complex behavior.
+However, in other cases, designing APIs involves involves putting a more usable layer atop a more complex existing API.
 This adds another layer of complexity in designing APIs.
 To illustrate this diffulty:
 
@@ -50,8 +47,8 @@ To illustrate this diffulty:
     :cite:`myers2016improving`.
 
 
-API Design Aspects
-------------------
+API Design Considerations
+-------------------------
 
 ..
   Outline
@@ -69,6 +66,15 @@ Changing the inherant complexity exhibits one of the many tradeoffs between desi
 Making an API more powerful (allowing a user to do more things with the API)
 by increasing complexity decreases the learnability of the API.
 However, increasing the learnability of an API by lowering the complexity also lowers the power of the API.
+
+Myers et al. identify 6 key design aspects of API design, which we describe here.
+
+* Learnability - an API user must learn how to use an API as quickly and easily as possible.
+* Productivity - an API user should be able use the API effectively to create their program.
+* Error-Prevention - an API user should be able to handle and prevent error cases when their program is used.
+* Simplicity - the design of the API should be simple.
+* Consistency - the design of the API should be consistent.
+* Matching Mental Models - the API user should have an accurate mental model of how the API executes procedures.
 
 .. container:: bib-item
 
@@ -89,7 +95,8 @@ However, increasing the learnability of an API by lowering the complexity also l
   This paper identifies key aspects in API usability, in an *API Concepts Framework*,
   a structure where *concepts* represent possible user actions, leading
   to measureable properties on usability. Using this framework, the paper introduces
-  an automated method for measuring API usability, which they test in a user study.
+  an automated method for measuring API usability, which they test in a user study and
+  find their calculated values highly correlated with user measured time.
 
 User Studies
 ------------
@@ -102,20 +109,20 @@ User Studies
   * Paper: The Implications of Method Placement on API Learnability
 ..
 
-Testing how to best design APIs is immensely difficult, as the numerous API design
+Testing API design is difficult, as the numerous API design
 decisions all affect the overall usability interdependently
 :cite:`myers2016improving`. Testing the high-level and global design decisions
 is often intractable because of this. Most user studies in API usability
 examine a specific aspect of API design :cite:`stylos2007usability`
-:cite:`stylos2008implications`.
+:cite:`stylos2008implications` :cite:`ellis2007factory`.
 
 .. container:: bib-item
 
   .. bibliography:: api-usability.bib
     :filter: key == 'stylos2007usability'
 
-  This paper examines the impact of requiring parameters in
-  objects' constructors on usability. The study in this paper showed that developers
+  This paper examines the usability implications of class constructor parameters.
+  The study in this paper showed that developers
   strongly preferred and were more effective with APIs that did not
   require parameters in object constructors. This contradicted the
   belief that object constructor parameters would "self-document"
@@ -132,6 +139,17 @@ examine a specific aspect of API design :cite:`stylos2007usability`
   unexpected location. Participants with "correctly-placed" methods
   were orders of magnitudes faster in their tasks.
 
+.. container:: bib-item
+
+  .. bibliography:: api-usability.bib
+    :filter: key == 'ellis2007factory'
+
+  This paper examines the usability of the factory design pattern.
+  Participants were asked to complete tasks that either used a
+  factory pattern constructor or plain constructor in a user study.
+  Participants were found to be significiantly slower when programming
+  in tasks with a factory pattern.
+
 Documentation Improving Tools
 -----------------------------
 
@@ -144,23 +162,25 @@ Documentation Improving Tools
   * Paper: Mica: A Web-Search Tool for Finding API Components and Examples
 ..
 
-API usability can also be improved by creating better tools for understanding and searching through APIs -- improving API documentation
-:cite:`stylos2009improving` :cite:`dekel2009improving` :cite:`stylos2006mica`.
+API usability can also be improved by creating better tools for understanding and searching through APIs.
 Documentation represents another distinction of API design from language design.
 The usage of APIs is so closely tied with using the API documentation that
 the documentation can be considered part of the API.
-A good documentation is integral in making an inherently complex API more learnable.
+Good documentation is integral in making an inherently complex API more learnable.
+
+.. :cite:`stylos2009improving` :cite:`dekel2009improving` :cite:`stylos2006mica`.
 
 .. container:: bib-item
 
   .. bibliography:: api-usability.bib
     :filter: key == 'stylos2009improving'
 
-  This paper presents Jadeite, a tool for improving API documentation by
-  letting API users add "pretend" classes or methods in places where
-  they expect a class or method to exist. This method helps alleviate
-  the problem where classes or methods are located in unexpected locations
-  :cite:`stylos2008implications`.
+  This paper presents Jadeite, a tool for improving API documentation.
+  In many APIs, users often expect a class or method to be placed in a
+  different location than actual, slowing them down :cite:`stylos2007usability`.
+  Jadeite allows API users to add "placeholder" classes or methods in places where
+  they expect a class or method to exist, which can redirect future API users to
+  the correct location.
 
 .. container:: bib-item
 
@@ -177,9 +197,11 @@ A good documentation is integral in making an inherently complex API more learna
   .. bibliography:: api-usability.bib
     :filter: key == 'stylos2006mica'
 
-  This paper presents Mica, a tool for helping API users search through APIs.
-  Mica is built on Google and analyzes the content of Google results to
-  give more relevant results for programmers.
+  This paper examines how API users use web search as a tool for learning APIs
+  and identifies innefficiencies in this process when web search shows irrelevant results.
+  This paper presents Mica, a tool for helping API users find more relevant results on Google.
+  Mica analyzes the content of Google results, directly shows API classes and methods,
+  and makes other UI changes to make relevant results visible.
 
 Program Comprehension
 =====================
