@@ -177,7 +177,7 @@ the bug will eventually be found.
 
 Although algorithmic debugging can be applied in any language paradigm, it is most
 suited for declarative languages, e.g., pure functional languages.
-to determine whether an ET node for a pure functional program is correct, the
+To determine whether an ET node for a pure functional program is correct, the
 programmer need only check that the return value of the corresponding, referentially
 transparent expression is the expected one, independent of any other ET node.
 On the other hand, checking the correctness of an ET node for an imperative program
@@ -211,11 +211,25 @@ widespread use. (add note about functional programming research lagging in tooli
   .. bibliography:: debugging.bib
     :filter: key == 'caballero2017survey'
 
-  This paper surveys the state-of-the-art in algorithmic debugging
-  (add some example observations)
-  (add observation about algorithmic debugging still not reaching mature
-  implementations or wide audiences)
+  This paper surveyed the state-of-the-art in AD in
+  2017, 35 years since the technique's conception.
+  Motivating this survey was the authors' observation that, despite the many
+  useful properties of AD, the technique has yet to be
+  realized in a mature tool used in industry.
 
+  In the first half, the survey reviews the general principles of AD and
+  discusses the adaptation of these principles to various programming paradigms,
+  including logic, functional, imperative, and object-oriented programming.
+
+  In the second half, it takes a critical view and enumerates the historical
+  issues that have prevented widespread adoption of AD.
+  In addition to resource scalability challenges, it notes several issues
+  with the user experience of AD, including inflexible navigation of the
+  debugging tree and difficult-to-answer generated questions.
+  It then reviews a variety of proposed solutions to many of these issues,
+  but also notes in a review of existing implementations that current
+  tools remain largely sequestered within academia and do not integrate
+  many existing solutions.
 
 Program Visualization
 ---------------------
