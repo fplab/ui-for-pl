@@ -177,7 +177,7 @@ Data visualization can help data science workers intuitively see and explore the
 Vega_ is a popular declarative language for creating interactive visualizations.
 Users define the interactive elements in JSON format, then Vega renders it using Canvas or SVG.
 In Vega, users often need to provide a specification of the visual elements.
-Vega-Lite_ is a simplified version of Vega.
+Vega-Lite_ :cite:`satyanarayan:2017` is a simplified version of Vega.
 Vega-Lite automates the construction of some specifications (e.g., axis, legends, scales).
 Vega-Lite is compiled to Vega and can only express a subset of interactive visualizations in Vega.
 
@@ -186,7 +186,7 @@ Vega-Lite is compiled to Vega and can only express a subset of interactive visua
 
 .. container:: bib-item
 
-  .. bibliography:: data-analysis-environments2.bib
+  .. bibliography:: data-analysis-environments.bib
     :filter: key == 'satyanarayan:2017'
 
 Novice users may find it difficult to draw connections with the specification and the runtime state in Vega.
@@ -206,7 +206,7 @@ Tools like Vega support the quick generation of visual representations, but they
 The project DearData_ creatively brings the view that people use data not only to become more efficient, but also become more humane.
 It calls people to collect and hand drawing their personal data on postcards.
 In this way, people have more freeform expressions of the visual elements, but they have to draw every single data points manually.
-The project DataInk manages to bridge the gap between traditional visualization tools and freeform hand drawing.
+The project DataInk :cite:`xia:2018` manages to bridge the gap between traditional visualization tools and freeform hand drawing.
 It allows users to create expressive data visualizations on a digital canvas through direct pen and touch input.
 It enables users to bind data attributes with visual properties (e.g., shape, color) on the design.
 The research team evaluated DataInk with 8 designers and non-experts.
@@ -241,19 +241,82 @@ In addition, Tea can achieve or even beat expert recommendations on textbook tut
 
 Computational notebooks
 =======================
-.. todo::
-  Include Guo's blog post on data science workflows and challenges: https://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext
+Till now, we discussed challenges and novel tools that targeted at a particular stage in data science workflow.
+In complex data science projects, multiple stages are involved and they intertwine with each other.
+Data science workers often need to make comparisons and explore alternatives.
+This process requires them to quickly script experimental analysis, inspect the intermediate results, document their thoughts, communicate with others, and be able to generate a report for others to replicate the analysis.
 
-One challenge - "how to consolidate all of the various notes, freehand sketches, emails, scripts, and output data files created throughout an experiment to aid in writing"
+    "The main challenge here is how to consolidate all of the various notes, freehand sketches, emails, scripts, and output data files created throughout an experiment to aid in writing."
+    -- Philip Guo, `Data Science Workflow: Overview and Challenges`_
 
-History of Computational Notebooks
-----------------------------------
+    .. _`Data Science Workflow: Overview and Challenges`: https://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext
 
-Limitations of Computational Notebooks
---------------------------------------
+Computational notebook platforms allow users to write executable notebook documents that combine code chunks, intermediate output, and rich text elements.
+It helps data science workers to present, reproduce, share, and collaborate their analysis.
+There are many computational notebook platforms designed for different analysis languages and environments, for example, `Apache Zeppelin`_, `Spark Notebook`_, `Observable`_, `RStudio`_, `Wolfram Notebooks`_.
+Among these computational notebook platforms, `Jupyter Notebook`_ is the most widely used one.
+It evolved from IPython, which is a terminal-based interactive shell for creating interactive visualizations for scientific computing.
+Wrapping IPython as the kernel, Jupyter Notebook has a powerful graphical interface that allows users to edit and execute "cells" -- small chunks of code or markdown text.
+
+.. _`Apache Zeppelin`: https://zeppelin.apache.org
+.. _`Spark Notebook`: http://spark-notebook.io
+.. _`Observable`: https://observablehq.com
+.. _`RStudio`: https://www.rstudio.com/
+.. _`Wolfram Notebooks`: http://www.wolfram.com/notebooks/
+.. _`Jupyter Notebook`: https://jupyter.org
+
+.. image:: https://s5.gifyu.com/images/133e26a4442805267.gif
+  :width: 600
+  :alt: Jupyter Notebook
 
 Managing the Masses on Notebooks
 --------------------------------
+Although computational notebooks are designed to support not only performing, but also documenting and sharing analysis, most people consider it personal, exploratory, and messy.
 
-Collaboration in Notebooks
---------------------------
+Rule et al. :cite:`rule:2018` analyzed over 1 million notebooks on GitHub and found them often lack explanatory text.
+Moreover, the textual descriptions in notebooks tend to focus heavily on describing methods rather than discussing reasoning or results.
+They conclude that there is a tension between exploration and explanation in writing and sharing computational notebooks.
+
+.. container:: bib-item
+
+  .. bibliography:: data-analysis-environments2.bib
+    :filter: key == 'rule:2018'
+
+Kery et al. took an interview approach to study how data scientists kept track of variants they explored in Jupyter notebook :cite:`kery:2018`.
+They found that both formal and informal versioning attempts caused issues.
+Formal versioning mechanisms such as using Git may hinder the exploration, as data science workers rapidly iterate and alternate their analysis.
+Informal versioning attempts include copying code, keeping unused code, and commenting out code before repurposing analysis.
+Informal versioning creates masses in the notebook.
+Data science workers have to maintain a strong mental map of the cells.
+Data science workers often need to pause their exploration and actively curate notebooks into a structured narrative.
+Their results further aligned with Rule's findings that explanation annotations were rarely used in the exploration phase of work.
+
+.. container:: bib-item
+
+  .. bibliography:: data-analysis-environments2.bib
+    :filter: key == 'kery:2018'
+
+To address the challenges in informal versioning, they designed Variolite, a code editing tool with local versioning control :cite:`kery:2017`.
+Variolite is an Atom editor extension that enables users to version a section of the code based on users' selection.
+They later integrated this design into Jupyter notebook with Verdant :cite:`kery:2019`.
+They designed an enhanced history view with algorithmic and visualization techniques for data science workers to better foraging past analysis choices.
+
+.. container:: bib-item
+
+  .. bibliography:: data-analysis-environments2.bib
+    :filter: key == 'kery:2017'
+
+.. container:: bib-item
+
+  .. bibliography:: data-analysis-environments2.bib
+    :filter: key == 'kery:2019'
+
+Head et al. took a different design approach :cite:`head:2019`.
+Instead of having versions for the same purpose of code folded, they started with how data science workers naturally adopted informal versioning attempts (e.g., keeping old analysis code, copying cells).
+They explored the idea of code gathering to help data science workers trace minimal "slice" of code that generates the computational results.
+
+.. container:: bib-item
+
+  .. bibliography:: data-analysis-environments2.bib
+    :filter: key == 'head:2019'
+
