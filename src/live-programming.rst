@@ -79,17 +79,6 @@ debugging interfaces influence those processes.
 .. container:: bib-item
 
   .. bibliography:: debugging.bib
-    :filter: key == 'latoza2010reachability'
-
-  This paper introduced the concept and formalism of
-  *reachability questions*: searches across feasible paths through a
-  program for target statements matching search criteria.
-  (add another sentence about user studies and prevalence of reachability questions)
-
-
-.. container:: bib-item
-
-  .. bibliography:: debugging.bib
     :filter: key == 'lawrance2013foraging'
 
   This paper provided a theory of programmer navigation when debugging
@@ -146,6 +135,27 @@ Program Slicing
 .. container:: bib-item
 
   .. bibliography:: debugging.bib
+    :filter: key == 'perera2012explain'
+
+  (static and dynamic program slicing for functional programs)
+  (no implementation or evaluation)
+
+Reachability Questions
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. container:: bib-item
+
+  .. bibliography:: debugging.bib
+    :filter: key == 'latoza2010reachability'
+
+  This paper introduced the concept and formalism of
+  *reachability questions*: searches across feasible paths through a
+  program for target statements matching search criteria.
+  (add another sentence about user studies and prevalence of reachability questions)
+
+.. container:: bib-item
+
+  .. bibliography:: debugging.bib
     :filter: key == 'latoza2011reacher'
 
   (describe connection to earlier work on reachability questions)
@@ -153,13 +163,6 @@ Program Slicing
   (describe user study and results)
   (should probably move this out of program slicing)
 
-.. container:: bib-item
-
-  .. bibliography:: debugging.bib
-    :filter: key == 'perera2012explain'
-
-  (static and dynamic program slicing for functional programs)
-  (no implementation or evaluation)
 
 
 Algorithmic Debugging
@@ -216,20 +219,18 @@ widespread use. (add note about functional programming research lagging in tooli
   Motivating this survey was the authors' observation that, despite the many
   useful properties of AD, the technique has yet to be
   realized in a mature tool used in industry.
-
   In the first half, the survey reviews the general principles of AD and
   discusses the adaptation of these principles to various programming paradigms,
   including logic, functional, imperative, and object-oriented programming.
-
   In the second half, it takes a critical view and enumerates the historical
   issues that have prevented widespread adoption of AD.
-  In addition to resource scalability challenges, it notes several issues
+  It notes, in addition to resource scalability challenges, several issues
   with the user experience of AD, including inflexible navigation of the
   debugging tree and difficult-to-answer generated questions.
   It then reviews a variety of proposed solutions to many of these issues,
   but also notes in a review of existing implementations that current
   tools remain largely sequestered within academia and do not integrate
-  many existing solutions.
+  many known solutions.
 
 Program Visualization
 ---------------------
