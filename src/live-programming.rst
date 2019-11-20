@@ -74,28 +74,51 @@ debugging interfaces influence those processes.
   The framework deconstructs the various cognitive breakdowns that may
   occur throughout software development and characterizes software
   errors in terms of the *chains of cognitive breakdowns* that lead to
-  them. (add another sentence about analysis of Alice and Whyline)
+  them. Cognitive breakdowns are characterized, in turn, by their breakdown type,
+  the action being performed by the programmer, the interface being
+  used to perform the action, and the information being acted upon.
+  For example, an interruption may cause a programmer to experience
+  an inattention breakdown upon creating a loop header in their program
+  editor and forget to include the closing brace, introducing a syntax
+  error.
+  The paper described the application of this methodology to
+  evaluate the Alice programming environment by coding and quantifying
+  users' common breakdown chains.
+  The use of this framework directly inspired the design of new programming
+  tools such as the Whyline :cite:`ko2008whyline`.
 
 .. container:: bib-item
 
   .. bibliography:: debugging.bib
     :filter: key == 'lawrance2013foraging'
 
-  This paper provided a theory of programmer navigation when debugging
+  Prior to this paper, theories of debugging relied on complex
+  mental constructs and were
+  mostly developed in an age in which programming environments were
+  relatively simple. These theories did not take into account the substantial
+  navigational activities performed in modern IDEs and offered little
+  practical advice to builders of software engineering tools.
+  This paper presented a theory of programmer navigation when debugging
   based on information foraging theory.
-  (add sentence elaborating on connection to ift)
-  (add sentence about user study)
-  (add sentence about providing first principled design guidelines for making interactive debuggers)
-
+  Information foraging theory is an instance of rational analysis, a
+  methodology for modeling cognitive processes as optimization functions
+  over environmental and (minimally assumed) cognitive constraints---in
+  particular, without reliance on hypothesized mental structures.
+  This paper followed Sjøberg et al.'s theory-building process
+  :cite:`sjoberg2008building`: it adapted the constructs of information
+  foraging theory to programmer navigation during debugging; empirically
+  investigated the circumstances in which the theory is applicable; and
+  empirically evaluated the theory's predictive power.
 
 
 Interactive Debuggers
 ---------------------
 
-describe history of transition from physical computing
-systems to observing core dumps
-to more interactive stepping and navigation, graphical
-projections of execution behavior onto source code, etc
+.. todo::
+  describe history of transition from physical computing
+  systems to observing core dumps
+  to more interactive stepping and navigation, graphical
+  projections of execution behavior onto source code, etc
 
 Interactive Breakpoints
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -112,57 +135,131 @@ Time-Travel Debugging
 Program Slicing
 ^^^^^^^^^^^^^^^
 
-(add description of program slicing as decomposition of programs)
-(provide some overview of different types of program slicing, e.g., static vs dynamic)
+**Program slicing** is a technique for computing, given some subset of a program's behavior,
+the corresponding subset of the program that produces that behavior.
+A **slicing criterion** specifies the target behavior; the corresponding program subset
+is called a **program slice**.
+For example, in the original formulation :cite:`weiser1981slicing`, Weiser defines a
+slicing criterion as consisting of a program statement and a subset of program
+variables; a program slice is an executable subset of the original program, obtained by
+deleting program statements that do not affect the criterion variables' runtime
+values at the criterion statement.
+
+(another short paragraph about how program slicing has been generalized,
+forward vs backward, static vs dynamic, amorphous, execution slices)
 
 .. container:: bib-item
 
   .. bibliography:: debugging.bib
     :filter: key == 'weiser1981slicing'
 
-  This paper introduced program slicing.
-  (add details about static slices)
+  This paper introduced the concept of program slicing.
+  The specific proposed technique would now be categorized as static, backward slicing.
+  In this work, the slicing criterion is a program statement and a subset of program
+  variables; a program slice is an executable subset of the original program, obtained
+  by deleting program statements that do not affect the criterion variables' runtime
+  values at the criterion statement.
+  The paper showed that the problem of computing minimal static slices is undecidable,
+  but that approximate static slices can be found using data flow analysis.
+
 
 .. container:: bib-item
 
   .. bibliography:: debugging.bib
     :filter: key == 'ko2008whyline'
 
-  (describe connection to earlier work on debugging theory)
-  (describe the tool and how it uses dynamic program slicing)
-  (describe user study and result)
+  This paper presented a new debugging interface for Java programs called Whyline.
+  Unlike prior debugging interfaces---which typically require the user to select
+  particular pieces of code of interest and, thus, require translation of questions
+  into code queries---Whyline allows the user to select a "why did" or "why didn't"
+  question about some program output and then generates an answer using dynamic,
+  backward program slicing.
+  The answer is presented as a visualization of the relevant execution slice,
+  which the user can explore interactively, again by selecting "why did"
+  and "why didn't" questions about runtime values.
+  The paper described aspects of the Whyline's design and implementation---in
+  particular, how the tool derives useful questions about program output.
+  The authors noted that effective question generation was highly domain-dependent
+  ---in this case, the program output was graphical.
+  An evaluation of the Whyline on one task showed that novice programmers
+  with Whyline were twice as fast as expert programmers without it.
 
 .. container:: bib-item
 
   .. bibliography:: debugging.bib
     :filter: key == 'perera2012explain'
 
-  (static and dynamic program slicing for functional programs)
-  (no implementation or evaluation)
+  This paper developed novel foundations and conceptual user interactions
+  for dynamic, backward program slicing of higher-order functional programs.
+  Prior slicing methods, primarily developed for imperative programs, were
+  restricted to slicing at the granularity of variables---a poor fit for
+  the complex values (e.g., higher-order functions, recursive data types)
+  prevalent in the functional setting.
+  In this work, given a program execution, a slicing criterion is a partial
+  manifestation of the output value, in which only subvalues of interest
+  are present and all others are replaced with holes;
+  a program slice is a partial program expression, where
+  subexpressions irrelevant to the criterion are replaced by holes.
+  The paper also developed a corresponding notion of an execution slice---
+  a tree-structured "unrolling" of the reduction steps leading to
+  the specified partial value, where criterion-irrelevant nodes are
+  are also replaced by holes.
+  The paper presented algorithms for computing least program and trace
+  slices, proved the algorithms correct, and presented a prototype
+  implementation of these techniques as a tool called Slicer.
+  Given a program execution and a slicing criterion, Slicer generates
+  a visualization of the least program and execution slice.
+  While these visualizations are static, the authors use them to sketch
+  the concept of a novel interactive debugging interface, leaving
+  the implementation and evaluation of such an interface to future work.
+
+  .. note::
+    The authors presented execution slicing as a novel concept, but variants
+    had already appeared in prior work, e.g., slicing ARTs in
+    :cite:`silva2006adps`, the execution slice visualization in WhyLine
+    :cite:`ko2008whyline`.
 
 Reachability Questions
 ^^^^^^^^^^^^^^^^^^^^^^
+
+A *reachability question* is a search across feasible paths through a
+program for target statements matching search criteria.
+Common reachability questions are expressed as queries about statements
+that can execute downstream/upstream from a particular origin/destination
+program statement.
+Program slicing may be viewed as an instance of a reachability question,
+where the query is to return all control and data dependencies of some
+statement.
 
 .. container:: bib-item
 
   .. bibliography:: debugging.bib
     :filter: key == 'latoza2010reachability'
 
-  This paper introduced the concept and formalism of
-  *reachability questions*: searches across feasible paths through a
-  program for target statements matching search criteria.
-  (add another sentence about user studies and prevalence of reachability questions)
+  This paper introduced the concept and formalism of reachability questions.
+  It reported the results of three separate studies---a lab study of 13 developers,
+  a survey of 460 developers, and a field study of 17 developers---and found that
+  reachability questions are quite prevalent and often time consuming to answer.
+  In the survey, developers reported asking questions that could be expressed as
+  reachability questions more than 9 times a day. In the field study, the authors
+  found that 9 of the 10 longest activities were associated with reachability
+  questions.
 
 .. container:: bib-item
 
   .. bibliography:: debugging.bib
     :filter: key == 'latoza2011reacher'
 
-  (describe connection to earlier work on reachability questions)
-  (describe the tool)
-  (describe user study and results)
-  (should probably move this out of program slicing)
-
+  Motivated by the results of :cite:`latoza2010reachability`, this paper presented
+  a novel debugging tool called Reacher that directly supports asking and answering
+  reachability questions. Upon user selection of an origin/destination statement,
+  Reacher supports searching downstream/upstream along feasible control
+  flow paths for statements matching user-specified criteria. Search results
+  selected by the user are aggregated and visually displayed as a call graph.
+  Users can interact with the call graph to navigate to corresponding source
+  code and to iteratively refine the graph to display more details as needed.
+  In a lab study with 12 participants, users with Reacher were over 5 times more successful
+  completing their tasks in significantly less time than with an existing IDE.
 
 
 Algorithmic Debugging
@@ -197,17 +294,33 @@ widespread use. (add note about functional programming research lagging in tooli
   .. bibliography:: debugging.bib
     :filter: key == 'nilsson1994lazy'
 
-  This paper introduced the use of algorithmic debugging---originally developed
-  for logic programs---for debugging lazy functional programs. (add sentence about
-  how algorithmic debugging is useful when evaluation order doesn't matter)
+  .. todo::
+    write bib entry
 
 .. container:: bib-item
 
   .. bibliography:: debugging.bib
     :filter: key == 'silva2006adps'
 
-  This paper noted the complementary strengths of program slicing and algorithmic
-  debugging and unified them in a common theoretical framework.
+  This paper combined program slicing and algorithmic debugging
+  into a unified debugging framework for functional programs, adapting
+  similar combinations applied to logic and imperative programs.
+  The paper was motivated by the authors' observation that AD tools would produce
+  long series of semantically loosely connected and, from the user's perspective,
+  redundant questions.
+  Program slicing provides a complementary remedy: rather than just 'correct'
+  or 'incorrect',
+  the user may provide a slicing criterion specifying which parts of the
+  subcomputation's result are incorrect; the slicing criterion is used to prune
+  the debugging tree of irrelevant subcomputations, leading to more semantically
+  connected questions.
+  The paper adapted program slicing concepts to the Augmented Redex Trail (ART), a
+  trace structure that can be the basis for both AD and program slicing, and presented
+  an algorithm for slicing ARTs.
+
+  .. note::
+    The debugging interface sketched in :cite:`perera2012explain` may be viewed
+    as combining program slicing and algorithmic debugging.
 
 .. container:: bib-item
 
