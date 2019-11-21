@@ -100,6 +100,13 @@ A **pretty printer** is a function that takes a structure as input and generates
 
   This paper reflects on cognitive dimensions theory as a whole and, in particular, states, based on observations made in other studies, that experts are more adept at using secondary notation than novices.
 
+.. container:: bib-item
+
+  .. bibliography:: notation2.bib
+    :filter: key == "brown1992color"
+
+ This paper focuses on the use of color and sound in **algorithm animation** systems by evaluating their previous work, *Zeus*, a system for algorithm animation and multi-view editing. Color has been used in *Zeus*, for the purpose of encoding the state of data structures, tying views together, highlighting activity, emphasizing patterns, and making history visible. In addition, sound has been used to reinforce visual views, convey patterns, replaces visual views and signals exceptional conditions. For instance, a sound effects "visualization" produces a tone whose pitch rises with the number of active threads. See :ref:`language-usability:Algorithm Animation` for more details about *Zeus* and other algorithm animation systems.
+
 Textual Notation
 ================
 
@@ -189,13 +196,6 @@ Customizable Notation
 .. todo:: 
 
   Cite Schwerdfeger and Van Wyk
-
-.. container:: bib-item
-
-  .. bibliography:: notation2.bib
-    :filter: key == "brown1992color"
-
- This paper focuses on the use of color and sound in **algorithm animation** systems. Color has been used in *Zeus*, a system for algorithm animation and multi-view editing, for the purpose of encoding the state of data structures, typing views together, highlighting activity, emphasizing patterns, and making history visible. Besides, the postive preliminary experiences using sound in *Zeus* show that sound will be a powerful technique for communicating information. See :ref:`language-usability:Algorithm Animation` for more details.
 
 .. container:: hidden
 
