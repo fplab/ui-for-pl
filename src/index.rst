@@ -93,14 +93,6 @@ The following resources are less focused on summarizing the academic literature 
 
   educational-technology.rst
 
-.. raw: latex
-  \part{Data Analysis Environments}
-.. toctree::
-  :caption: Data Analysis Environments
-  :hidden:
-
-  data-analysis-environments.rst
-
 .. raw:: latex
 
   \part{Community}
