@@ -31,17 +31,7 @@ The following resources are less focused on summarizing the academic literature 
  * `The Whole Code Catalog <https://futureofcoding.org/catalog/>`_
 
 
-. toctree::
 
-.. raw:: latex
-
-  \part{Interactive Theorem Prover}
-
-.. toctree::
-  :caption: Interactive Theorem Prover
-  :hidden:
-
-  itp.rst
 
 
 .. toctree::
