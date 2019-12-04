@@ -95,8 +95,8 @@ Proof General
   .. bibliography:: itp.bib
     :filter: key == 'aspinall07'
 
-  Sophisticated functionality are implemented later. Proof General Kit implements a protocol for communicating between
-  theorem provers, display and other auxiliary tools, and it integrate features such as browsing and searching loaded theorems.
+  Proof General Kit implements a protocol for communicating between
+  theorem provers, display and other auxiliary tools, and it integrates features such as browsing and searching loaded theorems.
 
 
 Now there are `more features, <http://proofgeneral.inf.ed.ac.uk/htmlshow.php?title=Proof+General+user+manual&file=releases%2FProofGeneral%2Fdoc%2FProofGeneral%2FProofGeneral_2.html>`_
@@ -106,14 +106,38 @@ when clicking on a subterm of a goal) and proof-tree visualization.
 
 Geometry Interactive Theorem Prover (GTP)
 =========================================
+
+
+GTPs has potential for education. 
+This book describes a possible direction of developing GTP:
+
+.. container:: bib-item
+
+  .. bibliography:: itp.bib
+    :filter: key == 'quaresma17'
+
+  A geometry book from the future would
+  be a computer program, in which all the theorems can be automatically discovered (and of course proved) by
+  computer and beautiful illustrations can be automatically generated and dynamically modified. 
+  
+`This <https://www.uc.pt/en/congressos/thedu/thedu18/ficheiros/TalkNarboux>`_
+discusses more aspects of ITP applied to teaching:
+
+1. The concepts, including the defnitions, deduction rules, axioms, hypothesis, etc, should be clarified.
+2. There should be objective criterion for the validity of a proof.
+3. Feed back should be provided in time.
+4. Users are motivated. Theorem proving as a game.
+
+Let us look at a substantial example. 
+
 .. container:: bib-item
 
   .. bibliography:: itp.bib
     :filter: key == 'narboux07'
   
   This tool provides a way to combine a dynamic geometry software with Coq, using both automated and interactive approaches.
-  The geometry software is used for drawing geometric figures and invent conjectures by using feedbacks from the geometric software
-  , and theorem proves are used to prove the conjectures.
+  The geometry software is used for drawing geometric figures and inventing conjectures by using feed back from the geometric software
+  , and a theorem prover is used to prove the conjectures.
   In the automatic mode, the conjecture along with the graph created by the user is rewritten and translated to the automatic theorem prover.
   The user can choose certain strategies such as setting searchning depth for the automated theorem prover, but has no control during proving,
   except interrupting it.
@@ -136,28 +160,7 @@ A few results of the GTPs are:
 
   Tarski's axioms, which are axioms for Euclidean geometry,
   is formulated in first-order logic, are formalized in Coq, which 'paves the way for the use of algebraic automated 
-  deduction methods in synthetic geometry within the Coq proof assistant'.
-
-GTPs also has potential for education. 
-This book describes a possible direction of developing GTP:
-
-.. container:: bib-item
-
-  .. bibliography:: itp.bib
-    :filter: key == 'quaresma17'
-
-  A geometry book from the future would
-  be a computer program, in which all the theorems can be automatically discovered (and of course proved) by
-  computer and beautiful illustrations can be automatically generated and dynamically modified. 
-  
-`This <https://www.uc.pt/en/congressos/thedu/thedu18/ficheiros/TalkNarboux>`_
-discusses more aspects of ITP applied to teaching:
-
-1. The concepts, including the defnitions, deduction rules, axioms, hypothesis, etc, should be clarified.
-2. There should be objective criterion for the validity of a proof.
-3. feedbacks should be provided in time.
-4. Users are motivated. Theorem proving as a game.
-
+  deduction methods in synthetic geometry within the Coq proof assistant.
 
 Usability Evaluation of Interactive Theorem provers
 =========================================================
