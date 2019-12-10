@@ -31,6 +31,13 @@ Deductive Program Synthesis
 
 Deductive Program Synthesis is focused on an approach in which the derivation task is regarded as a problem of proving a mathematical theorem :cite:`manna1992fundamentals`. Manna and Waldinger discuss that in order to write a program that meets the specifications, a proof of existence must be conducted showing that for any input, the output satisfies the specified conditions. In order for the proof to be sufficiently constructive, upon finding the existence of an output, it is required to state the computational means used to determine the existence. This is then used as a basis for the program that is eventually created. Manna and Waldinger continue to discuss specifications, proving of theorems and deduction rules for the remainder of the paper.
 
+.. container:: bib-item
+
+  .. bibliography:: programming-assistants.bib
+    :filter: key == 'manna1992fundamentals'
+
+  This paper explains the foundations and fundamentals of deductive program synthesis detailing the mathematical approach behind it.
+
 Inductive Program Synthesis
 ---------------------------
 
@@ -54,13 +61,6 @@ The authors state that the key feature that differentiates their tool is that it
 anyCode was evaluated with 45 examples where the effectiveness criteria was that it was able to successfully synthesize expected expressions and to list them among the top 10 solutions. The two models used to build the tool, unigram and PCFG, were evaluated separately and together. Using only the unigram model, the expected expression was only in the top 10 27% of the time and 18% using the PCFG model.
 
 However, when both models were used, the expected expression was in the top 10 82% of time and was the #1 option 44% of the time. More implementation details of the two models can be found in the paper. anyCode was given an average runtime of 60 ms to generate the top 10 expressions, proving that it can effectively and efficiently synthesize expressions.
-
-.. container:: bib-item
-
-  .. bibliography:: programming-assistants.bib
-    :filter: key == 'manna1992fundamentals'
-
-  This paper explains the foundations and fundamentals of deductive program synthesis detailing the mathematical approach behind it.
 
 .. container:: bib-item
 
@@ -130,7 +130,7 @@ After creating the baseline models, a long short-term memory model was created w
   This paper demonstrates the use of abstract syntax trees to train a deep learning model for code completion suggestions.
 
 Refactoring and Program Transformation
-===========
+======================================
 
 **Refactoring** refers to the process of restructuring existing code without changing the program's behavior and is a large area of interest in programming assistant research. It is intended to improve the nonfunctional attributes of a program. Typically, code refactoring applies small changes to various areas of a program and most development environments have already integrated support for basic refactoring. Detecting problems early and refactoring source code can save developers time and effort debugging in the future.
 
