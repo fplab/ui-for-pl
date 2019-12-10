@@ -5,30 +5,36 @@
 Overview
 ========
 
-**Programming assistants** are tools integrated into development environments that enable more effective programming by allowing the developer to focus less on the syntactical and logical problems occured during development and more on the big picture of projects. Why do we need programming assistants? As more complex and time-consuming projects arise, assistants can significantly reduce the time and effort a programmer exhausts during development, while also reducing the probability of errors occuring.
+**Programming assistants** operate in concert with programmers to automate away many tedious programming tasks, including code insertion, refactoring and program repair. They are tools integrated into development environments that enable more effective programming by allowing the developer to focus less on the syntactical and logical problems occured during development and more on the big picture of projects. Why do we need programming assistants? As more complex and time-consuming projects arise, assistants can significantly reduce the time and effort a programmer exhausts during development, while also reducing the probability of errors occuring.
 
-Programming assistants can be highly sophisticated themselves, with most using advanced artificial intelligence, machine learning and natural language processing models. However, most models can be represented by the following diagram:
+Programming assistants can be highly sophisticated themselves, with some using advanced artificial intelligence, machine learning and natural language processing models. Most systems can be represented by the following diagram:
 
 .. image:: Ml_model.png
 
-where the input can be range from syntactical structure (abstract syntax trees, parsed text, edit action history) to program runtime data. The chosen model is done so based on accuracy and runtime comparisons between various hypothesized models. Even after the model is chosen, it is further evaluated and tuned. Once a model is chosen and trained on input data, new data is introduced for prediction and the results are published. Models can output various types of predictions including: single hole and multiple hole fillings in a program and arbitrary edits throughout a program. The main areas of research for programming assistants are discussed further below.
+where the input can be range from syntactical structure (abstract syntax trees, parsed text, edit action history) to program edit-time data. The model is chosen based on accuracy and runtime comparisons between various hypothesized models. Even after the model is chosen, it is further evaluated and tuned. Once a model is chosen and trained on input data, new data is introduced for prediction and the results are published. Models can output various types of predictions including: single hole and multiple hole fillings in a program and arbitrary edits throughout a program. The main areas of research for programming assistants are discussed further below.
 
 Program Synthesis
 =================
 
-**Program Synthesis** refers to the process of code synthesis based on a programmer's specifications. It is intended to serve as the ultimate abstraction and allows the assistant to implement instructions typically containing a mixture of a natual language and programmatic syntax. This area of research originates from the idea that computers are very good at following explicit instructions, but humans are not necessarily good at writing those instructions. Wouldn't it be more efficient to tell a computer what the developer wants it to do and to leave the implementation details to the computer? The main promise of Program Synthesis is to automate the trivial parts of programming, allowing the developer to focus on the big picture.
+**Program Synthesis** refers to the process of code synthesis based on a programmer's specifications. It is intended to allow the assistant to implement instructions typically containing a mixture of a natual language and programmatic syntax. This area of research originates from the idea that computers are very good at following explicit instructions, but humans are not necessarily good at writing those instructions. Wouldn't it be more efficient to tell a computer what the developer wants it to do and to leave the implementation details to the computer? The main promise of Program Synthesis is to automate the trivial parts of programming, allowing the developer to focus on the big picture.
 
-Before discussing how synthesis occurs, it is important to discuss the various ways to specify program behavior. Most programming languages are not helpful for telling a program synthesizer what a developer wants it to do. Therefore, there must be a way to provide a specification of what the program should do. There are many styles in place including:
+Before discussing how synthesis occurs, it is important to discuss the various ways to specify program behavior. There are many styles in place including:
 
 1. Complete Formal Specification using a formula (e.g. `∀x. P(x) = x*2` for a program that doubles the input)
-2. Input/Output pairs that serve as examples of what the program should be doing (e.g. (2,4), (4,8) for the program that doubles)
+2. Input/Output examples that serve as examples of what the program should be doing (e.g. (2,4), (4,8) for the program that doubles)
 3. Demonstrations of how the program should compute the output (Very similar to #2 but tends to have some intermediate steps as well)
 
-The two main types of Program Synthesis are deductive and inductive. **Deductive Program Synthesis** uses complete formal specifications while **Inductive Program Synthesis** uses less formal specifications and relies primarily on iterative search techniques to find implementations
+The two main types of Program Synthesis are deductive and inductive. **Deductive Program Synthesis** uses complete formal specifications while **Inductive Program Synthesis** uses less formal specifications and relies primarily on iterative search techniques to find implementations.
+
+Deductive Program Synthesis
+---------------------------
 
 Deductive Program Synthesis is focused on an approach in which the derivation task is regarded as a problem of proving a mathematical theorem :cite:`manna1992fundamentals`. Manna and Waldinger discuss that in order to write a program that meets the specifications, a proof of existence must be conducted showing that for any input, the output satisfies the specified conditions. In order for the proof to be sufficiently constructive, upon finding the existence of an output, it is required to state the computational means used to determine the existence. This is then used as a basis for the program that is eventually created. Manna and Waldinger continue to discuss specifications, proving of theorems and deduction rules for the remainder of the paper.
 
-Inductive Program Synthesis (IPS) has been a more popular area of research in the last decade. This is mainly due to the realization that most are not familiar with complicated mathematical theorems and prefer to synthesize using less formal specifications. There are many different variations of IPS as there are many different iterative approaches, but most follow the same overall architecture containing a synthesizer and a verifier:
+Inductive Program Synthesis
+---------------------------
+
+Inductive Program Synthesis (IPS) is typically used more mainly due to the realization that most are not familiar with complicated mathematical theorems and prefer to synthesize using less formal specifications. There are many different variations of IPS as there are many different iterative approaches, but most follow the same overall architecture containing a synthesizer and a verifier:
 
 .. image:: program_synthesis_model.png
 
@@ -73,6 +79,7 @@ Common techniques to achieve this include auto completion popups while typing, q
 Common training inputs include:
 - Parsed code corpuses
 - Abstract syntax trees
+- Typing context
 
 Most of the popular IDEs (Visual Studio, Eclipse, IntelliSense, IntelliJ IDEA) contain some form of basic code completion but many new research projects have started picking up.
 
@@ -122,7 +129,7 @@ After creating the baseline models, a long short-term memory model was created w
 
   This paper demonstrates the use of abstract syntax trees to train a deep learning model for code completion suggestions.
 
-Refactoring
+Refactoring and Program Transformation
 ===========
 
 **Refactoring** refers to the process of restructuring existing code without changing the program's behavior and is a large area of interest in programming assistant research. It is intended to improve the nonfunctional attributes of a program. Typically, code refactoring applies small changes to various areas of a program and most development environments have already integrated support for basic refactoring. Detecting problems early and refactoring source code can save developers time and effort debugging in the future.
