@@ -1,4 +1,4 @@
-.. :Authors: - Cyrus Omar
+.. :Authors: - Cyrus Omar, Yongwei Yuan
 
 .. title:: Notation
 
