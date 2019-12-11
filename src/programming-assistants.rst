@@ -9,7 +9,7 @@ Overview
 
 Programming assistants can be highly sophisticated themselves, with some using advanced artificial intelligence, machine learning and natural language processing models. Most systems can be represented by the following diagram:
 
-.. image:: Ml_model.png
+.. image:: MLModel.png
 
 where the input can be range from syntactical structure (abstract syntax trees, parsed text, edit action history) to program edit-time data. The model is chosen based on accuracy and runtime comparisons between various hypothesized models. Even after the model is chosen, it is further evaluated and tuned. Once a model is chosen and trained on input data, new data is introduced for prediction and the results are published. Models can output various types of predictions including: single hole and multiple hole fillings in a program and arbitrary edits throughout a program. The main areas of research for programming assistants are discussed further below.
 
@@ -144,7 +144,7 @@ The main benefits of refactoring can be categorized into either **maintainabilit
 
 New assistance tools are being developed to accurately suggest program edits. The process includes the proper identification of repetitive edits, refactoring different areas of code based on the repeated pattern and suggesting the new refactorings to the user. Blue Pencil is Microsoft's assistance tool focused on program edit suggestions.
 
- `This article <https://devblogs.microsoft.com/visualstudio/refactoring-made-easy-with-intellicode/>`_ demonstrates Blue-Pencil in action as it was recently integrated into Visual Studio 2019 :cite:`miltner2019fly`.
+`This article <https://devblogs.microsoft.com/visualstudio/refactoring-made-easy-with-intellicode/>`_ demonstrates Blue-Pencil in action as it was recently integrated into Visual Studio 2019 :cite:`miltner2019fly`.
 
 Although this is a small example, making changes like these is a very tedious process. Scaling this up to larger projects creates a real problem with a large resource requirement. This is the exact problem the Blue-Pencil solution aims to tackle. Blue-Pencil non intrusively watches and learn from user edits and makes suggestions accordingly. It attempts to identify repetitive edits using the document edit history by generating explanations for each of the user's edits to predict actions to take.
 
