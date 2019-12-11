@@ -144,7 +144,7 @@ The main benefits of refactoring can be categorized into either **maintainabilit
 
 New assistance tools are being developed to accurately suggest program edits. The process includes the proper identification of repetitive edits, refactoring different areas of code based on the repeated pattern and suggesting the new refactorings to the user. Blue Pencil is Microsoft's assistance tool focused on program edit suggestions.
 
- `This article <https://devblogs.microsoft.com/visualstudio/refactoring-made-easy-with-intellicode/>`_ demonstrates Blue-Pencil in action as it was recently integrated into Visual Studio 2019 :cite:`miltner2019fly`.
+`This article <https://devblogs.microsoft.com/visualstudio/refactoring-made-easy-with-intellicode/>`_ demonstrates Blue-Pencil in action as it was recently integrated into Visual Studio 2019 :cite:`miltner2019fly`.
 
 Although this is a small example, making changes like these is a very tedious process. Scaling this up to larger projects creates a real problem with a large resource requirement. This is the exact problem the Blue-Pencil solution aims to tackle. Blue-Pencil non intrusively watches and learn from user edits and makes suggestions accordingly. It attempts to identify repetitive edits using the document edit history by generating explanations for each of the user's edits to predict actions to take.
 
