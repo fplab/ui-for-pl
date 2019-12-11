@@ -132,15 +132,13 @@ After creating the baseline models, a long short-term memory model was created w
 Refactoring and Program Transformation
 ======================================
 
-**Refactoring** refers to the process of restructuring existing code without changing the program's behavior and is a large area of interest in programming assistant research. It is intended to improve the nonfunctional attributes of a program. Typically, code refactoring applies small changes to various areas of a program and most development environments have already integrated support for basic refactoring. Detecting problems early and refactoring source code can save developers time and effort debugging in the future.
+**Refactoring** refers to the process of restructuring existing code without changing the program's behavior and is a large area of interest in programming assistant research. It is intended to improve the nonfunctional attributes of a program. Typically, code refactoring applies small changes to various areas of a program, but can also include general program tranformations since not all suggested transformations are refactorings. Most development environments have already integrated support for basic refactoring. Detecting problems early and refactoring source code can save developers time and effort debugging in the future.
 
 The main benefits of refactoring can be categorized into either **maintainability**: Fixing issues is very easy because the code is easy to read and easy to understand, or **extensibility**: Extending the capabilities of the application is very easy because the codes uses recognizable design patterns and is flexible.
 
-(TODO: Suggesting Program Edits)
+New assistance tools are being developed to accurately suggest program edits. The process includes the proper identification of repetitive edits, refactoring different areas of code based on the repeated pattern and suggesting the new refactorings to the user. Blue Pencil is Microsoft's assistance tool focused on program edit suggestions.
 
-Software engineers at Microsoft are currently developing and integrating a refactoring assistant that recognizes editing patterns in source code and suggest other edits :cite:`miltner2019fly`.
-
- `This article <https://devblogs.microsoft.com/visualstudio/refactoring-made-easy-with-intellicode/>`_ demonstrates Blue-Pencil in action as it was recently integrated into Visual Studio 2019.
+ `This article <https://devblogs.microsoft.com/visualstudio/refactoring-made-easy-with-intellicode/>`_ demonstrates Blue-Pencil in action as it was recently integrated into Visual Studio 2019 :cite:`miltner2019fly`.
 
 Although this is a small example, making changes like these is a very tedious process. Scaling this up to larger projects creates a real problem with a large resource requirement. This is the exact problem the Blue-Pencil solution aims to tackle. Blue-Pencil non intrusively watches and learn from user edits and makes suggestions accordingly. It attempts to identify repetitive edits using the document edit history by generating explanations for each of the user's edits to predict actions to take.
 
@@ -153,7 +151,9 @@ The model was evaluated with 37 document editing sessions in two software develo
   .. bibliography:: programming-assistants.bib
     :filter: key == 'miltner2019fly'
 
-  This paper demonstrates the use of document edit history to suggest code refactoring based on repetitive editing patterns.
+  This paper demonstrates the use of document edit history to suggest code refactoring based on repetitive editing patterns. Software     
+  engineers at Microsoft are currently developing and integrating a refactoring assistant that recognizes editing patterns in source code 
+  and suggest other edits
 
 Program Repair
 ==============
