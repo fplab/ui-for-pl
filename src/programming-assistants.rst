@@ -9,7 +9,7 @@ Overview
 
 Programming assistants can be highly sophisticated themselves, with some using advanced artificial intelligence, machine learning and natural language processing models. Most systems can be represented by the following diagram:
 
-.. image:: Ml_model.png
+.. image:: MLModel.png
 
 where the input can be range from syntactical structure (abstract syntax trees, parsed text, edit action history) to program edit-time data. The model is chosen based on accuracy and runtime comparisons between various hypothesized models. Even after the model is chosen, it is further evaluated and tuned. Once a model is chosen and trained on input data, new data is introduced for prediction and the results are published. Models can output various types of predictions including: single hole and multiple hole fillings in a program and arbitrary edits throughout a program. The main areas of research for programming assistants are discussed further below.
 
