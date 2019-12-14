@@ -25,26 +25,23 @@ API Usability
   * Distinction with language usability
 ..
 
-Application Programming Interfaces (APIs) are interfaces that mediate interactions between software components.
-Examples include software libraries and frameworks, OS system calls, and web protocols.
+Application Programming Interfaces (APIs) are user interfaces that serve a dual role: they are simultaneously the user interfaces that programmers use to interact with software components and formal interfaces that govern interactions between different software components.
+Examples include software libraries and frameworks, OS system call interfaces, and web protocols.
 Nearly every program written will use an API :cite:`myers2016improving`.
 
-The goal of the API designer is to create an API that a broad range of
+The goal of the API designer is to create an API that other
 programmers can use in their applications.
 This goal mirrors the goals of programming language designers --
-an API designer must a create a service that is "usable" to
-a broad and vaguely scoped audience.
+an API designer must create a service that is "usable" to
+a vaguely scoped audience.
+This scope of an audience may be broad or narrow, depending on whether the API is general, or domain specific.
 Like languages, APIs must be simple enough to be used
-by users who are unaware of the inner workings of the API.
+by users who are unaware of the inner workings of the API, whether the audience is broad or narrow.
 
-In many cases, both language and API design can be approached through a "bottom-up" manner -- designed with smaller components
-that can be combined to create complex behavior.
-However, in other cases, designing APIs involves involves putting a more usable layer atop a more complex existing API.
-This adds another layer of complexity in designing APIs.
-To illustrate this diffulty:
+APIs differ from Programming Languages (PL) in that PLs are axiomatic: a language definition defines a universe of programs. APIs operate within a programming language by making use of its primitive operations as well as other APIs.
 
-    "The enormous size of public APIs contributes to these difficulties; for example, the Java Platform, Standard Edition API Specification includes more than 4,000 classes with more than 35,000 different methods, and Microsoft’s .NET Framework includes more than 140,000 classes, methods, properties, and fields."
-    :cite:`myers2016improving`.
+Individual APIs are often organized into frameworks. Some of these frameworks are extremely large, contributing to the difficulty of their design.
+Microsoft’s .NET Framework includes more than 140,000 classes, methods, properties, and fields :cite:`myers2016improving`.
 
 
 API Design Considerations
@@ -60,21 +57,21 @@ API Design Considerations
 ..
 
 There are several design aspects to desiging usable APIs.
-A broad aspect of usability identified by both :cite:`myers2016improving`
-and :cite:`scheller2015automated` is the effect of *complexity* on usability.
-Changing the inherant complexity exhibits one of the many tradeoffs between design aspects of APIs.
-Making an API more powerful (allowing a user to do more things with the API)
-by increasing complexity decreases the learnability of the API.
-However, increasing the learnability of an API by lowering the complexity also lowers the power of the API.
+Myers et al. identify 6 key design aspects of API design, which we describe here :cite:`myers2016improving`:
 
-Myers et al. identify 6 key design aspects of API design, which we describe here.
-
-* Learnability - an API user must learn how to use an API as quickly and easily as possible.
+* Learnability - an API user should be able to learn how to use an API as quickly and easily as possible.
 * Productivity - an API user should be able use the API effectively to create their program.
 * Error-Prevention - an API user should be able to handle and prevent error cases when their program is used.
 * Simplicity - the design of the API should be simple.
 * Consistency - the design of the API should be consistent.
 * Matching Mental Models - the API user should have an accurate mental model of how the API executes procedures.
+
+A broad aspect of usability identified by both :cite:`myers2016improving`
+and :cite:`scheller2015automated` is the effect of *complexity* on usability -- the opposite of simplicity.
+Changing the inherant complexity exhibits one of the many tradeoffs between design aspects of APIs.
+Making an API more powerful (allowing a user to do more things with the API)
+by increasing complexity decreases the learnability of the API.
+However, increasing the learnability of an API by lowering the complexity also lowers the power of the API.
 
 .. container:: bib-item
 
@@ -95,7 +92,10 @@ Myers et al. identify 6 key design aspects of API design, which we describe here
   This paper identifies key aspects in API usability, in an *API Concepts Framework*,
   a structure where *concepts* represent possible user actions, leading
   to measureable properties on usability. Using this framework, the paper introduces
-  an automated method for measuring API usability, which they test in a user study and
+  an automated method for measuring API usability, by statistically inferencing usability
+  from the measurable properties of APIs they identify, including number of methods in classes,
+  number of method parameters, number of methods with similar names, etc.
+  They test their method in a user study and
   find their calculated values highly correlated with user measured time.
 
 User Studies
@@ -110,18 +110,17 @@ User Studies
 ..
 
 Testing API design is difficult, as the numerous API design
-decisions all affect the overall usability interdependently
-:cite:`myers2016improving`. Testing the high-level and global design decisions
+decisions all affect the overall usability interdependently.
+Testing the high-level and global design decisions
 is often intractable because of this. Most user studies in API usability
-examine a specific aspect of API design :cite:`stylos2007usability`
-:cite:`stylos2008implications` :cite:`ellis2007factory`.
+examine a specific aspect of API design.
 
 .. container:: bib-item
 
   .. bibliography:: api-usability.bib
     :filter: key == 'stylos2007usability'
 
-  This paper examines the usability implications of class constructor parameters.
+  This paper examines the usability implications of class constructor parameters in Java.
   The study in this paper showed that developers
   strongly preferred and were more effective with APIs that did not
   require parameters in object constructors. This contradicted the
@@ -137,7 +136,7 @@ examine a specific aspect of API design :cite:`stylos2007usability`
   In the user study participants were given nearly identical APIs but
   the comparison group contained a method that was placed in an
   unexpected location. Participants with "correctly-placed" methods
-  were orders of magnitudes faster in their tasks.
+  were 2-11 times faster in their tasks.
 
 .. container:: bib-item
 
@@ -179,7 +178,7 @@ Good documentation is integral in making an inherently complex API more learnabl
   In many APIs, users often expect a class or method to be placed in a
   different location than actual, slowing them down :cite:`stylos2007usability`.
   Jadeite allows API users to add "placeholder" classes or methods in places where
-  they expect a class or method to exist, which can redirect future API users to
+  they expect a class or method to exist, which can redirect API users to
   the correct location.
 
 .. container:: bib-item
