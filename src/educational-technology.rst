@@ -15,12 +15,12 @@ steep learning curve often faced by novice programmers and help them overcome wh
 programming :cite:`guzdial2004programming`. The second is supporting the motivations that different 
 people have for trying to learn these new programming skills :cite:`kelleher2005lowering`.
 
-There are a few key design principles that are often used in either of these strategies. One is to try to minimize frustration while still being
-challenging enough to maintain interest, with the related principle of incorporating motivations for learning these skills. 
-Another is related to being as concrete as possible versus abstract, as people need to understand concrete concepts before they
-can begin to apply abstractions. Additionally, educational programming environments often are designed to give immediate feedback, 
-with one way of accomplishing this being using visual notation that helps the user confirm or refine their beliefs about how the
-program being written behaves.
+There are a few key design principles that are often used in either of these strategies: 
+
+* Try to minimize frustration while still being challenging enough to maintain interest
+* Incorporate motivations for learning new skills 
+* Help students learn abstract concepts using concrete instances
+* Give :doc:`immediate feedback </live-programming>`
 
 .. container:: bib-item
 
@@ -111,7 +111,7 @@ Feedback Generation
 ===================
 
 With the growing number of people interested in learning programming skills, institutions have difficulty maintaining the number of instructors
-needed to give students valuable one-on-one feedback. Thus, automatic feedback generation is innvaluable in the current learning climate.
+needed to give students valuable one-on-one feedback. Thus, automatic feedback generation may be valuable in the current learning climate.
 
 There are various ways for students to get feedback. One way that automatic feedback is being generated is in systems that perform as "autograders" where
 students can upload submissions and get information back on how their solutions performed against test suites. This however still leaves a burden
@@ -123,12 +123,22 @@ debugging code with errors can be far more valuable to the learning process than
   .. bibliography:: educational-technology.bib
     :filter: key == 'suzuki2017exploring'
 
-  Five types of common hints that teachers give to help students fix their code that can be generated using program synthesis
-  are itentified: transformations (what to change to make the program work), locations (the line(s) that need to be changed to make the program work),
-  data (demonstrating where a variable takes on the wrong value), behavior (identifying how the program is not behaving how it is supposed to), and
-  examples (examples of inputs and correct outputs). Additionally, four principles of feedback design are identified: 1) help students locate bugs, 2)
-  demonstrate instances in which code fails, 3) explain behavior of code with visual execution, and 4) help students understand the relationship
-  between the cause of an error and its symptoms.
+  From analysis of Q&A posts on a discussion forum for a programming class as well as an interview of a teaching assistant
+  for a college level introductory programming class, five types of common hints that teachers give to help students fix their 
+  code that can be generated using program synthesis are itentified: 
+  
+  1) Transformations (what to change to make the program work)
+  2) Locations (the line(s) that need to be changed to make the program work)
+  3) Data (demonstrating where a variable takes on the wrong value)
+  4) Behavior (identifying how the program is not behaving how it is supposed to)
+  5) Examples (examples of inputs and correct outputs)
+  
+  Additionally, four principles of feedback design described in prior work are identified: 
+  
+  1) Help students locate bugs
+  2) Demonstrate instances in which code fails
+  3) Explain behavior of code with visual execution
+  4) Help students understand the relationship between the cause of an error and its symptoms
 
 Tutoring Systems
 ================
@@ -144,7 +154,9 @@ and learn more if there is interaction that demonstrates whether or not the stud
     :filter: key == 'guo2013online'
 
   Python Tutor is an online tutoring system. This is a form of program visualization that shows the state of memory (stack frames and the heap)
-  as a piece of code executes, essentially creating visual code traces. 
+  as a piece of code executes, essentially creating visual code traces. The tool was designed based on common features of other existing program visualization
+  tools and then updated based on user feedback. The paper acknowledges that study results may determine
+  that new features may be needed to support active learning, such as adding questions and quizzes along with the visualizations.
 
 .. container:: bib-item
 
@@ -206,8 +218,8 @@ their students are excelling at or struggling to understand.
   in the study were able to complete this example extraction exercise when using CodeScoop compared to a text editor and liked their end result
   example better.
 
-Domain Specific Environments
-============================
+Domain-Specific and Task-Specific Environments
+==============================================
 
 .. todo::
     Add information about environments/languages targeting users who have very specific goals for learning to program (don't need general knowledge)
