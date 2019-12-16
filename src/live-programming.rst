@@ -67,7 +67,7 @@ Game development involves multiple disciplines including programming, design, ar
   (2) Prescribe to an iterative development process and utilize prototypes as a method of proving features and concepts before committing them to the design;
   (3) Do not be overly ambitious in the design.
 
-As we can see in the above paper, there is a huge problem space in the game development domain including product (e.g. art, creativity, game design), development (e.g. tools, development process, team), resources (budge, hardware, publishers), and customer facing (e.g. marketing, feedback).
+As we can see in the above paper, there is a huge problem space in the game development domain including product (e.g. art, creativity, game design), development (e.g. tools, development process, team), resources (budget, hardware, publishers), and customer facing (e.g. marketing, feedback).
 This compendium covers only **tools** and **languages** for game development.
 
 Professional Platforms for Game Development
@@ -75,24 +75,25 @@ Professional Platforms for Game Development
 In recent years, game engines such as Unity3D and Unreal Engine have been the most popular platforms for game development.
 A game engine simplifies the task of the programmer by offering convenient abstractions for the hardware and operating systems on top of which the game runs.
 Game engines also provide reusable components such as physics, game inputs, rendering, and artificial intelligence (AI).
-Entity-component systems and event-handling mechanisms have been a fundamental feature of the software architecture of game engines nowadays.
+Entity-component systems and event-handling mechanisms have been a fundamental feature of the software architecture of modern game engines.
 Entity-component systems allow users to attach components (i.e. scripts) to different game entities, which maximizes the reusability and interoperability of software modules.
+
+While available research has mainly focused on game engine subsystems such as rendering and AI, the issues regarding the overall architecture design of game engines have received less coverage.
 
 .. container:: bib-item
 
   .. bibliography:: game-development.bib
     :filter: key == 'anderson2008case'
 
-  While available research has mainly focused on game engine subsystems such as rendering and AI, the issues regarding the overall architecture design of game engines have merely been discussed.
   This article, in response, presents a number of key aspects and potential research topics with regard to the architecture design of game engines.
-  These topics include the establishment of a unified language of game development, the identification of software components that are common to all types of computer games, the definition of the role of content creation tools in the game development process and as part of game engines, and many others.
+  These topics include the establishment of a unified language of game development, the identification of software components that are common to many types of computer games, the definition of the role of content creation tools in the game development process and as part of game engines, and many others.
 
 .. container:: bib-item
 
   .. bibliography:: game-development.bib
     :filter: key == 'elvezio2018mercury'
 
-  This paper presented a framework as an improvement for the existing game engine architecture.
+  This paper presents a framework as an improvement for the existing game engine architecture.
   In 3D interactive systems that are developed using game engines, User Interface (UI) components are organized in a hierarchy that is used to propagate events among vertically connected components.
   However, programmers have to connect horizontal components manually and register/unregister events as needed in order to enable communications between those horizontal components.
   This paper introduces a messaging framework, Mercury, to facilitate communication among components.
@@ -101,7 +102,7 @@ Entity-component systems allow users to attach components (i.e. scripts) to diff
 Declarative Programming Languages for Game Development
 ---------------------------------------------------------
 Most game development platforms require highly domain-specific knowledge of imperative programming languages, which has a steep learning curve for end-users.
-For example, Unity3D employs C# as its scripting language and Unreal Engine uses C++ as its scripting language.
+For example, Unity3D employs C# as its native language and Unreal Engine uses C++ as its native language.
 In this section we examine Functional Reactive Programming, visual block-based programming languages, and visual dataflow programming languages for game development.
 
 .. container:: bib-item
