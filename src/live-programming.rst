@@ -287,7 +287,7 @@ must maintain an understanding of how any *subsequent ET node* depends on those 
 values.
 
 Despite their useful guarantee of bug diagnosis, algorithmic debuggers have yet to enter
-widespread use. (add note about functional programming research lagging in tooling)
+widespread use.
 
 .. container:: bib-item
 
