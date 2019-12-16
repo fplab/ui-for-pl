@@ -68,23 +68,23 @@ Game development involves multiple disciplines including programming, design, ar
   (3) Do not be overly ambitious in the design.
 
 As we can see in the above paper, there is a huge problem space in the game development domain including product (e.g. art, creativity, game design), development (e.g. tools, development process, team), resources (budget, hardware, publishers), and customer facing (e.g. marketing, feedback).
-This compendium covers only **tools** and **languages** for game development.
+This compendium mainly covers **tools** and **languages** for game development.
 
 Professional Platforms for Game Development
 -------------------------------------------------
 In recent years, game engines such as Unity3D and Unreal Engine have been the most popular platforms for game development.
 A game engine simplifies the task of the programmer by offering convenient abstractions for the hardware and operating systems on top of which the game runs.
 Game engines also provide reusable components such as physics, game inputs, rendering, and artificial intelligence (AI).
-Entity-component systems and event-handling mechanisms have been a fundamental feature of the software architecture of modern game engines.
-Entity-component systems allow users to attach components (i.e. scripts) to different game entities, which maximizes the reusability and interoperability of software modules.
-
-While available research has mainly focused on game engine subsystems such as rendering and AI, the issues regarding the overall architecture design of game engines have received less coverage.
+Entity-component-system (ECS) is an architectural pattern that is mostly used in game development, where every object in a game's scene is an entity (e.g. enemies, bullets, vehicles, etc.) and every entity consists of one or more components (implemented typically using structs, classes, or associative arrays) which add behavior or functionality.
+Therefore the behavior of an entity can be changed at runtime by adding or removing components, which maximizes the reusability and interoperability of software modules.
+ECS and event-handling mechanisms have been a fundamental feature of the software architecture of modern game engines.
 
 .. container:: bib-item
 
   .. bibliography:: game-development.bib
     :filter: key == 'anderson2008case'
 
+  While available research has mainly focused on game engine subsystems such as rendering and AI, the issues regarding the overall architecture design of game engines have received less coverage.
   This article, in response, presents a number of key aspects and potential research topics with regard to the architecture design of game engines.
   These topics include the establishment of a unified language of game development, the identification of software components that are common to many types of computer games, the definition of the role of content creation tools in the game development process and as part of game engines, and many others.
 
@@ -110,10 +110,24 @@ In this section we examine Functional Reactive Programming, visual block-based p
   .. bibliography:: game-development.bib
     :filter: key == 'elliott1997functional'
 
-  This paper introduced Fran, a functional reactive animation system which introduced the paradigm called Functional Reactive Programming (FRP).
+  This paper introduces Fran, a functional reactive animation system which introduced the paradigm called Functional Reactive Programming (FRP).
+  FRP is a general framework for programming hybrid systems in a high-level, declarative manner.
   The key ideas in functional reactive animation are its notions of *behaviors* and *events*.
-  Behaviors are continuous, time-varying values.
+  Behaviors are continuous, time-varying values such as numbers and colors.
   Events are values that occur at a single, discrete point in time, having no duration, such as a button press.
+  FRP aims to automate the low-level implementation details by providing the user high-level abstractions, which prevent them from having to explicitly manage common implementation chores that has nothing to do with the content of an animation.
+  The concept of FRP has been proven to be viable in not only game development, but also data visualization and web development.
+
+.. container:: bib-item
+
+  .. bibliography:: game-development.bib
+    :filter: key == 'cleary2015reactive'
+
+  This paper presents the experience of using FRP to deliver a summer camp for students in grades 8 through 12.
+  The authors used a system based on a declarative programming approach to allow students without a background in computing to explore a wide variety of subject material within a 3D virtual environment, including computer science, mathematics, physics, and art.
+  The students experienced building 3D virtual worlds using the Panda3D game engin and an external FRP Python library called PyFRP.
+  Using a series of topic examples, the paper demonstrates that FRP's declarative nature makes creating interactions and animations quick and painless and that FRP can be used to teach a variety of subjects.
+  The paper also proves the feasibility of integrating the concept of FRP into game engines. 
 
 .. container:: bib-item
 
@@ -125,10 +139,15 @@ In this section we examine Functional Reactive Programming, visual block-based p
   Programming is done by dragging and snapping together colorful command blocks to control 2D graphical objects called sprites moving on a background called the stage.
   This paper also describes aspects of Scratch and the language design that make it easier for young people to explore, express themselves, and learn.
 
-The Blueprints Visual Scripting system :cite:`blueprints` in Unreal Engine is a gameplay scripting system that uses the concept of dataflow programming to compose game elements from within the Unreal Editor.
-Users can use simple drag-and-drop operations to draw connections between nodes on the interface without writing code.
-The system is used to define object-oriented (OO) classes and objects in the engine.
-Specifically, Blueprints can handle extending classes, storing and modifying default properties, and managing components instancing for classes.
+.. container:: bib-item
+
+  .. bibliography:: game-development.bib
+    :filter: key == 'blueprints'
+
+  The Blueprints Visual Scripting system in Unreal Engine is a gameplay scripting system that uses the concept of dataflow programming to compose game elements from within the Unreal Editor.
+  Users can use simple drag-and-drop operations to draw connections between nodes on the interface without writing code.
+  The system is used to define object-oriented (OO) classes and objects in the engine.
+  Specifically, Blueprints can handle extending classes, storing and modifying default properties, and managing components instancing for classes.
 
 
 Game Description Languages
@@ -157,18 +176,19 @@ Several attempts have been made in the past to model aspects of games and to enc
 
 Game Development in Education
 -------------------------------------------------
-Researchers have developed game development environments to broaden interest in computing amongst students in K-12 and university settings.
+Researchers have explored how game development environments can teach computational concepts and broaden interest in computing amongst students in K-12 and university settings.
 
 .. container:: bib-item
 
   .. bibliography:: game-development.bib
-    :filter: key == 'maloney2008programming'
+    :filter: key == 'werner2012children'
 
-  This paper reports on the Scratch programming experiences of urban youth from after-school programs over an 18-month period.
-  A total of 536 Scratch projects were collected from the after-school program that mainly serves low-income African American and Latino youths ages 8-18.
-  There projects were analyzed to get an idea of what programming concepts were learned by these youth.
-  The authors also conducted interviews with 30 participants to get their subjective experiences.
-  The findings show that the youth chose to get involved more in Scratch programming given that they had many other software options and that they are motivated to learn to program.
+  This paper describes a semester-long game-programming course where 325 middle school students used Alice to make games.
+  The authors aim to discover the CS concepts that are accessible with Alice programming contructs, the common programming constructs that are used by middle school students making games without required game specifications, and the programming constructs that are used successfully.
+  They measured the frequency of successful execution of programming contructs based on an analysis of 231 final games.
+  The results show that many games exhibit successful uses of high level computer science concepts such as student-created abstractions and modeling, concurrent execution, and event handlers.
+  The most common constructs were methods, functions, and events.
+  Surprisingly, there were few differences between the use and successful use of constructs, suggesting that if something was in the program, it was generally used correctly.
 
 .. container:: bib-item
 
