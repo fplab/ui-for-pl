@@ -18,7 +18,7 @@ Data Analysis Environments
 ==========================
 Data scientists use data analysis environments for a variety of data science activities.
 The term data science was first distinguished from pure statistics in 1997. 
-University of Michigan statistics professor C.F. Jeff Wu popularized the term "data science" in his talk `"Statistics = Data Science?"`_.
+C.F. Jeff Wu popularized the term "data science" in his talk `"Statistics = Data Science?"`_.
 He described the current state of data science work as: 1) data collection, 2) data modeling and analysis, and 3) problem solving and decision support.
 He argued that there should be a balanced curriculum that puts more emphasis on data collection, and there should be more focus on large and complex data which usually interface with other disciplines.
 
