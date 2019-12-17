@@ -47,8 +47,8 @@ the source code.
 Using these terms, debugging may be understood
 more precisely as the collective processes of determining what runtime
 faults led to a runtime failure, determining what software errors
-led to those faults, and modifying the code to prevent the faults from
-occurring. A **debugger** is a tool that allows the programmer to observe
+led to those faults, and eliminating the errors.
+A **debugger** is a tool that allows the programmer to observe
 the machine state during program execution, thereby making it possible to
 identify runtime faults.
 
@@ -278,8 +278,8 @@ Algorithmic Debugging
 ^^^^^^^^^^^^^^^^^^^^^
 
 *Algorithmic debugging* (also called *declarative debugging*) is a semi-automatic
-debugging technique in which the debugger automatically generates a series of
-questions to which the programmer's answers guide the search toward the bug.
+debugging technique in which the debugger guides the programmer toward the
+bug by asking a series of questions.
 The debugger constructs an *execution tree* (ET), a data structure representing a
 program execution, and traverses it using some search strategy, asking the
 programmer at each ET node whether the represented subcomputation is correct
@@ -290,8 +290,8 @@ the bug will eventually be found.
 Although algorithmic debugging can be applied in any language paradigm, it is most
 suited for declarative languages, e.g., pure functional languages.
 To determine whether an ET node for a pure functional program is correct, the
-programmer need only check that the return value of the corresponding, referentially
-transparent expression is the expected one, independent of any other ET node.
+programmer need only check that the return value of the corresponding
+expression is the expected one, independent of any other ET node.
 On the other hand, checking the correctness of an ET node for an imperative program
 requires checking, in addition to the return value, that values in the heap have
 been updated correctly---this can be difficult to ascertain because the programmer
