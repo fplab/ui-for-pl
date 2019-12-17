@@ -39,17 +39,19 @@ TODO: work on version control systems
 Accessibility
 =============
 
-Introduction and Overview
+Overview
 ----------------------------
 
-Accessibility in computing refers to the development and design of both software and hardware systems to be usable by people with disabilities. Broadly, "Providing accessibility means removing barriers that prevent people with disabilities from participating in substantial life activities, including the use of services, products, and information." :cite:`bergman1995towards`. This includes providing screen readers for those with visual impairments and alternative input devices for those with motor impairments. 
-
-Additionally, advances in computing technology over the previous decades have enabled richer communication for individuals with impairments. For example, augmentative and alternative communication (AAC) tools such as video calling or speech generating devices assist individuals with impairments in producing or comprehending speech.
+Accessibility in computing refers to the development and design of both software and hardware systems to be usable by people with disabilities. Many of the techniques used to create accessible software are also relevant to program editors, however, these present some challenges. For example, programming environements may include real-time debug information, use color to encode meaning, and contain large blocks of difficult to navigate text. These are just a few of many components which require special consideration in creating accessible program editors.
 
 First, This section will briefly give some context by going over some historic events regarding the accessibility of computing. Next, this section will discuss accessible design philosophy in general and some important characteristics. Finally, this section will discuss three important areas within that space as they relate to programming interfaces specifically: tools for programmers with visual impairments, tools for programmers with motor impairments, and writing accessible software. This section discusses those two types of impairments specifically as they are highly relevant to programming tasks and most research seems to be centered around those categories.
 
 History
 ----------------------------
+
+Broadly, "Providing accessibility means removing barriers that prevent people with disabilities from participating in substantial life activities, including the use of services, products, and information." :cite:`bergman1995towards`. This includes providing screen readers for those with visual impairments and alternative input devices for those with motor impairments. 
+
+Additionally, advances in computing technology over the previous decades have enabled richer communication for individuals with impairments. For example, augmentative and alternative communication (AAC) tools such as video calling or speech generating devices assist individuals with impairments in producing or comprehending speech.
 
 Although personal computers were first sold to the general public in the 1970s, the process of making this technology accessible began to become more common around 1990. **For example:**
 
@@ -90,8 +92,8 @@ Although personal computers were first sold to the general public in the 1970s, 
 
   Bergman and Johnson provide an overview of accessibility as it relates specifically to HCI; Readers should refer to this work for an in-depth history. Note that more up to date accessibility standards exist.
 
-Background
-----------------------------
+Accessible Design Philosophies
+---------------------------------
 
 Modern work has continued to explore **design philosophies** of accessible computing.
 
