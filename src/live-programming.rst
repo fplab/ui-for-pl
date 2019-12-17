@@ -145,6 +145,9 @@ variables; a program slice is an executable subset of the original program, obta
 deleting program statements that do not affect the criterion variables' runtime
 values at the criterion statement.
 
+Since Weiser's introduction of program slicing, researchers have proposed various
+extensions and generalizations. These include
+
 (another short paragraph about how program slicing has been generalized,
 forward vs backward, static vs dynamic, amorphous, execution slices)
 
@@ -161,6 +164,15 @@ forward vs backward, static vs dynamic, amorphous, execution slices)
   values at the criterion statement.
   The paper showed that the problem of computing minimal static slices is undecidable,
   but that approximate static slices can be found using data flow analysis.
+
+.. container:: bib-item
+
+  .. bibliography:: debugging.bib
+    :filter: key == 'xu2005survey'
+
+  This paper surveyed a wide variety of extensions and variations of program slicing
+  that had been developed since Weiser first proposed the technique in 1981
+  :cite:`weiser1981slicing`.
 
 
 .. container:: bib-item
