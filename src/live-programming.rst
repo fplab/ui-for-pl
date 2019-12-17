@@ -139,17 +139,21 @@ Program Slicing
 the corresponding subset of the program that produces that behavior.
 A **slicing criterion** specifies the target behavior; the corresponding program subset
 is called a **program slice**.
-For example, in the original formulation :cite:`weiser1981slicing`, Weiser defines a
+For example, in the original formulation :cite:`weiser1981slicing`, Weiser defined a
 slicing criterion as consisting of a program statement and a subset of program
 variables; a program slice is an executable subset of the original program, obtained by
 deleting program statements that do not affect the criterion variables' runtime
 values at the criterion statement.
 
-Since Weiser's introduction of program slicing, researchers have proposed various
-extensions and generalizations. These include
-
-(another short paragraph about how program slicing has been generalized,
-forward vs backward, static vs dynamic, amorphous, execution slices)
+Since Weiser's introduction of program slicing, researchers have proposed many
+variations and extensions. For example, whereas Weiser's notion of a program
+slice is a **backwards** slice consisting of statements that may affect the
+slicing criterion, a **forwards** slice consists of statements that may be
+influenced by the slicing criterion.
+Weiser focused on **static** slicing, which takes into account all possible
+executions of the program, while other tools incorporate **dynamic** slicing,
+which computes program slices with respect to a specific execution.
+Additional variations are reviewed in :cite:`xu2005survey`.
 
 .. container:: bib-item
 
