@@ -74,7 +74,7 @@ Although personal computers were first sold to the general public in the 1970s, 
   .. bibliography:: program-editors.bib
     :filter: key == 'ada'
 
-  It’s also important to note that the Americans with Disabilities Act (ADA) was passed in 1990.
+  The Americans with Disabilities Act (ADA) was passed in 1990.
 
 **Accessibility research** also appeared around this time. Like many HCI topics, it first emerged from the field of **human factors.** 
 
@@ -125,7 +125,11 @@ Traditional screen readers may not convey all of this information to visually im
   .. bibliography:: program-editors.bib
     :filter: key == 'doustdar_2016'
 
-  A blog post explaining the experiences of a blind programmer.
+  A blog post explaining the experiences of a blind programmer. Doustdar explains how he was first motivated to learn to program because he wanted to make a video game that blind people could play. He describes using the Visual Basic IDE, which allowed the user to drag and drop controls and auto-generated functions for the user, and how this interface gave him furstratingly little control over his code.
+
+  Over time, Doustdar learned to program through tinkering with various projects, because books were not accessible to him. He describes not being able to do as well in theoretical subjects because of this.
+
+  Finally, Doustdar also describes some of his experiences as a professional programmer, including how he became drawn to back-end development because of his blindness and facing discrimination from others in the workplace.
 
 Thus, prior research has analyzed typical behaviors of developers with visual impairments and has proposed systems to aid them in various tasks.
  
@@ -147,8 +151,8 @@ First and foremost, it’s important to have an understanding of how blind softw
   
   They conducted qualitative interviews with eight developers with varying amounts of experience. Significant findings are summarized below:
 
-  1. All particpants relied heavily on screen readers. Two participants noted that braille displays were useful for matching parenthesis. A wide range of IDEs were used. Debuggers were rarely used.
-  2. Participants relied heavily on documentation and keywords to understnad code structure. Participants often also used temporary text files to save variable names or quickly edit single blocks.
+  1. All participants relied heavily on screen readers. Two participants noted that braille displays were useful for matching parenthesis. A wide range of IDEs were used. Debuggers were rarely used.
+  2. Participants relied heavily on documentation and keywords to understand code structure. Participants often also used temporary text files to save variable names or quickly edit single blocks.
   3. Participants reported mixed success communicating with coworkers using visual diagrams; some translated them to text, while others reported that complex diagrams were often too abstract and were inaccessible.
   4. Generally, participants noted difficulty with tasks that have a visual component, and also finding math formulas and research online.
 
@@ -214,7 +218,7 @@ As previously mentioned, programming education often uses diagrams to represent 
   .. bibliography:: program-editors2.bib
     :filter: key == 'stefik2011design'
 
-  Stefik et al. present an educational infrastructure for blind and visually impaired middle and high school students that consists of Sodbeans, an auditory programming environment, Hop, a programming language, and a multi-sensory curriculum. They conducted an empirical study at a programming summer camp with 12 blind participants to evaluate their framework. 
+  Stefik et al. present an educational infrastructure for blind and visually impaired middle and high school students that consists of Sodbeans, an auditory programming environment, Hop, a programming language, and a multi-sensory curriculum. They conducted an empirical study at a programming summer camp with 12 blind participants to evaluate their framework. They evaluated their curriculum by comparing pre- and post-test scores, as well as scoring components of the learning process (Self-Efficacy, Critical Thinking, Task Goal Orientation, etc.). They found that students performed better with their curriculum. They also found that students reported a significant increase in self-efficacy, while also reporting significant decreases in competitive approaches to the work and decreases in students avoiding certain behaviors due to fear of embarassment.
 
 .. container:: bib-item
 
@@ -265,7 +269,7 @@ Yet, there are many clear obligations and benefits to creating accessible softwa
   .. bibliography:: program-editors3.bib
     :filter: key == 'choo2019examining'
 
-  Another potential barier is that non-disabled users may not know how a disabled user would experience their software. This paper explores using virtual reality (VR) to simulate vision impairments for accessibility testing.
+  Another potential barrier is that non-disabled users may not know how a disabled user would experience their software. This paper explores using virtual reality (VR) to simulate vision impairments for accessibility testing.
 
 .. container:: hidden
 
