@@ -99,16 +99,9 @@ debugging interfaces influence those processes.
   navigational activities performed in modern IDEs and offered little
   practical advice to builders of software engineering tools.
   This paper presented a theory of programmer navigation when debugging
-  based on information foraging theory.
-  Information foraging theory is an instance of rational analysis, a
-  methodology for modeling cognitive processes as optimization functions
-  over environmental and (minimally assumed) cognitive constraints---in
-  particular, without reliance on hypothesized mental structures.
-  This paper followed Sjøberg et al.'s theory-building process
-  :cite:`sjoberg2008building`: it adapted the constructs of information
-  foraging theory to programmer navigation during debugging; empirically
-  investigated the circumstances in which the theory is applicable; and
-  empirically evaluated the theory's predictive power.
+  based on information foraging theory, which relies only on
+  environmental and (minimally assumed) cognitive constraints
+  to model cognitive processes.
 
 
 Interactive Debuggers
