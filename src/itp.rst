@@ -4,25 +4,25 @@
 
 Overview
 ========
-Formal verification is essential to make sure important properties such as safety hold in software or hardware systems. 
   
 
 
-  :cite:`klein09` Complete formal verification is the only known way to guarantee that a system is free of programming errors. 
+  "Complete formal verification is the only known way to guarantee that a system is free of programming errors." :cite:`klein09` 
 
 Important applications of formal verification include: aerospace softwares such as those who prevent airplane collision;
-microprocessor producers such as Intel have their own verification team; there are also works about the
-language Rust, which, though haven't been completely verified, provides safety and performance at the same time. 
+microprocessor producers such as Intel have their own verification team.
 A cryptographic system must ensure that its protocol is error free, while the errors are hard to notice.
 
 An interactive theorem prover (ITP), sometimes refered to as proof assistant, is a programming environment that helps 
 humans to write formal proofs. In contrast to automated theorem provers, ITPs require human guidance, 
 though they also have a certain level of automation power. 
 Different to a traditional proof conducted through a pen-and-paper approach, a formal proof conducted by computers
-is completely rigorous, and is oftenly tedious and hard.
+is completely rigorous, and is oftenly tedious and hard. Similarly, a machine proof is usually cumbersome as well.
+For example, seL4, a verified microkernel that we will mention later, takes a total of about 23 person years for its 
+development of framework, libraries and functional correctness proof, and those sums up to 200,000 lines of code in the ITP Isabelle. :cite:`klein09`
 
-It is worth noting that, when we say some formal proof done by a theorem prover works, 
-we impose the implicit assumption that the theorem prover is error-free. In other words, we have to trust the theorem provers.
+It is worth noting that, usually we treat the theorem prover as a trusted computing base (TCB). In other words, we have to trust the theorem provers.
+
 
 
 Notable Computer-Aided Proofs
@@ -55,7 +55,8 @@ Notable Computer-Aided Proofs
 
 Gamification
 ============
-There are several interesting works for gamification, one of them is `Polymorphic Blocks <https://cseweb.ucsd.edu/~lerner/pb.html>`_ .
+Gamification of ITPS is translating them into games. 
+Check out one of them: `Polymorphic Blocks <https://cseweb.ucsd.edu/~lerner/pb.html>`_ .
 
 .. container:: bib-item
 
@@ -79,8 +80,12 @@ There are several interesting works for gamification, one of them is `Polymorphi
   whether it helps the user understand the symbolic meaning of the formulas. The paper also states that this tool has a potential of
   laying the foundation for crowdsourcing proofs via gamification.
 
-Proof General
+Unifying ITPs
 =============
+There are many different ITPs, and an extension for one of them
+does not easily transport to another. Proof General, a canonical IDE for ITPs,
+is a framework that tackles this problem.
+
 .. container:: bib-item
 
   .. bibliography:: itp.bib
@@ -100,13 +105,14 @@ Proof General
 
 
 Now there are `more features, <http://proofgeneral.inf.ed.ac.uk/htmlshow.php?title=Proof+General+user+manual&file=releases%2FProofGeneral%2Fdoc%2FProofGeneral%2FProofGeneral_2.html>`_
-supported by proof general, such as proof by pointing (appropraite tactics or lemmas are automatically applied
+supported by proof general, such as proof by pointing (appropriate tactics or lemmas are automatically applied
 when clicking on a subterm of a goal) and proof-tree visualization.
 
 
 Geometry Interactive Theorem Prover (GTP)
 =========================================
 
+Geometry Interactive Theorem Provers (GTP) are used for proving geometric properties.
 
 GTPs has potential for education. 
 This book describes a possible direction of developing GTP:
@@ -139,7 +145,7 @@ Let us look at a substantial example.
   The geometry software is used for drawing geometric figures and inventing conjectures by using feed back from the geometric software
   , and a theorem prover is used to prove the conjectures.
   In the automatic mode, the conjecture along with the graph created by the user is rewritten and translated to the automatic theorem prover.
-  The user can choose certain strategies such as setting searchning depth for the automated theorem prover, but has no control during proving,
+  The user can choose certain strategies such as setting searching depth for the automated theorem prover, but has no control during proving,
   except interrupting it.
   In the interactive mode, the process is similar, except that the conjecture along with the graph is limited into those that can be 
   translated into Coq, and the proof must be done by the user in Coq.
@@ -159,10 +165,10 @@ A few results of the GTPs are:
     :filter: key == 'boutry16'
 
   Tarski's axioms, which are axioms for Euclidean geometry,
-  is formulated in first-order logic, are formalized in Coq, which 'paves the way for the use of algebraic automated 
-  deduction methods in synthetic geometry within the Coq proof assistant.
+  is formulated in first-order logic, are formalized in Coq, which "paves the way for the use of algebraic automated 
+  deduction methods in synthetic geometry within the Coq proof assistant".
 
-Usability Evaluation of Interactive Theorem provers
+Usability Evaluation of Interactive Theorem Provers
 =========================================================
 .. container:: bib-item
 
@@ -188,7 +194,7 @@ Usability Evaluation of Interactive Theorem provers
   The detailed tree-structured proof in KeY is both an advantage and a
   disadvantage, since the user can go into details as much as she wants to, but at the same time 
   it gives too much information that the user does not care about. 
-  However KeY users oftenly have to interact with
+  However KeY users often have to interact with
   low-level logic formulas rather than doing proof on the notation level, and it is common for them to perform repeated low-level interactions. 
   Isabelle, on the other hand, produces a more intuitive proof.
   It also has tools that helps automation such as automated counter example finding. One of the down side of Isabelle is that, finding the right tactic
