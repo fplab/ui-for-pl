@@ -31,11 +31,9 @@ Debugging
 Much of the activity of programming involves **debugging**, i.e.,
 diagnosing and preventing undesired program behavior.
 Wilkes's early realization of this fact was echoed and amplified in a 2002
-study of the U.S. software industry, which found that software engineers
-spent an average of 70-80% of their time testing and debugging, with
-the average bug taking 17.4 hours to fix.
+study of the U.S. software industry, which found that the average
+bug took 17.4 hours to investigate and fix.
 Thus, debuggers form a crucial component of an effective programming system.
-(needs better finish)
 
 Software bugs manifest at three levels. Typically a bug is first
 observed as a **runtime failure**, an instance of external program
