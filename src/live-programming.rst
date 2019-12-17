@@ -31,7 +31,7 @@ Debugging
 Much of the activity of programming involves **debugging**, i.e.,
 diagnosing and preventing undesired program behavior.
 Wilkes's early realization of this fact was echoed and amplified in a 2002
-study of the U.S. software industry, which found that the average
+study :cite:`tassey2002nist` of the U.S. software industry, which found that the average
 bug took 17.4 hours to investigate and fix.
 Thus, debuggers form a crucial component of an effective programming system.
 
@@ -51,6 +51,11 @@ led to those faults, and modifying the code to prevent the faults from
 occurring. A **debugger** is a tool that allows the programmer to observe
 the machine state during program execution, thereby making it possible to
 identify runtime faults.
+
+.. container:: bib-item
+
+  .. bibliography:: debugging.bib
+    :filter: key == 'tassey2002nist'
 
 Theories of Human Debugging
 ---------------------------
