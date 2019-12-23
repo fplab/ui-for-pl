@@ -23,10 +23,6 @@ Debugging
 Interactive Debuggers
 ---------------------
 
-Program Visualization
----------------------
-
-
 Programming by Demonstration
 ============================
 
