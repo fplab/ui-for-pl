@@ -18,9 +18,9 @@ Contributions
 This is very much a `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged. 
 
 .. todo::
-  The compendium includes **Todo** items like these to help guide community contributions. 
+  The compendium includes **Todo items** like these to help guide community contributions. 
   However, all manner of contributions are encouraged, including edits to existing text and reorganization efforts.
-  You could even just add a new Todo item of your own, even if you don't yet have the bandwidth to discharge it!
+  You could even just add a new Todo item, even if you don't yet have the bandwidth to discharge it!
 
 How to Contribute
 *****************
@@ -52,7 +52,7 @@ The following resources are similar in spirit to this compendium but less focuse
  * `Visual Programming Codex <https://github.com/ivanreese/visual-programming-codex>`_
  * `The Whole Code Catalog <https://futureofcoding.org/catalog/>`_
 
-See the :ref:`Community <Community Overview>` chapter for more external resources.
+See the :ref:`Community <Community Overview>` chapter for more pointers to external resources.
 
 .. toctree::
 
