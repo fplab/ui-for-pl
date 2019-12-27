@@ -16,10 +16,20 @@ working in this exciting and evolving field.
 Contributions
 -------------
 This is very much a `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged. 
-Click the "Edit on GitHub" link at the top of any page to quickly propose an edit. 
-For more substantial edits, e.g. to add a new topic area, you can `fork the repository <https://github.com/fplab/ui-for-pl>`_ and make a pull request on GitHub.
+
+.. todo::
+  The compendium includes **Todo** items like these to help guide community contributions. 
+  However, all manner of contributions are encouraged, including edits to existing text and reorganization efforts.
+  You could even just add a new Todo item of your own, even if you don't yet have the bandwidth to discharge it!
+
+How to Contribute
+*****************
+Click the "Edit on GitHub" link at the top of any page to quickly propose an edit to that page. 
+For more substantial edits, you can `fork the repository <https://github.com/fplab/ui-for-pl>`_ and make a pull request on GitHub.
 The `README <https://github.com/fplab/ui-for-pl/blob/master/README.md>`_ includes more detailed technical instructions.
 
+Discussing Contributions
+************************
 .. todo::
 
   Create a channel on FoC Slack for people to discuss potential contributions.
