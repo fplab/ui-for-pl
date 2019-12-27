@@ -38,3 +38,6 @@ Icon
 # Sphinx
 
 html/
+
+# VS Code
+.vscode/
