@@ -5,18 +5,24 @@
 User Interfaces for Programming Languages
 =========================================================
 
-This online compendium covers research into user interfaces for programming 
+  **compendium**. *n*. a collection of concise but detailed information about a particular subject.
+
+You have found an online compendium covering research into user interfaces for programming 
 languages, broadly construed.
 Each topic includes a brief overview followed by an **annotated bibliography**. 
-The aim is to provide a summary of the relevant academic literature, 
-as well as notable non-academic designs and resources, for use by researchers and designers
+The aim is to summarize and provide pointers into the literature for the benefit of researchers and designers
 working in this exciting and evolving field.
 
 Contributions
 -------------
 This is very much a `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged. 
-Click the "Edit on GitHub" link on any page to quickly propose an edit. 
+Click the "Edit on GitHub" link at the top of any page to quickly propose an edit. 
 For more substantial edits, e.g. to add a new topic area, you can `fork the repository <https://github.com/fplab/ui-for-pl>`_ and make a pull request on GitHub.
+The `README <https://github.com/fplab/ui-for-pl/blob/master/README.md>`_ includes more detailed technical instructions.
+
+.. todo::
+
+  Create a channel on FoC Slack for people to discuss potential contributions.
 
 
 Contributors
