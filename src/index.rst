@@ -27,7 +27,7 @@ The `README <https://github.com/fplab/ui-for-pl/blob/master/README.md>`_ include
 
 Contributors
 ************
-  * The compendium is maintained by `Cyrus Omar <https://web.eecs.umich.edu/~comar>`_ together with other members of the `Future of Programming Lab <https://github.com/fplab/fplab/wiki/The-Future-of-Programming-Lab>`_ at the University of Michigan.
+  * The compendium is maintained by `Cyrus Omar <https://web.eecs.umich.edu/~comar>`_ together with other members of the `Future of Programming Lab <http://fplab.mplse.org/>`_ at the University of Michigan.
 
   * During the Fall 2019 term, the following students in the `EECS 598: User Interfaces for Programming Languages <http://web.eecs.umich.edu/~comar/courses/ui-for-pl/>`_ course at Michigan made the first wave of contributions to this document: 
     Abhitej Ganta (:ref:`Programming Assistants <Programming Assistants Overview>`), 
