@@ -1,35 +1,42 @@
 .. You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-==========================================
+=========================================================
 User Interfaces for Programming Languages
-==========================================
+=========================================================
 
-This is an online compendium covering research into user interfaces for programming languages, broadly construed.
-It is organized hierarchically into topic areas. Each topic area includes a brief overview followed by an **annotated bibliography** that aims to clearly and concisely summarize the relevant academic literature, as well as notable non-academic designs.
+This online compendium covers research into user interfaces for programming 
+languages, broadly construed.
+Each topic includes a brief overview followed by an **annotated bibliography**. 
+The aim is to provide a summary of the relevant academic literature, 
+as well as notable non-academic designs and resources, for use by researchers and designers
+working in this exciting and evolving field.
 
 Contributions
 -------------
-This is very much a **living document** and community contributions are encouraged. 
+This is very much a `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged. 
 Click the "Edit on GitHub" link on any page to quickly propose an edit. 
 For more substantial edits, e.g. to add a new topic area, you can `fork the repository <https://github.com/fplab/ui-for-pl>`_ and make a pull request on GitHub.
 
 
 Contributors
 ************
-  * This compendium is maintained by `Cyrus Omar <https://web.eecs.umich.edu/~comar>`_ (comar@umich.edu) and other members of the `Future of Programming Lab <https://github.com/fplab/fplab/wiki/The-Future-of-Programming-Lab>`_ at the University of Michigan.
+  * The compendium is maintained by `Cyrus Omar <https://web.eecs.umich.edu/~comar>`_ together with other members of the `Future of Programming Lab <https://github.com/fplab/fplab/wiki/The-Future-of-Programming-Lab>`_ at the University of Michigan.
 
-  * During the Fall 2019 term, students taking the `EECS 598: User Interfaces for Programming Languages <http://web.eecs.umich.edu/~comar/courses/ui-for-pl/>`_ course at Michigan will be making the first wave of contributions to this document.
+  * During the Fall 2019 term, the following students in the `EECS 598: User Interfaces for Programming Languages <http://web.eecs.umich.edu/~comar/courses/ui-for-pl/>`_ course at Michigan made the first wave of contributions to this document: 
+    Abhitej Ganta (:ref:`Programming Assistants <Programming Assistants Overview>`), 
+    etc.
 
 Similar Resources
 -----------------
-The following resources are less focused on summarizing the academic literature but are otherwise similar in spirit:
+The following resources are similar in spirit to this compendium but less focused on summarizing the academic literature:
 
  * `Gallery of Programmer Interfaces <https://docs.google.com/presentation/d/e/2PACX-1vSPuf3eQ2tlCtXAif4gEWQQU-xK8EzhiH3SIfuD7vWy7eP4NN0-KRejbec_m-GF6-f_D95OOFyyoolx/pub?start=false&loop=false&delayms=3000#slide=id.g1da0625f1b_0_56>`_
  * `Visual Programming Languages - Snapshots <http://blog.interfacevision.com/design/design-visual-progarmming-languages-snapshots/>`_
  * `Visual Programming Codex <https://github.com/ivanreese/visual-programming-codex>`_
  * `The Whole Code Catalog <https://futureofcoding.org/catalog/>`_
 
+See the :ref:`Community <Community Overview>` chapter for more external resources.
 
 .. toctree::
 
