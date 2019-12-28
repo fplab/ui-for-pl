@@ -7,20 +7,26 @@ User Interfaces for Programming Languages
 
   **compendium**. *n*. a collection of concise but detailed information about a particular subject.
 
-You have found an online compendium covering research into user interfaces for programming 
+This is an **online compendium** covering research into user interfaces for programming 
 languages, broadly construed.
-Each topic includes a brief overview followed by an **annotated bibliography**. 
-The aim is to summarize and provide pointers into the literature for the benefit of researchers and designers
-working in this exciting and evolving field.
+Each topic on the left includes a brief overview followed by an **annotated bibliography**. 
+The aim is to summarize, organize, and provide pointers into the literature for the benefit of researchers and designers
+working in this exciting and rapidly evolving field.
 
 Contributions
 -------------
-This is very much a `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged. 
+This compendium is very much a `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged! 
 
 .. todo::
-  The compendium includes **Todo items** in a box like this one to help guide community contributions. 
+  The compendium includes **TODO items** in boxes like this one to help guide community contributions. 
   However, all manner of contributions are encouraged, including edits to existing text and reorganization efforts.
-  You could even just add a new Todo item, even if you don't yet have the bandwidth to discharge it!
+  You can even just add a new TODO item, even if you don't yet have the bandwidth to discharge it!
+
+Discussing Contributions
+************************
+.. todo::
+
+  Create a channel on FoC Slack for people to discuss potential contributions.
 
 How to Contribute
 *****************
@@ -28,11 +34,6 @@ Click the "Edit on GitHub" link at the top of any page to quickly propose an edi
 For more substantial edits, you can `fork the repository <https://github.com/fplab/ui-for-pl>`_ and make a pull request on GitHub.
 The `README <https://github.com/fplab/ui-for-pl/blob/master/README.md>`_ includes more detailed technical instructions.
 
-Discussing Contributions
-************************
-.. todo::
-
-  Create a channel on FoC Slack for people to discuss potential contributions.
 
 
 Contributors
