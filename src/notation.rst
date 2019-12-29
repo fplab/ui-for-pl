@@ -157,6 +157,7 @@ For example, *grammar-based parser generators* generate a parser given a formal 
 Parser Combinators
 ``````````````````
 Another method is to use a *parser combinator* library, which generates a parser by executing a program that applies various functions (called `combinators`) to define and combine parsing rules.
+In many cases, the goal is for the composition of various combinators to resemble a grammar-based specification.
 
 .. container:: bib-item
 
