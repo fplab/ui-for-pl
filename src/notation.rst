@@ -275,3 +275,4 @@ Programmable Notation
   :cite:`wadler2003prettier`
   :cite:`bernardy17`
   :cite:`hutton92`
+  :cite:`frost08`
