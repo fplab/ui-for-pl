@@ -223,30 +223,41 @@ For example, textual pretty printers are unparsers that choose a "pretty" textua
 Minifiers and Obfuscators
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Not all unparsers are pretty printers. An unparser's goal may instead be to minimize the size of the resulting string representation, or even to intentionally obfuscate the code.
+Not all unparsers are pretty printers. 
+An unparser's goal may instead be to minimize the size of the resulting string representation, or even to intentionally obfuscate the code.
 
 .. todo::
   Are there papers on minifiers or obfuscators?
 
 Graphical Notation
-===============================
+==================
+Mathematical notation is often non-textual. 
 
-Mathematical notation is often non-textual. For example, it is common to lay out fractions vertically, or to use square root notation that requires placing a line over a sub-expression.
-In other cases, mathematical notation is even more overtly diagrammatic or graphical. For example, matrix notation lays out sub-expressions in a grid. Set intersection is diagrammed using overlapping circles.
+For example, it is common to lay out fractions vertically, or to use square root notation :math:`\sqrt{e}`.
+Matrix notation lays out sub-expressions in a grid. 
+Set intersection is diagrammed using overlapping circles.
 
-Diagrammatic notation is also used to represent structures that arise in fields other than pure mathematics. Examples include `juggling notation <http://www.solipsys.co.uk/new/JugglingTalkSummary.html?JugglingTalk>`_, `knot notation <https://www.maths.ed.ac.uk/~v1ranick/papers/conway.pdf>`_ (see `Katherine Ye's Strange Loop 2015 talk <https://www.youtube.com/watch?v=Wahc9Ocka1g>`_), and `notation for kinetic sculptures <https://github.com/hypotext/notation#channa-horwitzs-sonakinetography>`_. These examples come from Katherine Ye's excellent notes on `notations and thought <https://github.com/hypotext/notation#notation-and-thought>`_, which contain a number of other examples, quotations, and musings on notation.
+In applied mathematics, the sciences, and the arts, diagrammatic notation is quite common.
+Examples include `juggling notation <http://www.solipsys.co.uk/new/JugglingTalkSummary.html?JugglingTalk>`_, 
+`knot notation <https://www.maths.ed.ac.uk/~v1ranick/papers/conway.pdf>`_ (see `Katherine Ye's Strange Loop 2015 talk <https://www.youtube.com/watch?v=Wahc9Ocka1g>`_), 
+and `notation for kinetic sculptures <https://github.com/hypotext/notation#channa-horwitzs-sonakinetography>`_. 
+These examples come from Katherine Ye's excellent `notes on notations and thought <https://github.com/hypotext/notation#notation-and-thought>`_, 
+which also contain a number of other examples, quotations, and musings on notation.
 
-.. todo::
+Some systems that support generating diagrams from textual descriptions of mathematical structures. Note that this is distinct from languages that simply provide low-level graphical primitives, e.g. lines and shapes, such as `TikZ <http://www.texample.net/tikz/>`_.
 
-  Cite Katherine's work on generating diagrams from symbolic descriptions of structures.
+.. container:: bib-item
 
-.. todo::
+  .. bibliography:: notation2.bib
+    :filter: key == "wode17"
 
-  Amy Ko's graduate work, and other work on projectional editors, including mbeddr
+  The `Penrose <https://penrose.ink/>`_ system, in development as of early 2020, supports generating graphical diagrams from textual descriptions of mathematical structures together with additional styling and layout optimization directives.
 
-.. todo::
+Few programming languages support non-textual primary notation, 
+in part because doing so requires moving away from the use of standard text editors for writing programs.
+We discuss systems that do support non-textual primary notation in the section on :ref:`Structure Editors`.
+We also discuss systems that support locally integrating interactive graphical notation into a textual editing environment there.
 
-  Graphite 
 
 Programmable Notation
 =====================
@@ -279,3 +290,5 @@ Programmable Notation
   :cite:`bernardy17`
   :cite:`hutton92`
   :cite:`frost08`
+  :cite:`wode17`
+  :cite:`ko06`
