@@ -7,7 +7,7 @@ Overview
 
 Humans visually represent **mathematical structures**, including computer programs, using **mathematical notation**.  
 There can be many different notations for a given structure, each differing along various cognitive dimensions. 
-As such, **notation design** is a subfield of user interface design.
+As such, notation design is a subfield of user interface design.
 
 In mathematical writing, authors often define notation informally, e.g. by example.
 It is common to be somewhat cavalier about notation in this setting, relying on the human reader to resolve ambiguities or insert missing details based on convention.
@@ -20,7 +20,7 @@ The rules that fundamentally introduce program structures constitute the **abstr
 
   The metalanguage that the abstract syntax operates within provides the ground notation used to identify program structures. 
 
-  For example, if the abstract syntax defines programs as labeled inductive tree structures, as is common practice, then the metalanguage might identify one such "abstract syntax tree" with the form ``Plus(Num(2), Num(2))``. 
+  For example, if the abstract syntax defines programs as labeled inductive tree structures, as is common practice, then the metalanguage might identify one such "abstract syntax tree" by the form ``Plus(Num(2), Num(2))``. 
   A concrete syntax can then map the concrete form ``2 + 2`` to this tree structure.
 
 Programming language definitions typically privilege a single concrete syntax, which is then referred to colloquially as *the* concrete syntax of the language. 
@@ -28,7 +28,7 @@ However, it is important to keep in mind that many languages now have popular th
 The underlying structures, not the surface forms, are what is meaningful, i.e. assigned meaning by the language definition.
 
 Notation specific to a particular type of data is known as **literal notation** for that type. 
-An instance of this notation is called a *literal*. 
+An instance of this notation is called a **literal**. 
 For example, the concrete syntax of many programming languages allows for list literals like ``[1, 2, 3]``.
 
 History of Mathematical Notation
