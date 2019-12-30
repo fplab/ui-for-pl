@@ -54,17 +54,17 @@ Before that, mathematical statements were written out in natural language (e.g. 
   It also includes some discussion of the notational choices in the Mathematica programming language.
 
 
-Cognitive Dimensions of Notation
-================================
+Cognitive Dimensions of Notations
+=================================
 
 Notations can be compared along various *cognitive dimensions*. 
 Examples include *diffuseness* (the amount of space that the notation takes up) and *role-expressiveness* (the extent to which the purpose of a notational entity is readily apparent) :cite:`blackwell2001cognitive`. 
 
 To properly perform a cognitive dimensions analysis, one needs to specify an appropriately specific context (e.g. by specifying who the intended user is, and the affordances available in the editing environment). 
-Because cognitive dimensions analyses involve reasoning about cognitive operations, they are typically qualitative in nature, though in some cases a quantitative cost metrics can also be relevant.
+Because cognitive dimensions analyses involve reasoning about cognitive operations, they are typically qualitative in nature, though in some cases a quantitative cost metric can also be relevant.
 
 .. note::
-  In much of the literature on cognitive dimensions of notation, the word "notation" is used liberally: researchers will analyze a complete language or system design rather than focusing strictly on notational choices.
+  In much of the literature on cognitive dimensions of notations, the word "notation" is used liberally: researchers will analyze a complete language or system design rather than focusing strictly on notational choices.
 
 .. container:: bib-item
 
@@ -147,7 +147,7 @@ Parsers are sometimes written manually (a.k.a. "hand-rolled").
 More commonly, however, they are generated programmatically using a parser generator.
 
 Grammar-Based Parser Generators
-```````````````````````````````
+*******************************
 For example, *grammar-based parser generators* generate a parser given a formal grammar (written using some suitable grammar formalism) where each production is equipped with logic that determines the corresponding structure. 
 
 .. todo::
@@ -155,9 +155,9 @@ For example, *grammar-based parser generators* generate a parser given a formal 
   Is there a good survey or book on grammar-based parser generators? Someone's thesis might have a good survey on the topic in it?
 
 Parser Combinators
-``````````````````
+******************
 Another method is to use a *parser combinator* library, which generates a parser by executing a program that applies various functions (called `combinators`) to define and combine parsing rules.
-In many cases, the goal is for the composition of various combinators to resemble a grammar-based specification.
+In many cases, the goal is for the composition of various combinators to resemble a grammar-based specification, such that the resulting parser is an implementation of the corresponding grammar.
 
 .. container:: bib-item
 
@@ -172,7 +172,9 @@ In many cases, the goal is for the composition of various combinators to resembl
   .. bibliography:: notation2.bib
     :filter: key == 'frost08'
 
-  This paper describes a parser combinator library that can accommodate left-recursive grammars and that performs well. It is implemented in Haskell.
+  This paper describes a parser combinator library that can accommodate ambiguities and left-recursive grammars. 
+  It is also asymptotically efficient. 
+  It is implemented in Haskell.
 
 .. todo::
 
