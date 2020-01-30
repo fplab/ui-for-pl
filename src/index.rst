@@ -55,6 +55,9 @@ The following resources are similar in spirit to this compendium but less focuse
 
 See the :ref:`Community <Community Overview>` chapter for more pointers to external resources.
 
+
+
+
 .. toctree::
 
 .. raw:: latex
