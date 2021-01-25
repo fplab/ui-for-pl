@@ -24,7 +24,9 @@ The rules that fundamentally introduce program structures constitute the **abstr
   A concrete syntax can then map the concrete form ``2 + 2`` to this tree structure.
 
 Programming language definitions typically privilege a single concrete syntax, which is then referred to colloquially as *the* concrete syntax of the language. 
-However, it is important to keep in mind that many languages now have popular third-party concrete syntaxes (e.g. `CoffeeScript <https://coffeescript.org/>`_ for JavaScript, `Reason <https://reasonml.github.io/>`_ for OCaml), and it is also possible to define a programming language without privileging any concrete syntax at all.
+However, it is important to keep in mind that many languages now have popular third-party concrete syntaxes 
+(e.g. `CoffeeScript <https://coffeescript.org/>`_ for JavaScript, `Reason <https://reasonml.github.io/>`_ for OCaml), 
+and it is also possible to define a programming language without privileging any concrete syntax at all.
 The underlying structures, not the surface forms, are what is meaningful, i.e. assigned meaning by the language definition.
 
 Notation specific to a particular type of data is known as **literal notation** for that type. 

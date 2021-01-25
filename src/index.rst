@@ -5,17 +5,15 @@
 User Interfaces for Programming Languages
 =========================================================
 
-  **compendium**. *n*. a collection of concise but detailed information about a particular subject.
-
-This is an **online compendium** covering research into user interfaces for programming 
+This is an online compendium covering research into user interfaces for programming 
 languages, broadly construed.
-Each topic on the left includes a brief overview followed by an **annotated bibliography**. 
+Each section includes a brief overview followed by an **annotated bibliography**. 
 The aim is to summarize, organize, and provide pointers into the literature for the benefit of researchers and designers
 working in this exciting and rapidly evolving field.
 
 Contributions
 -------------
-This compendium is very much a `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged! 
+This compendium is very much an incomplete `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged! 
 
 .. todo::
   The compendium includes **TODO items** in boxes like this one to help guide community contributions. 
