@@ -5,42 +5,42 @@
 User Interfaces for Programming Languages
 =========================================================
 
-This is an online compendium covering research into user interfaces for programming 
+This online compendium covers research into user interfaces for programming 
 languages, broadly construed.
-Each section includes a brief overview followed by an **annotated bibliography**. 
+Each section includes a brief overview of the topic together with an **annotated bibliography**. 
 The aim is to summarize, organize, and provide pointers into the literature for the benefit of researchers and designers
 working in this exciting and rapidly evolving field.
 
 Contributions
 -------------
-This compendium is very much an incomplete `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged! 
+This compendium is far from a complete account of the field, and many major papers and research areas are missing entirely. 
+We are maintaining it as a `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged! 
 
+How to Contribute
+~~~~~~~~~~~~~~~~~
+Click the "Edit on GitHub" link at the top of any page to quickly propose an edit to that page. 
+For more substantial edits, you can `fork the repository <https://github.com/fplab/ui-for-pl>`_ and make a pull request on GitHub.
+The `README <https://github.com/fplab/ui-for-pl/blob/master/README.md>`_ includes more detailed technical instructions.
+
+Leaving TODOs
+~~~~~~~~~~~~~
 .. todo::
   The compendium includes **TODO items** in boxes like this one to help guide community contributions. 
   However, all manner of contributions are encouraged, including edits to existing text and reorganization efforts.
   You can even just add a new TODO item, even if you don't yet have the bandwidth to discharge it!
 
 Discussing Contributions
-************************
+~~~~~~~~~~~~~~~~~~~~~~~~
 .. todo::
 
   Create a channel on FoC Slack for people to discuss potential contributions.
 
-How to Contribute
-*****************
-Click the "Edit on GitHub" link at the top of any page to quickly propose an edit to that page. 
-For more substantial edits, you can `fork the repository <https://github.com/fplab/ui-for-pl>`_ and make a pull request on GitHub.
-The `README <https://github.com/fplab/ui-for-pl/blob/master/README.md>`_ includes more detailed technical instructions.
-
-
-
 Contributors
-************
+~~~~~~~~~~~~
   * The compendium is maintained by `Cyrus Omar <https://web.eecs.umich.edu/~comar>`_ together with other members of the `Future of Programming Lab <http://fplab.mplse.org/>`_ at the University of Michigan.
 
-  * During the Fall 2019 term, the following students in the `EECS 598: User Interfaces for Programming Languages <http://web.eecs.umich.edu/~comar/courses/ui-for-pl/>`_ course at Michigan made the first wave of contributions to this document: 
-    Abhitej Ganta (:ref:`Programming Assistants <Programming Assistants Overview>`), 
-    etc.
+  * During the Fall 2019 term, the following students in the `EECS 598: User Interfaces for Programming Languages <http://web.eecs.umich.edu/~comar/courses/ui-for-pl/>`_ 
+    course at Michigan made the first wave of contributions to this document: Abhitej Ganta (:ref:`Programming Assistants <Programming Assistants Overview>`), ...
 
 Similar Resources
 -----------------

@@ -21,7 +21,7 @@
 # project = 'User Interfaces for <br />Programming Languages:<br /><span style="font-weight: normal">A Compendium</span>'
 project = 'User Interfaces for Programming Languages'
 html_title = project
-copyright = '2019. Original content licensed under the Creative Commons Attribution-ShareAlike 4.0 International license.'
+copyright = '2020. Original content licensed under the Creative Commons Attribution-ShareAlike 4.0 International license.'
 author = 'Cyrus Omar'
 titlesuffix = "UI for PL"
 
@@ -50,6 +50,9 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_themes']
+
+# Bibtex files
+bibtex_bibfiles = ['notation.bib', 'notation2.bib']
 
 
 # -- Options for HTML output -------------------------------------------------
