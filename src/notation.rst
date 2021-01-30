@@ -5,29 +5,22 @@
 Overview
 ========
 
-Humans visually represent **mathematical structures**, including computer programs, using **mathematical notation**.  
+Humans visually represent **mathematical structures**, such as computer programs, using **mathematical notation**.  
 There can be many different notations for a given structure, each differing along various cognitive dimensions. 
 As such, notation design is a subfield of user interface design.
 
 In mathematical writing, authors often define notation informally, e.g. by example.
 It is common to be somewhat cavalier about notation in this setting, relying on the human reader to resolve ambiguities or insert missing details based on convention.
 
-Programming language designers, in contrast, are typically more precise. 
+Programming language designers, in contrast, must be more precise to allow the program to be manipulated by computational tools (e.g. compilers). 
 In particular, a **concrete syntax** or **surface syntax** is a formal system that serves to map recognized notational forms to program structures.
-The rules that fundamentally introduce program structures constitute the **abstract syntax** or **structural syntax** of the language.
-
-.. note::
-
-  The metalanguage that the abstract syntax operates within provides the ground notation used to identify program structures. 
-
-  For example, if the abstract syntax defines programs as labeled inductive tree structures, as is common practice, then the metalanguage might identify one such "abstract syntax tree" by the form ``Plus(Num(2), Num(2))``. 
-  A concrete syntax can then map the concrete form ``2 + 2`` to this tree structure.
+(Program structures themselves are defined in some suitable metalanguage, which itself might have its own notational forms.)
 
 Programming language definitions typically privilege a single concrete syntax, which is then referred to colloquially as *the* concrete syntax of the language. 
-However, it is important to keep in mind that many languages now have popular third-party concrete syntaxes 
+However, many languages now have popular third-party concrete syntaxes 
 (e.g. `CoffeeScript <https://coffeescript.org/>`_ for JavaScript, `Reason <https://reasonml.github.io/>`_ for OCaml), 
 and it is also possible to define a programming language without privileging any concrete syntax at all.
-The underlying structures, not the surface forms, are what is meaningful, i.e. assigned meaning by the language definition.
+The underlying structures, not the surface forms, are what is meaningful, i.e. assigned meaning by the language definition (a.k.a. semantics).
 
 Notation specific to a particular type of data is known as **literal notation** for that type. 
 An instance of this notation is called a **literal**. 
@@ -36,6 +29,7 @@ For example, the concrete syntax of many programming languages allows for list l
 History of Mathematical Notation
 ================================
 
+Mathematical notation has evolved substantially over the centuries.
 Diagrammatic notation is evident in early mathematical writing, e.g. in Euclid's *Elements*. 
 Symbolic notation has been comparatively slow to emerge, arising mainly in the last several centuries. 
 Before that, mathematical statements were written out in natural language (e.g. "The sum of 2 and 2 is 4.")
@@ -180,7 +174,39 @@ In many cases, the goal is for the composition of various combinators to resembl
 
 .. todo::
 
-  Is there other notable work on parser combinators, particularly after 2008?
+  other notable work on parser combinators, particularly after 2008?
+
+.. todo::
+
+  links to well-maintained parser combinator libraries could also be useful here
+
+Programmable Notation
+~~~~~~~~~~~~~~~~~~~~~
+
+Some languages support programmable notation, i.e. they allow the programmer to define new notational forms within programs. 
+The central challenge here is to support modularity. The simplest mechanisms do not support modularity, i.e. different syntax 
+definitions included in different libraries can conflict with one another, leading to errors or ambiguities.
+
+.. container:: bib-item 
+
+  .. bibliography:: notation2.bib 
+    :filter: key == 'omar17' or key == 'omar18' or key == 'omar14'
+  
+  This thesis and accompanying papers introduce a programmable syntax mechanism that allows for the definition of new literal notation
+  (only). The definitions are constrained to support modular definition and modular reasoning about types and binding.
+
+.. todo::
+  
+  Cite Cyrus' PhD thesis + ECOOP and ICFP papers
+
+.. todo::
+
+  Cite Erdweg's work
+
+.. todo:: 
+
+  Cite Schwerdfeger and Van Wyk
+
 
 Parse Errors
 ~~~~~~~~~~~~
@@ -229,13 +255,11 @@ Not all unparsers are pretty printers.
 An unparser's goal may instead be to minimize the size of the resulting string representation, or even to intentionally obfuscate the code.
 
 .. todo::
-  Are there papers on minifiers or obfuscators?
+  papers on minifiers or obfuscators? links to notable minifiers / obfuscators?
 
 Graphical Notation
 ==================
-Mathematical notation is often non-textual. 
-
-For example, it is common to lay out fractions vertically, or to use square root notation :math:`\sqrt{e}`.
+Mathematical notation can also be non-textual. For example, it is common to lay out fractions vertically, or to use square root notation :math:`\sqrt{e}`.
 Matrix notation lays out sub-expressions in a grid. 
 Set intersection is diagrammed using overlapping circles.
 
@@ -261,20 +285,6 @@ We discuss systems that do support non-textual primary notation in the section o
 We also discuss systems that support locally integrating interactive graphical notation into a textual editing environment there.
 
 
-Programmable Notation
-=====================
-
-.. todo::
-  
-  Cite Cyrus' PhD thesis + ECOOP and ICFP papers
-
-.. todo::
-
-  Cite Erdweg's work
-
-.. todo:: 
-
-  Cite Schwerdfeger and Van Wyk
 
 
 .. container:: hidden

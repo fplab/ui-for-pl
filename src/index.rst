@@ -13,12 +13,12 @@ working in this exciting and rapidly evolving field.
 
 Contributions
 -------------
-This compendium is far from a complete account of the field, and many major papers and research areas are missing entirely. 
+This compendium is far from a complete account of the field, and many major papers, projects, and areas are missing entirely. 
 We are maintaining it as a `living document <https://en.wikipedia.org/wiki/Living_document>`_ and community contributions of any size are encouraged! 
 
 How to Contribute
 ~~~~~~~~~~~~~~~~~
-Click the "Edit on GitHub" link at the top of any page to quickly propose an edit to that page. 
+Click the "Edit on GitHub" link at the top right of any page to quickly propose an edit to that page. 
 For more substantial edits, you can `fork the repository <https://github.com/fplab/ui-for-pl>`_ and make a pull request on GitHub.
 The `README <https://github.com/fplab/ui-for-pl/blob/master/README.md>`_ includes more detailed technical instructions.
 
@@ -31,9 +31,8 @@ Leaving TODOs
 
 Discussing Contributions
 ~~~~~~~~~~~~~~~~~~~~~~~~
-.. todo::
-
-  Create a channel on FoC Slack for people to discuss potential contributions.
+You can discuss potential contributions with the maintainers and other contributors on the #ui-for-pl-compendium channel on the 
+`Future of Coding Slack <https://futureofcoding.org/community>`_.
 
 Contributors
 ~~~~~~~~~~~~
