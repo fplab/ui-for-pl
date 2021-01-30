@@ -55,8 +55,9 @@ We use BibTeX for citations, via the [sphinxcontrib-bibtex](https://sphinxcontri
 
 This extension is somewhat limited, so we need to use the following workarounds:
 1. Each .bib file can have no more than 9 entries, so just make new files, e.g. `notation.bib`, `notation2.bib` and so on, as needed.
-2. Sphinx will generate warnings if you have not explicitly cited a bibliography entry in the text. To get around this, you can include a hidden area at the bottom of each file to cite items that you have not otherwise cited. See the bottom of `notation.rst` for an example.
-3. There are certain lexical limitations on the cite keys, e.g. they cannot have capital letters. I recommend using cite keys of the form `lastnameYY` where `YY` is the two digit year, e.g. `hughes95`.
+2. Each .bib file must be added to the `bibtex_bibfiles` list in `conf.py`.
+3. Sphinx will generate warnings if you have not explicitly cited a bibliography entry in the text. To get around this, you can include a hidden area at the bottom of each file to cite items that you have not otherwise cited. See the bottom of `notation.rst` for an example.
+4. There are certain lexical limitations on the cite keys, e.g. they cannot have capital letters. I recommend using cite keys of the form `lastnameYY` where `YY` is the two digit year, e.g. `hughes95`.
 
 You can find BibTeX entries using [Google Scholar](https://scholar.google.com/) or [DBLP](https://dblp.uni-trier.de/). Please remove extraneous details, e.g. conference locations and dates, and publisher names and locations. For common publication venues, it is okay to use abbreviations, e.g. `OOPSLA`, rather than full conference names.
 
