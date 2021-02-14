@@ -26,7 +26,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run 
         run: |
-          git checkout git@github.com:fplab/ui-for-pl.git
+          git clone git@github.com:fplab/ui-for-pl.git
           cd ui-for-pl
           sudo pip3 install -r requirements.txt
           make
