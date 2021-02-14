@@ -27,9 +27,10 @@ jobs:
       - name: Run 
         run: |
           cd $GITHUB_WORKSPACE
-          pip --version
-          python --version
-          pip install -U -r requirements.txt
+          sudo apt install python3-pip
+          pip3 --version
+          python3 --version
+          pip3 install -U -r requirements.txt
           make
           git checkout www
           git add html
