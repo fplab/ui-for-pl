@@ -33,14 +33,10 @@ jobs:
           sudo pip3 install -r requirements.txt
           make
           echo DONE!
-      - name: Commit files
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add html
-          git commit -m "Add changes"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: www
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: www
+          FOLDER: html
