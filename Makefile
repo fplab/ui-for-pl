@@ -1,3 +1,0 @@
-default:
-%:
-	$(MAKE) -C src $@
