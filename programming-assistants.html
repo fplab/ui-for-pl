@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Programming Assistants &mdash; User Interfaces for Programming Languages</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style-extra.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/js-extra.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Overview" href="live-programming.html" />
+    <link rel="prev" title="Overview" href="program-editors.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: linear-gradient( #009688, rgba(181, 71, 170, 1) )" >
+          
+<a href="index.html">User Interfaces for <br />Programming Languages</a>
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Notation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notation.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html#history-of-mathematical-notation">History of Mathematical Notation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html#cognitive-dimensions-of-notations">Cognitive Dimensions of Notations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html#secondary-notation">Secondary Notation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html#textual-notation">Textual Notation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notation.html#parsers">Parsers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notation.html#parser-generators">Parser Generators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="notation.html#grammar-based-parser-generators">Grammar-Based Parser Generators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="notation.html#parser-combinators">Parser Combinators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="notation.html#programmable-notation">Programmable Notation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notation.html#parse-errors">Parse Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notation.html#unparsers">Unparsers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notation.html#pretty-printers">Pretty Printers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notation.html#minifiers-and-obfuscators">Minifiers and Obfuscators</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html#graphical-notation">Graphical Notation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Language Usability</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html#language-adoption">Language Adoption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html#usability-of-type-systems">Usability of Type Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html#api-usability">API Usability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html#program-comprehension">Program Comprehension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html#domain-specific-languages">Domain-Specific Languages</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Program Editors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html#language-servers">Language Servers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html#structure-editors">Structure Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="program-editors.html#visual-programming-languages">Visual Programming Languages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html#program-navigation">Program Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html#collaborative-editing">Collaborative Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html#accessibility">Accessibility</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Assistants</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#program-synthesis">Program Synthesis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#deductive-program-synthesis">Deductive Program Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inductive-program-synthesis">Inductive Program Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-completion">Code Completion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#refactoring-and-program-transformation">Refactoring and Program Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#program-repair">Program Repair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#interactive-proof-assistants">Interactive Proof Assistants</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Live Programming</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#repls">REPLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#data-analysis-environments">Data Analysis Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#debugging">Debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="live-programming.html#interactive-debuggers">Interactive Debuggers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="live-programming.html#program-visualization">Program Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#programming-by-demonstration">Programming by Demonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#direct-manipulation-programming">Direct Manipulation Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="live-programming.html#graphical-user-interface-design">Graphical User Interface Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="live-programming.html#game-development">Game Development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#live-coding">Live Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#programmable-physical-environments">Programmable Physical Environments</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Educational Technology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="educational-technology.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="educational-technology.html#block-based-environments">Block-Based Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="educational-technology.html#feedback-generation">Feedback Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="educational-technology.html#tutoring-systems">Tutoring Systems</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="community.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community.html#conferences-and-workshops">Conferences and Workshops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community.html#online-communities">Online Communities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community.html#courses">Courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community.html#research-groups">Research Groups</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">User Interfaces for Programming Languages</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon breadcrumb-home"></a>&raquo;</li>
+        
+      <li>Programming Assistants</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/fplab/ui-for-pl/blob/master/src/programming-assistants.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<span id="programming-assistants-overview"></span><h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p><strong>Programming assistants</strong> operate in concert with programmers to automate away many tedious programming tasks, including code insertion, refactoring and program repair. They are tools integrated into development environments that enable more effective programming by allowing the developer to focus less on the syntactical and logical problems occured during development and more on the big picture of projects. Why do we need programming assistants? As more complex and time-consuming projects arise, assistants can significantly reduce the time and effort a programmer exhausts during development, while also reducing the probability of errors occuring.</p>
+<p>Programming assistants can be highly sophisticated themselves, with some using advanced artificial intelligence, machine learning and natural language processing models. Most systems can be represented by the following diagram:</p>
+<img alt="_images/MLModel.png" src="_images/MLModel.png" />
+<p>where the input can be range from syntactical structure (abstract syntax trees, parsed text, edit action history) to program edit-time data. The model is chosen based on accuracy and runtime comparisons between various hypothesized models. Even after the model is chosen, it is further evaluated and tuned. Once a model is chosen and trained on input data, new data is introduced for prediction and the results are published. Models can output various types of predictions including: single hole and multiple hole fillings in a program and arbitrary edits throughout a program. The main areas of research for programming assistants are discussed further below.</p>
+</div>
+<div class="section" id="program-synthesis">
+<h1>Program Synthesis<a class="headerlink" href="#program-synthesis" title="Permalink to this headline">¶</a></h1>
+<p><strong>Program Synthesis</strong> refers to the process of code synthesis based on a programmer’s specifications. It is intended to allow the assistant to implement instructions typically containing a mixture of a natual language and programmatic syntax. This area of research originates from the idea that computers are very good at following explicit instructions, but humans are not necessarily good at writing those instructions. Wouldn’t it be more efficient to tell a computer what the developer wants it to do and to leave the implementation details to the computer? The main promise of Program Synthesis is to automate the trivial parts of programming, allowing the developer to focus on the big picture.</p>
+<p>Before discussing how synthesis occurs, it is important to discuss the various ways to specify program behavior. There are many styles in place including:</p>
+<ol class="arabic simple">
+<li><p>Complete Formal Specification using a formula (e.g. <cite>∀x. P(x) = x*2</cite> for a program that doubles the input)</p></li>
+<li><p>Input/Output examples that serve as examples of what the program should be doing (e.g. (2,4), (4,8) for the program that doubles)</p></li>
+<li><p>Demonstrations of how the program should compute the output (Very similar to #2 but tends to have some intermediate steps as well)</p></li>
+</ol>
+<p>The two main types of Program Synthesis are deductive and inductive. <strong>Deductive Program Synthesis</strong> uses complete formal specifications while <strong>Inductive Program Synthesis</strong> uses less formal specifications and relies primarily on iterative search techniques to find implementations.</p>
+<div class="section" id="deductive-program-synthesis">
+<h2>Deductive Program Synthesis<a class="headerlink" href="#deductive-program-synthesis" title="Permalink to this headline">¶</a></h2>
+<p>Deductive Program Synthesis is focused on an approach in which the derivation task is regarded as a problem of proving a mathematical theorem <span id="id1">[<span>manna1992fundamentals</span>]</span>. Manna and Waldinger discuss that in order to write a program that meets the specifications, a proof of existence must be conducted showing that for any input, the output satisfies the specified conditions. In order for the proof to be sufficiently constructive, upon finding the existence of an output, it is required to state the computational means used to determine the existence. This is then used as a basis for the program that is eventually created. Manna and Waldinger continue to discuss specifications, proving of theorems and deduction rules for the remainder of the paper.</p>
+<div class="bib-item docutils container">
+<span class="target" id="id2"></span><p>This paper explains the foundations and fundamentals of deductive program synthesis detailing the mathematical approach behind it.</p>
+</div>
+</div>
+<div class="section" id="inductive-program-synthesis">
+<h2>Inductive Program Synthesis<a class="headerlink" href="#inductive-program-synthesis" title="Permalink to this headline">¶</a></h2>
+<p>Inductive Program Synthesis (IPS) is typically used more mainly due to the realization that most are not familiar with complicated mathematical theorems and prefer to synthesize using less formal specifications. There are many different variations of IPS as there are many different iterative approaches, but most follow the same overall architecture containing a synthesizer and a verifier:</p>
+<img alt="_images/program_synthesis_model.png" src="_images/program_synthesis_model.png" />
+<p>A synthesizer produces a ‘candidate program’ based on the specifications provided and sends the program to a verifier to validate that the program fully satisfies the specifications. If the verifier successfully validates the program, no further action is taken. However, if the verifier determines that the candidate is not satisfactory, it provides feedback to the synthesizer to be used to guide the development of a new candidate program. This process is repeated until the candidate program passes all of the specification <span id="id3">[<span>gvero2015synthesizing</span>]</span>.</p>
+<p>Given the query <cite>open file example.txt</cite>, anyCode would return a list of potential Java expressions:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">File</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">&quot;/Users/example/example.txt&quot;</span><span class="o">);</span>
+<span class="n">BufferedReader</span> <span class="n">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">&quot;/Users/example/example.txt&quot;</span><span class="o">));</span>
+</pre></div>
+</div>
+<p>The authors state that the key feature that differentiates their tool is that it does not take into account any prior code context. The main take aways of their tool are that it often produces the expected code fragments, tolerates the flexibility of the English language, and it can repair incorrect Java expressions that use the wrong syntax or missing arguments.</p>
+<p>anyCode was evaluated with 45 examples where the effectiveness criteria was that it was able to successfully synthesize expected expressions and to list them among the top 10 solutions. The two models used to build the tool, unigram and PCFG, were evaluated separately and together. Using only the unigram model, the expected expression was only in the top 10 27% of the time and 18% using the PCFG model.</p>
+<p>However, when both models were used, the expected expression was in the top 10 82% of time and was the #1 option 44% of the time. More implementation details of the two models can be found in the paper. anyCode was given an average runtime of 60 ms to generate the top 10 expressions, proving that it can effectively and efficiently synthesize expressions.</p>
+<div class="bib-item docutils container">
+<span class="target" id="id4"></span><p>This paper introduces demonstrates program synthesis as code suggestions using Java syntax and English free-form queries as inputs.
+Gvero and Kuncak have a proposed a new code assistance tool, anyCode, for integrated development environments (IDEs) that produces a
+list of syntheses based on user-entered free-form queries. The queries contain a mixture of English and Java syntax and produce
+expressions that account for the correct syntax, types and scoping rules of Java.</p>
+</div>
+</div>
+<div class="section" id="code-completion">
+<h2>Code Completion<a class="headerlink" href="#code-completion" title="Permalink to this headline">¶</a></h2>
+<p><strong>Code Completion</strong> systems are simple program synthesis systems that generate code snippets for insertion at the cursor, whereas other program synthesis systems may fill multiple holes in a code corpus. It is intended to speed up the process of coding applications by reducing typos and other mistakes. Code Completion assistants serves as convenient way to access function syntax and descriptions, significantly reducing the amount of memorization required.</p>
+<p>Common techniques to achieve this include auto completion popups while typing, querying parameters of functions, querying hints related to syntax errors. The models used in Code Completion are very similar to those used in Program Synthesis but tend to use different inputs.</p>
+<p>Common training inputs include:
+- Parsed code corpuses
+- Abstract syntax trees
+- Typing context</p>
+<p>Most of the popular IDEs (Visual Studio, Eclipse, IntelliSense, IntelliJ IDEA) contain some form of basic code completion but many new research projects have started picking up <span id="id5">[<span>raychev2014code</span>]</span>.</p>
+<p>Take the following simple machine learning example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">X_features</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">y_label</span><span class="p">]</span>
+
+<span class="n">X_tr</span><span class="p">,</span> <span class="n">X_te</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">y_te</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="n">_</span>
+<span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_te</span><span class="p">,</span> <span class="n">y_te</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Given the hole in the code, this code completion tool can accurately fill in <cite>model.fit(X_tr, y_tr)</cite> for the question mark. The team is able to do this by treating the code completion problem as a natural language processing problem of predicting probabilities of sentences. Static analysis of method call sequences and a statistical language model are used to generate a list of ranked sentences based on likelihoods.</p>
+<p>There are four key aspects in this tool:
+1. Completion across multiple types - In one given run, the tool is able to make completions for objects of various types.
+2. Complete of parameters - While generating completions for methods, the tool is also able to fill in the correct method parameters.
+3. Holes as sequences - The tool is able to recognize if multiple method invocations are missing in a given hole and fills in the missing.
+4. New fused completions - The tool is able to make completions on sequences and methods it has not been trained on before.</p>
+<p>The evaluation of the tools proved it to be very fast and effective. Out of the 84 examples tested on, the desired completion appeared in the top 3 results in 90% of the cases. More details on the implementation of the model and the evaluation metrics used can be found in the paper <span id="id6">[<span>raychev2014code</span>]</span>.</p>
+<p>Pythia is another code completion system that uses AI to suggest method completions and API suggestions. To compare the perform of the Pythia model, the researchers also generated models using the frequency approach and Markov-Chain approach <span id="id7">[<span>svyatkovskiy2019pythia</span>]</span>.</p>
+<p>The frequency baseline model was generated by training a model based on the occurrence count of methods in a corpus. It was further improved by providing additional context information concerning whether or not the code was inside an “if” statement. The Markov-Chain model was model trained to determine the next method given a sequence of prior commands for certain Python libraries. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span> <span class="o">-&gt;</span> <span class="n">os</span><span class="o">.</span><span class="n">remove</span> <span class="o">-&gt;</span> <span class="n">_</span>
+</pre></div>
+</div>
+<p>After creating the baseline models, a long short-term memory model was created with backpropagation through time, a gradient-based neural network training algorithm, applied to the model. More implementation details can be found in the paper <span id="id8">[<span>svyatkovskiy2019pythia</span>]</span>. Comparing all models created in the study, the frequency and Markov-Chain baselines were 67% and 83% accurate in predicting the expected completion within the top 5 results. The Pythia model was able to out perfom both models with an accuracy of 92% for the same metric, giving the researchers enough evidence to publish and integrate the tool into Visual Studio.</p>
+<div class="bib-item docutils container">
+<span class="target" id="id9"></span><p>This paper demonstrates the use of APIs to generate code completions for holes in corpuses given a query character. Raychev, Vechev and
+Yahav addressed the code completion problem using APIs. Unlike most code completion tools, their work synthesizes completions for holes
+in code with most likely method calls.</p>
+</div>
+<div class="bib-item docutils container">
+<span class="target" id="id10"></span><p>This paper demonstrates the use of abstract syntax trees to train a deep learning model for code completion suggestions. Pythia, an AI-
+assisted code completion system, is another Microsoft research project that has since been deployed to Visual Studio IntelliCode. Pythia
+not only suggests method completions but also search for relevant APIs for suggestion. Pythia also uses abstract syntax trees as input
+to train large-scale deep learning models and attempts to predict completions within 100 ms.</p>
+</div>
+</div>
+</div>
+<div class="section" id="refactoring-and-program-transformation">
+<h1>Refactoring and Program Transformation<a class="headerlink" href="#refactoring-and-program-transformation" title="Permalink to this headline">¶</a></h1>
+<p><strong>Refactoring</strong> refers to the process of restructuring existing code without changing the program’s behavior and is a large area of interest in programming assistant research. It is intended to improve the nonfunctional attributes of a program. Typically, code refactoring applies small changes to various areas of a program, but can also include general program tranformations since not all suggested transformations are refactorings. Most development environments have already integrated support for basic refactoring. Detecting problems early and refactoring source code can save developers time and effort debugging in the future.</p>
+<p>The main benefits of refactoring can be categorized into either <strong>maintainability</strong>: Fixing issues is very easy because the code is easy to read and easy to understand, or <strong>extensibility</strong>: Extending the capabilities of the application is very easy because the codes uses recognizable design patterns and is flexible.</p>
+<p>New assistance tools are being developed to accurately suggest program edits. The process includes the proper identification of repetitive edits, refactoring different areas of code based on the repeated pattern and suggesting the new refactorings to the user. Blue Pencil is Microsoft’s assistance tool focused on program edit suggestions.</p>
+<p><a class="reference external" href="https://devblogs.microsoft.com/visualstudio/refactoring-made-easy-with-intellicode/">This article</a> demonstrates Blue-Pencil in action as it was recently integrated into Visual Studio 2019 <span id="id11">[<span>miltner2019fly</span>]</span>.</p>
+<p>Although this is a small example, making changes like these is a very tedious process. Scaling this up to larger projects creates a real problem with a large resource requirement. This is the exact problem the Blue-Pencil solution aims to tackle. Blue-Pencil non intrusively watches and learn from user edits and makes suggestions accordingly. It attempts to identify repetitive edits using the document edit history by generating explanations for each of the user’s edits to predict actions to take.</p>
+<p>How does it work? Given a history of edits on a given document, Blue-Pencil takes an oracle-guided approach to generate explanations for the history. More implementation details are discussed in the paper.</p>
+<p>The model was evaluated with 37 document editing sessions in two software development languages (C# and SQL) coming from various sources. The model provided 206 suggestions and only yielded 23 false positives giving it a final precision value of 0.89 with the average suggestion time being 199 ms. More details on the implementation and results of the study can be found here.</p>
+<div class="bib-item docutils container">
+<span class="target" id="id12"></span><p>This paper demonstrates the use of document edit history to suggest code refactoring based on repetitive editing patterns. Software
+engineers at Microsoft are currently developing and integrating a refactoring assistant that recognizes editing patterns in source code
+and suggest other edits</p>
+</div>
+</div>
+<div class="section" id="program-repair">
+<h1>Program Repair<a class="headerlink" href="#program-repair" title="Permalink to this headline">¶</a></h1>
+<p><strong>Program Repair</strong> refers to the process of automatic repairing of a code corpus that contains type and/or runtime errors, manifested as exceptions or failed tests. It is intended to speed up the time and effort exhausted to debug a software project. Debugging can consume a significant amount of time the larger or more complex the project is. Not only does the root cause of an issue have to be found but the bug itself has to be fixed making the whole process very tedious. Some common techniques used in Program Repair are statistical fault localization and component-based program synthesis.</p>
+<p>A very common approach for Program Repair is using <strong>Genetic Programming</strong>, a computational method inspired by biological evolution which evolves computer programs tailored to a specific task <span id="id13">[<span>weimer2010automatic</span>]</span>.</p>
+<p>The work introduces algorithms to find and minimize the number of repairs required in a program based on test cases that describe the desired functionality. The algorithms are generic enough to span a broad range of bugs. The research also introduces a novel and efficient representation to apply Genetic Programming to Program Repair with experimental results showing how the approach generates repairs for several types of bugs in 11 programs. The solution was able to fix the bugs across all 11 programs (over 60,000 lines of code total) in 2000 seconds, an impressive feat considering the total size of the projects analyzed.</p>
+<p>Another Program Repair tool, SemFix is an automated program repair method based on symbolic execution, constraint solving and program synthesis. It utilizes statistical fault localization in order to identify and rank lines of code based on their suspiciousness, determines the correct specifications of buggy statements using a method similar to angelic debugging and finally uses program synthesis to correct the statement <span id="id14">[<span>nguyen2013semfix</span>]</span>.</p>
+<p>To evaluate the tool, a buggy test set of 50 was used with a total of 90 bugs. The performance and speed of SemFix was also compared to those of GenProg, a competing automatic debugging tool. SemFix proved to be more successful and faster with the average speed repair speed being 100 ms. Although SemFix outperformed GenProg, it was still only able to debug 48 of the 90 bugs successfully (GenProg was only able to debug 16 of the 90) which seems problematic. However, the SemFix team clearly addresses this and explains the drawbacks of the tool. More details can be found in the paper.</p>
+<div class="bib-item docutils container">
+<span class="target" id="id15"></span><p>This paper demonstrates the use of genetic programming to automatically fix programming bugs. Researchers at CMU are doing just this by
+combining program analysis methods with evolutionary computation to automatically repair bugs. The key feature about the research was
+that it did not rely on formal specifications, allowing it to be more flexible to a larger range of software.</p>
+</div>
+<div class="bib-item docutils container">
+<span class="target" id="id16"></span><p>This paper demonstrates the use of statistical fault localization to determine and fix buggy areas of a code corpus.</p>
+</div>
+</div>
+<div class="section" id="interactive-proof-assistants">
+<h1>Interactive Proof Assistants<a class="headerlink" href="#interactive-proof-assistants" title="Permalink to this headline">¶</a></h1>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="live-programming.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="program-editors.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020. Original content licensed under the Creative Commons Attribution-ShareAlike 4.0 International license..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

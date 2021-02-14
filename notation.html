@@ -1,0 +1,609 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Notation &mdash; User Interfaces for Programming Languages</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style-extra.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/js-extra.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Overview" href="language-usability.html" />
+    <link rel="prev" title="User Interfaces for Programming Languages" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: linear-gradient( #009688, rgba(181, 71, 170, 1) )" >
+          
+<a href="index.html">User Interfaces for <br />Programming Languages</a>
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Notation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#history-of-mathematical-notation">History of Mathematical Notation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#cognitive-dimensions-of-notations">Cognitive Dimensions of Notations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#secondary-notation">Secondary Notation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#textual-notation">Textual Notation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#parsers">Parsers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#parser-generators">Parser Generators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#grammar-based-parser-generators">Grammar-Based Parser Generators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parser-combinators">Parser Combinators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#programmable-notation">Programmable Notation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parse-errors">Parse Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#unparsers">Unparsers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pretty-printers">Pretty Printers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#minifiers-and-obfuscators">Minifiers and Obfuscators</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#graphical-notation">Graphical Notation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Language Usability</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html#language-adoption">Language Adoption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html#usability-of-type-systems">Usability of Type Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html#api-usability">API Usability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html#program-comprehension">Program Comprehension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-usability.html#domain-specific-languages">Domain-Specific Languages</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Program Editors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html#language-servers">Language Servers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html#structure-editors">Structure Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="program-editors.html#visual-programming-languages">Visual Programming Languages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html#program-navigation">Program Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html#collaborative-editing">Collaborative Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program-editors.html#accessibility">Accessibility</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Assistants</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="programming-assistants.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming-assistants.html#program-synthesis">Program Synthesis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="programming-assistants.html#deductive-program-synthesis">Deductive Program Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming-assistants.html#inductive-program-synthesis">Inductive Program Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming-assistants.html#code-completion">Code Completion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="programming-assistants.html#refactoring-and-program-transformation">Refactoring and Program Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming-assistants.html#program-repair">Program Repair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming-assistants.html#interactive-proof-assistants">Interactive Proof Assistants</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Live Programming</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#repls">REPLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#data-analysis-environments">Data Analysis Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#debugging">Debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="live-programming.html#interactive-debuggers">Interactive Debuggers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="live-programming.html#program-visualization">Program Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#programming-by-demonstration">Programming by Demonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#direct-manipulation-programming">Direct Manipulation Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="live-programming.html#graphical-user-interface-design">Graphical User Interface Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="live-programming.html#game-development">Game Development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#live-coding">Live Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live-programming.html#programmable-physical-environments">Programmable Physical Environments</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Educational Technology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="educational-technology.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="educational-technology.html#block-based-environments">Block-Based Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="educational-technology.html#feedback-generation">Feedback Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="educational-technology.html#tutoring-systems">Tutoring Systems</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="community.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community.html#conferences-and-workshops">Conferences and Workshops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community.html#online-communities">Online Communities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community.html#courses">Courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community.html#research-groups">Research Groups</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">User Interfaces for Programming Languages</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon breadcrumb-home"></a>&raquo;</li>
+        
+      <li>Notation</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/fplab/ui-for-pl/blob/master/src/notation.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Humans visually represent <strong>mathematical structures</strong>, such as computer programs, using <strong>mathematical notation</strong>.
+There can be many different notations for a given structure, each differing along various cognitive dimensions.
+As such, notation design is a subfield of user interface design.</p>
+<p>In mathematical writing, authors often define notation informally, e.g. by example.
+It is common to be somewhat cavalier about notation in this setting, relying on the human reader to resolve ambiguities or insert missing details based on convention.</p>
+<p>Programming language designers, in contrast, must be more precise to allow the program to be manipulated by computational tools (e.g. compilers).
+In particular, a <strong>concrete syntax</strong> or <strong>surface syntax</strong> is a formal system that serves to map recognized notational forms to program structures.
+(Program structures themselves are defined in some suitable metalanguage, which itself might have its own notational forms.)</p>
+<p>Programming language definitions typically privilege a single concrete syntax, which is then referred to colloquially as <em>the</em> concrete syntax of the language.
+However, many languages now have popular third-party concrete syntaxes
+(e.g. <a class="reference external" href="https://coffeescript.org/">CoffeeScript</a> for JavaScript, <a class="reference external" href="https://reasonml.github.io/">Reason</a> for OCaml),
+and it is also possible to define a programming language without privileging any concrete syntax at all.
+The underlying structures, not the surface forms, are what is meaningful, i.e. assigned meaning by the language definition (a.k.a. semantics).</p>
+<p>Notation specific to a particular type of data is known as <strong>literal notation</strong> for that type.
+An instance of this notation is called a <strong>literal</strong>.
+For example, the concrete syntax of many programming languages allows for list literals like <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code>.</p>
+</div>
+<div class="section" id="history-of-mathematical-notation">
+<h1>History of Mathematical Notation<a class="headerlink" href="#history-of-mathematical-notation" title="Permalink to this headline">¶</a></h1>
+<p>Mathematical notation has evolved substantially over the centuries.
+Diagrammatic notation is evident in early mathematical writing, e.g. in Euclid’s <em>Elements</em>.
+Symbolic notation has been comparatively slow to emerge, arising mainly in the last several centuries.
+Before that, mathematical statements were written out in natural language (e.g. “The sum of 2 and 2 is 4.”)</p>
+<div class="bib-item docutils container">
+<p id="id1"><dl class="citation">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id168">Caj93</a></span></dt>
+<dd><p>Florian Cajori. <em>A history of mathematical notations</em>. Courier Corporation, 1993.</p>
+</dd>
+</dl>
+</p>
+<p>This book provides a thorough historical account of mathematical notation, starting from antiquity.</p>
+</div>
+<div class="bib-item docutils container">
+<p id="id11"><dl class="citation">
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id169">Wol00</a></span></dt>
+<dd><p>Stephen Wolfram. Mathematical notation: past and future. In <em>MathML and Math on the Web: MathML International Conference</em>. 2000.</p>
+</dd>
+</dl>
+</p>
+<p>This article (<a class="reference external" href="https://www.stephenwolfram.com/publications/mathematical-notation-past-future/">link</a>) provides a concise overview of the history of mathematical notation.
+It also includes some discussion of the notational choices in the Mathematica programming language.</p>
+</div>
+</div>
+<div class="section" id="cognitive-dimensions-of-notations">
+<h1>Cognitive Dimensions of Notations<a class="headerlink" href="#cognitive-dimensions-of-notations" title="Permalink to this headline">¶</a></h1>
+<p>Notations can be compared along various <em>cognitive dimensions</em>.
+Examples include <em>diffuseness</em> (the amount of space that the notation takes up) and <em>role-expressiveness</em> (the extent to which the purpose of a notational entity is readily apparent) <span id="id21">[<a class="reference internal" href="#id47"><span>BBC+01</span></a>]</span>.</p>
+<p>To properly perform a cognitive dimensions analysis, one needs to specify an appropriately specific context (e.g. by specifying who the intended user is, and the affordances available in the editing environment).
+Because cognitive dimensions analyses involve reasoning about cognitive operations, they are typically qualitative in nature, though in some cases a quantitative cost metric can also be relevant.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In much of the literature on cognitive dimensions of notations, the word “notation” is used liberally: researchers will analyze a complete language or system design rather than focusing strictly on notational choices.</p>
+</div>
+<div class="bib-item docutils container">
+<p id="id22"><dl class="citation">
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id173">Ive80</a></span></dt>
+<dd><p>Kenneth Iverson. Notation as a tool of thought. <em>Communications of the ACM</em>, 1980.</p>
+</dd>
+</dl>
+</p>
+<p>Iverson’s Turing Award lecture discussed various “important characteristics of notation”, and identified programming languages as powerful “tools of thought”.</p>
+</div>
+<div class="bib-item docutils container">
+<p id="id32"><dl class="citation">
+<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id170">Gre89</a></span></dt>
+<dd><p>Thomas R. G. Green. Cognitive dimensions of notations. <em>People and Computers V</em>, pages 443–460, 1989.</p>
+</dd>
+</dl>
+</p>
+<p>Green introduced the “cognitive dimensions” framework, which provides vocabulary that can be used to compare different designs.
+The emphasis is on the notation within a particular environment, e.g. an editor.</p>
+</div>
+<div class="bib-item docutils container">
+<p id="id42"><dl class="citation">
+<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id171">BG03</a></span></dt>
+<dd><p>Alan Blackwell and Thomas Green. Notational systems–the cognitive dimensions of notations framework. <em>HCI models, theories, and frameworks: toward an interdisciplinary science. Morgan Kaufmann</em>, 2003.</p>
+</dd>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id21">BBC+01</a></span></dt>
+<dd><p>Alan F. Blackwell, Carol Britton, A. Cox, Thomas R. G. Green, and others. Cognitive dimensions of notations: design tools for cognitive technology. In <em>International Conference on Cognitive Technology</em>, 325–341. Springer, 2001.</p>
+</dd>
+</dl>
+</p>
+<p>Subsequent papers have proposed a number of additional cognitive dimensions beyond those given as examples by Green.
+These two papers summarize both the original work and some of these subsequent developments, and are suitable as introductions to CD analysis.</p>
+</div>
+<div class="bib-item docutils container">
+<p id="id52"><dl class="citation">
+<dt class="label" id="id58"><span class="brackets"><a class="fn-backref" href="#id172">PM96</a></span></dt>
+<dd><p>John F. Pane and Brad A. Myers. Usability issues in the design of novice programming systems. Technical Report, Carnegie Mellon University, CMU-CS-96-132, 1996.</p>
+</dd>
+</dl>
+</p>
+<p>This detailed technical report details a large number of useful dimensions (going beyond notation in some cases).
+The focus is nominally on novice programming systems, but many of the dimensions are relevant beyond that domain.</p>
+</div>
+<div class="admonition-todo admonition" id="id62">
+<p class="admonition-title">Todo</p>
+<p>A more thorough bibliography covering cognitive dimensions analysis and its applications might be useful, perhaps as a subpage.</p>
+</div>
+</div>
+<div class="section" id="secondary-notation">
+<h1>Secondary Notation<a class="headerlink" href="#secondary-notation" title="Permalink to this headline">¶</a></h1>
+<p>Additional cues are often systematically inserted by humans when editing, or by tools when rendering notation for display, in order to improve readability and other cognitive dimensions.
+These cues are called <em>secondary notation</em> if they are unnecessary from the perspective of the syntax and semantics.</p>
+<p>For example, a human might (1) insert formally unnecessary indentation to better communicate nested scopes to human readers;
+or (2) place conceptually related items near each other;
+or (3) include natural language comments.</p>
+<div class="bib-item docutils container">
+<p id="id63"><dl class="citation">
+<dt class="label" id="id71"><span class="brackets"><a class="fn-backref" href="#id174">Pet95</a></span></dt>
+<dd><p>Marian Petre. Why looking isn't always seeing: readership skills and graphical programming. <em>Communications of the ACM</em>, 38(6):33–44, 1995.</p>
+</dd>
+</dl>
+</p>
+<p>This paper introduces the phrase “secondary notation” and discusses, by way of examples, the importance of good notation, and various subtletites that can arise.</p>
+</div>
+<div class="bib-item docutils container">
+<p id="id73"><dl class="citation">
+<dt class="label" id="id82"><span class="brackets"><a class="fn-backref" href="#id175">Pet06</a></span></dt>
+<dd><p>Marian Petre. Cognitive dimensions ‘beyond the notation’. <em>Journal of Visual Languages &amp; Computing</em>, 17(4):292–301, 2006.</p>
+</dd>
+</dl>
+</p>
+<p>This paper reflects on cognitive dimensions analysis and, in particular, states, based on observations made in other studies, that experts are more adept at using secondary notation than novices.</p>
+</div>
+</div>
+<div class="section" id="textual-notation">
+<h1>Textual Notation<a class="headerlink" href="#textual-notation" title="Permalink to this headline">¶</a></h1>
+<p>Most contemporary programming languages come equipped with textual notation.
+In other words, programs are represented and edited in textual form, i.e. as strings over some suitable alphabet, typically ASCII or Unicode.
+It is typically desirable for there to be at most one structure for any given string.
+This property of a textual syntax is known as <em>determinism</em>.</p>
+<div class="section" id="parsers">
+<h2>Parsers<a class="headerlink" href="#parsers" title="Permalink to this headline">¶</a></h2>
+<p>A parser is an implementation of a textual syntax, i.e. a function that takes a string as input and returns the corresponding structure (or structures, if the syntax is not deterministic).
+If this is not possible, e.g. because there is no corresponding structure, then parsers exhibit various behaviors.
+In practice, they produce error messages that attempt to identify and explain the parse error (a.k.a. syntax error) to the user.</p>
+<div class="section" id="parser-generators">
+<h3>Parser Generators<a class="headerlink" href="#parser-generators" title="Permalink to this headline">¶</a></h3>
+<p>Parsers are sometimes written manually (a.k.a. “hand-rolled”).
+More commonly, however, they are generated programmatically using a parser generator.</p>
+<div class="section" id="grammar-based-parser-generators">
+<h4>Grammar-Based Parser Generators<a class="headerlink" href="#grammar-based-parser-generators" title="Permalink to this headline">¶</a></h4>
+<p>For example, <em>grammar-based parser generators</em> generate a parser given a formal grammar (written using some suitable grammar formalism) where each production is equipped with logic that determines the corresponding structure.</p>
+<div class="admonition-todo admonition" id="id83">
+<p class="admonition-title">Todo</p>
+<p>Is there a good survey or book on grammar-based parser generators? Someone’s thesis might have a good survey on the topic in it?</p>
+</div>
+</div>
+<div class="section" id="parser-combinators">
+<h4>Parser Combinators<a class="headerlink" href="#parser-combinators" title="Permalink to this headline">¶</a></h4>
+<p>Another method is to use a <em>parser combinator</em> library, which generates a parser by executing a program that applies various functions (called <cite>combinators</cite>) to define and combine parsing rules.
+In many cases, the goal is for the composition of various combinators to resemble a grammar-based specification, such that the resulting parser is an implementation of the corresponding grammar.</p>
+<div class="bib-item docutils container">
+<p id="id84"><dl class="citation">
+<dt class="label" id="id88"><span class="brackets"><a class="fn-backref" href="#id179">Hut92</a></span></dt>
+<dd><p>Graham Hutton. Higher-order functions for parsing. <em>J. Funct. Program.</em>, 1992.</p>
+</dd>
+</dl>
+</p>
+<p>This paper describes the parser combinator technique by example.
+The technique was known prior to this paper, but Hutton says that little was previously written about it.</p>
+</div>
+<div class="bib-item docutils container">
+<p id="id95"><dl class="citation">
+<dt class="label" id="id100"><span class="brackets"><a class="fn-backref" href="#id180">FHC08</a></span></dt>
+<dd><p>Richard A. Frost, Rahmatullah Hafiz, and Paul Callaghan. Parser combinators for ambiguous left-recursive grammars. In <em>Practical Aspects of Declarative Languages</em>. 2008.</p>
+</dd>
+</dl>
+</p>
+<p>This paper describes a parser combinator library that can accommodate ambiguities and left-recursive grammars.
+It is also asymptotically efficient.
+It is implemented in Haskell.</p>
+</div>
+<div class="admonition-todo admonition" id="id106">
+<p class="admonition-title">Todo</p>
+<p>other notable work on parser combinators, particularly after 2008?</p>
+</div>
+<div class="admonition-todo admonition" id="id107">
+<p class="admonition-title">Todo</p>
+<p>links to well-maintained parser combinator libraries could also be useful here</p>
+</div>
+</div>
+</div>
+<div class="section" id="programmable-notation">
+<h3>Programmable Notation<a class="headerlink" href="#programmable-notation" title="Permalink to this headline">¶</a></h3>
+<p>Some languages support programmable notation, i.e. they allow the programmer to define new notational forms within programs.
+The central challenge here is to support modularity. The simplest mechanisms do not support modularity, i.e. different syntax
+definitions included in different libraries can conflict with one another, leading to errors or ambiguities.</p>
+<div class="bib-item docutils container">
+<p id="id108"><dl class="citation">
+<dt class="label" id="id116"><span class="brackets">Oma17</span></dt>
+<dd><p>Cyrus Omar. <em>Reasonably Programmable Syntax</em>. PhD thesis, Carnegie Mellon University, 2017.</p>
+</dd>
+<dt class="label" id="id117"><span class="brackets">OA18</span></dt>
+<dd><p>Cyrus Omar and Jonathan Aldrich. Reasonably programmable literal notation. <em>Proc. ACM Program. Lang.</em>, 2(ICFP):106:1–106:32, 2018.</p>
+</dd>
+<dt class="label" id="id118"><span class="brackets">OKN+14</span></dt>
+<dd><p>Cyrus Omar, Darya Kurilova, Ligia Nistor, Benjamin Chung, Alex Potanin, and Jonathan Aldrich. Safely composable type-specific languages. In <em>ECOOP</em>. 2014.</p>
+</dd>
+</dl>
+</p>
+<p>This thesis and accompanying papers introduce a programmable syntax mechanism that allows for the definition of new literal notation
+(only). The definitions are constrained to support modular definition and modular reasoning about types and binding.</p>
+</div>
+<div class="admonition-todo admonition" id="id119">
+<p class="admonition-title">Todo</p>
+<p>Cite Cyrus’ PhD thesis + ECOOP and ICFP papers</p>
+</div>
+<div class="admonition-todo admonition" id="id120">
+<p class="admonition-title">Todo</p>
+<p>Cite Erdweg’s work</p>
+</div>
+<div class="admonition-todo admonition" id="id121">
+<p class="admonition-title">Todo</p>
+<p>Cite Schwerdfeger and Van Wyk</p>
+</div>
+</div>
+<div class="section" id="parse-errors">
+<h3>Parse Errors<a class="headerlink" href="#parse-errors" title="Permalink to this headline">¶</a></h3>
+<p>When a piece of text cannot be successfully parsed, it is helpful to generate an error message that can help the programmer localize and fix the error.
+This is a challenging problem.</p>
+<div class="admonition-todo admonition" id="id122">
+<p class="admonition-title">Todo</p>
+<p>Summarize the literature on parse/syntax errors.</p>
+</div>
+</div>
+</div>
+<div class="section" id="unparsers">
+<h2>Unparsers<a class="headerlink" href="#unparsers" title="Permalink to this headline">¶</a></h2>
+<p>An unparser is a function that takes a structure as input and produces a textual representation which, if parsed, will produce the original structure (or in some cases one merely equivalent to it, for some suitable notion of equivalence).</p>
+<p>It is often the case that there are multiple valid string representations of a structure.
+Different unparsers are therefore free to make different choices within this space.</p>
+<div class="section" id="pretty-printers">
+<h3>Pretty Printers<a class="headerlink" href="#pretty-printers" title="Permalink to this headline">¶</a></h3>
+<p>For example, textual pretty printers are unparsers that choose a “pretty” textual representation, e.g. one that follows secondary notational conventions about the use of whitespace.</p>
+<div class="bib-item docutils container">
+<p id="id123"><dl class="citation">
+<dt class="label" id="id124"><span class="brackets"><a class="fn-backref" href="#id176">Hug95</a></span></dt>
+<dd><p>John Hughes. The design of a pretty-printing library. In <em>Advanced Functional Programming</em>, 53–96. 1995.</p>
+</dd>
+</dl>
+</p>
+<p>This paper introduces the basic mechanisms behind many textual pretty printer libraries.</p>
+</div>
+<div class="bib-item docutils container">
+<p id="id134"><dl class="citation">
+<dt class="label" id="id136"><span class="brackets"><a class="fn-backref" href="#id177">Wad03</a></span></dt>
+<dd><p>Philip Wadler. A prettier printer. <em>The Fun of Programming, Cornerstones of Computing</em>, pages 223–243, 2003.</p>
+</dd>
+</dl>
+</p>
+<p>This paper refines Hughes’ design.</p>
+</div>
+<div class="bib-item docutils container">
+<p id="id145"><dl class="citation">
+<dt class="label" id="id148"><span class="brackets"><a class="fn-backref" href="#id178">Ber17</a></span></dt>
+<dd><p>Jean-Philippe Bernardy. A pretty but not greedy printer (Functional Pearl). <em>PACMPL (ICFP)</em>, 2017. <a class="reference external" href="https://doi.org/10.1145/3110250">doi:10.1145/3110250</a>.</p>
+</dd>
+</dl>
+</p>
+<p>This paper further improves on Hughes’ and Wadler’s designs, specifying a number of design criteria explicitly and supporting more flexible alignment specifications.</p>
+</div>
+</div>
+<div class="section" id="minifiers-and-obfuscators">
+<h3>Minifiers and Obfuscators<a class="headerlink" href="#minifiers-and-obfuscators" title="Permalink to this headline">¶</a></h3>
+<p>Not all unparsers are pretty printers.
+An unparser’s goal may instead be to minimize the size of the resulting string representation, or even to intentionally obfuscate the code.</p>
+<div class="admonition-todo admonition" id="id156">
+<p class="admonition-title">Todo</p>
+<p>papers on minifiers or obfuscators? links to notable minifiers / obfuscators?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="graphical-notation">
+<h1>Graphical Notation<a class="headerlink" href="#graphical-notation" title="Permalink to this headline">¶</a></h1>
+<p>Mathematical notation can also be non-textual. For example, it is common to lay out fractions vertically, or to use square root notation <span class="math notranslate nohighlight">\(\sqrt{e}\)</span>.
+Matrix notation lays out sub-expressions in a grid.
+Set intersection is diagrammed using overlapping circles.</p>
+<p>In applied mathematics, the sciences, and the arts, diagrammatic notation is quite common.
+Examples include <a class="reference external" href="http://www.solipsys.co.uk/new/JugglingTalkSummary.html?JugglingTalk">juggling notation</a>,
+<a class="reference external" href="https://www.maths.ed.ac.uk/~v1ranick/papers/conway.pdf">knot notation</a> (see <a class="reference external" href="https://www.youtube.com/watch?v=Wahc9Ocka1g">Katherine Ye’s Strange Loop 2015 talk</a>),
+and <a class="reference external" href="https://github.com/hypotext/notation#channa-horwitzs-sonakinetography">notation for kinetic sculptures</a>.
+These examples come from Katherine Ye’s excellent <a class="reference external" href="https://github.com/hypotext/notation#notation-and-thought">notes on notations and thought</a>,
+which also contain a number of other examples, quotations, and musings on notation.</p>
+<p>Some systems that support generating diagrams from textual descriptions of mathematical structures. Note that this is distinct from languages that simply provide low-level graphical primitives, e.g. lines and shapes, such as <a class="reference external" href="http://www.texample.net/tikz/">TikZ</a>.</p>
+<div class="bib-item docutils container">
+<p id="id157"><dl class="citation">
+<dt class="label" id="id164"><span class="brackets"><a class="fn-backref" href="#id181">NiYeS+17</a></span></dt>
+<dd><p>Wode Ni*, Katherine Ye*, Joshua Sunshine, Jonathan Aldrich, and Keenan Crane. Substance and style: domain-specific languages for mathematical diagrams. In <em>Domain-Specific Language Design and Implementation (DSLDI)</em>. 2017.</p>
+</dd>
+</dl>
+</p>
+<p>The <a class="reference external" href="https://penrose.ink/">Penrose</a> system, in development as of early 2020, supports generating graphical diagrams from textual descriptions of mathematical structures together with additional styling and layout optimization directives.</p>
+</div>
+<p>Few programming languages support non-textual primary notation,
+in part because doing so requires moving away from the use of standard text editors for writing programs.
+We discuss systems that do support non-textual primary notation in the section on <a class="reference internal" href="program-editors.html#structure-editors"><span class="std std-ref">Structure Editors</span></a>.
+We also discuss systems that support locally integrating interactive graphical notation into a textual editing environment there.</p>
+<div class="hidden docutils container">
+<p><span id="id168">[<a class="reference internal" href="#id2"><span>Caj93</span></a>]</span>
+<span id="id169">[<a class="reference internal" href="#id13"><span>Wol00</span></a>]</span>
+<span id="id170">[<a class="reference internal" href="#id35"><span>Gre89</span></a>]</span>
+<span id="id171">[<a class="reference internal" href="#id46"><span>BG03</span></a>]</span>
+<span id="id172">[<a class="reference internal" href="#id58"><span>PM96</span></a>]</span>
+<span id="id173">[<a class="reference internal" href="#id29"><span>Ive80</span></a>]</span>
+<span id="id174">[<a class="reference internal" href="#id71"><span>Pet95</span></a>]</span>
+<span id="id175">[<a class="reference internal" href="#id82"><span>Pet06</span></a>]</span>
+<span id="id176">[<a class="reference internal" href="#id124"><span>Hug95</span></a>]</span>
+<span id="id177">[<a class="reference internal" href="#id136"><span>Wad03</span></a>]</span>
+<span id="id178">[<a class="reference internal" href="#id148"><span>Ber17</span></a>]</span>
+<span id="id179">[<a class="reference internal" href="#id88"><span>Hut92</span></a>]</span>
+<span id="id180">[<a class="reference internal" href="#id100"><span>FHC08</span></a>]</span>
+<span id="id181">[<a class="reference internal" href="#id164"><span>NiYeS+17</span></a>]</span>
+<span id="id182">[<a class="reference internal" href="program-editors.html#id7"><span>KM06</span></a>]</span></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="language-usability.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="User Interfaces for Programming Languages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020. Original content licensed under the Creative Commons Attribution-ShareAlike 4.0 International license..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

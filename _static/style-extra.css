@@ -1,0 +1,39 @@
+.wy-nav-top {
+  background: #490C5E;
+}
+
+.wy-nav-content {
+  max-width: 1000px;
+}
+
+div.contents ul.simple ul {
+  margin-left:2em;
+}
+
+.icon-home::before {
+  content: none !important; /* don't show the home icon next to the title */
+}
+
+.breadcrumb-home::before {
+  content: "";
+}
+
+.wy-menu .caption-text {
+  color: yellow;
+}
+
+.bib-item {
+  background-color: #e7f2fa;
+}
+
+.citation {
+	margin-bottom: 0px !important;
+}
+
+.citation + p {
+	display: none;
+}
+
+ul {
+	margin-bottom: 0px !important;
+}
