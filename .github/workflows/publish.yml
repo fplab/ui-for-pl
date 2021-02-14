@@ -21,15 +21,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      # uses: actions/checkout@v2
 
       # Runs a set of commands using the runners shell
       - name: Run 
         run: |
-          cd $GITHUB_WORKSPACE
-          sudo apt install python3-pip
-          pip3 --version
-          python3 --version
+          git checkout git@github.com:fplab/ui-for-pl.git
+          cd ui-for-pl
           sudo pip3 install -r requirements.txt
           make
           git checkout www
