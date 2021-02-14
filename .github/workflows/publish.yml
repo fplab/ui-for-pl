@@ -30,7 +30,6 @@ jobs:
       - name: Build 
         run: |
           cd $GITHUB_WORKSPACE
-          cd ui-for-pl
           sudo pip3 install -r requirements.txt
           make
           echo DONE!
