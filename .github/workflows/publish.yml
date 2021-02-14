@@ -21,18 +21,27 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # uses: actions/checkout@v2
-
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+        
       # Runs a set of commands using the runners shell
-      - name: Run 
+      - name: Build 
         run: |
           git clone git@github.com:fplab/ui-for-pl.git
           cd ui-for-pl
           sudo pip3 install -r requirements.txt
           make
-          git checkout www
-          git add html
-          git commit -m "automatic build via GitHub Action"
-          git push
           echo DONE!
-  
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add html
+          git commit -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: www
